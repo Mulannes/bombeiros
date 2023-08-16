@@ -1,21 +1,18 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { Form } from '../../src/components/form'
 import { useNavigation } from '@react-navigation/native'
+import { DisplayAnImage } from '../../src/components/imageBgLog'
 
 export default function Index({ navigation }) {
   return (
     <View style={Styles.container}>
+      <DisplayAnImage />
       <Form />
       <TouchableOpacity style={Styles.touch} onPress={() => {
         navigation.navigate("plano")
       }}>
-        <Text>Clique aqui!</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={Styles.touch2} onPress={() => {
-        navigation.navigate("teste")
-      }}>
-        <Text>Clique aqui!</Text>
+        <Text>Next</Text>
       </TouchableOpacity>
     </View>
   )
@@ -29,14 +26,11 @@ const Styles = StyleSheet.create({
 
   },
   touch: {
-    width: 300,
-    height: 300,
+    width: 30,
+    height: 30,
     backgroundColor: "red",
   },
-  touch2: {
-    width: 300,
-    height: 300,
-    backgroundColor: "blue",
-  }
+
+
 
 })

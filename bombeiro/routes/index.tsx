@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Index from "../app/(tabs)";
 import Plano from "../app/(tabs)/plano";
-import Teste from "../app/(tabs)/teste";
 
 const Stack = createNativeStackNavigator()
 export default function Routes() {
@@ -17,13 +16,6 @@ export default function Routes() {
             <Stack.Screen
                 name="plano"
                 component={Plano}
-                options={{
-                    headerShown: false
-                }}
-            />
-            <Stack.Screen
-                name="teste"
-                component={Teste}
                 options={{
                     headerShown: false
                 }}
