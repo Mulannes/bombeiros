@@ -1,22 +1,40 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
-import Rec1 from "../components/RectangleIcon"
-import React from 'react'
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, Button, Linking } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+// import Rec1 from "../components/RectangleIcon"
+import React, { useState } from 'react'
+import page from "../../app/(tabs)/plano"
+
+// const [email , setEmail] = useState({value:"", error:""})
+// const [password , setPassword] = useState({value:"", error:""})
 
 export const Form = () => {
   return (
     <View style={Styles.container}>
       <View style={Styles.cube}>
-        <Rec1 />
-        <Image source={require('../../src/assets/images/Rectangle98.png')} style={Styles.rec2} resizeMode='cover' />
       </View>
+      <Image source={require('../../src/assets/images/Rectangle97.png')} style={[Styles.rec, Styles.rec1]} resizeMode='cover' />
+      <Image source={require('../../src/assets/images/Rectangle98.png')} style={[Styles.rec, Styles.rec2]} resizeMode='cover' />
       <View style={[Styles.card, Styles.shadowProp]}>
         <View>
           <Text style={Styles.heading}>
-            React Native Box Shadow (Shadow Props)
+          <TextInput
+          // label='Email'
+          // value={email.value}
+          // error={!!email.error}
+          // errorText={email.error}
+          // description={undefined}
+          />
+          <TextInput
+          // label='Password'
+          // value={password.value}
+          // error={!!password.error}
+          // errorText={password.error}
+          // description={undefined}
+          />
           </Text>
         </View>
         <Text>
-          Using the elevation style prop to apply box-shadow for iOS devices
+          Não tem uma conta? <Text style={Colors.blue} onPress={() => Linking.openURL(page.props.first)}>Clique Aqui!</Text>
         </Text>
       </View>
     </View>
@@ -27,6 +45,7 @@ const Styles = StyleSheet.create({
   container: {
     width: "100%",
     flex: 1,
+    position: "relative",
     alignItems: "center",
   },
   heading: {
@@ -50,7 +69,8 @@ const Styles = StyleSheet.create({
     shadowOpacity: 1,
     flex: 1,
     height: 371,
-    position: "relative",
+    position: "absolute",
+    bottom: 175,
   },
   shadowProp: {
     shadowColor: '#171717',
@@ -66,10 +86,23 @@ const Styles = StyleSheet.create({
     height: 321,
     zIndex: 0,
   },
-  rec2: {
-    width: "100%",
+  rec: {
+    flex: 1,
+    width: 182,
     height: 72,
     position: "absolute",
-    top: 0,
-  }
+    bottom: 319,
+    zIndex: -1,
+},
+  rec1: {
+    right: 0,
+  },
+  rec2: {
+    left: 0,
+  },
 });
+const Colors = StyleSheet.create({
+  blue: {
+    color: "#33338D"
+  }
+})
