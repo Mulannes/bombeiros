@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Form } from '../../src/components/form'
 import { useNavigation } from '@react-navigation/native'
@@ -8,13 +8,13 @@ import { RootStackParamList } from '../../routes'
 
 type RouteProps = NativeStackScreenProps<RootStackParamList>;
 
-export default function Index({ navigation }:RouteProps) {
+export default function Index({ navigation }: RouteProps) {
   return (
     <View style={Styles.container}>
       <DisplayAnImage />
       <Form />
       <TouchableOpacity style={Styles.touch} onPress={() => {
-          navigation.navigate("plano")
+        navigation.navigate("plano")
       }}>
         <Text>Next</Text>
       </TouchableOpacity>
@@ -34,6 +34,8 @@ const Styles = StyleSheet.create({
     width: 30,
     height: 30,
     backgroundColor: "red",
+    position: "absolute",
+    bottom: 0,
   },
-  
+
 })

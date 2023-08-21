@@ -1,8 +1,7 @@
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, Button, Linking } from 'react-native'
+import { View, Text, StyleSheet, Image, TextInput } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-// import Rec1 from "../components/RectangleIcon"
 import React, { useState } from 'react'
-import page from "../../app/(tabs)/plano"
+import { FlexBtn } from "../components/flexBtn"
 
 // const [email , setEmail] = useState({value:"", error:""})
 // const [password , setPassword] = useState({value:"", error:""})
@@ -17,25 +16,24 @@ export const Form = () => {
       <View style={[Styles.card, Styles.shadowProp]}>
         <View>
           <Text style={Styles.heading}>
-          <TextInput
-          // label='Email'
-          // value={email.value}
-          // error={!!email.error}
-          // errorText={email.error}
-          // description={undefined}
-          />
-          <TextInput
-          // label='Password'
-          // value={password.value}
-          // error={!!password.error}
-          // errorText={password.error}
-          // description={undefined}
-          />
+            <TextInput
+              placeholder="Email"
+
+            // value={email.value}
+            // error={!!email.error}
+            // errorText={email.error}
+            // description={undefined}
+            />
+            <TextInput
+            // label='Password'
+            // value={password.value}
+            // error={!!password.erro-r}
+            // errorText={password.error}
+            // description={undefined}
+            />
           </Text>
         </View>
-        <Text>
-          Não tem uma conta? <Text style={Colors.blue} onPress={() => Linking.openURL(page.props.first)}>Clique Aqui!</Text>
-        </Text>
+        <FlexBtn />
       </View>
     </View>
   )
@@ -69,6 +67,7 @@ const Styles = StyleSheet.create({
     shadowOpacity: 1,
     flex: 1,
     height: 371,
+    alignItems: "center",
     position: "absolute",
     bottom: 175,
   },
@@ -93,13 +92,16 @@ const Styles = StyleSheet.create({
     position: "absolute",
     bottom: 319,
     zIndex: -1,
-},
+  },
   rec1: {
     right: 0,
   },
   rec2: {
     left: 0,
   },
+  inputs: {
+    backgroundColor: "transparent",
+  }
 });
 const Colors = StyleSheet.create({
   blue: {
