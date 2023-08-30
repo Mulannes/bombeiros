@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity,  } from 'react-native'
 import React from 'react'
 import { Form } from '../../src/components/form'
-import { useNavigation } from '@react-navigation/native'
 import { DisplayAnImage } from '../../src/components/imageBgLog'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { RootStackParamList } from '../../routes'
@@ -13,11 +12,11 @@ export default function Index({ navigation }: RouteProps) {
     <View style={Styles.container}>
       <DisplayAnImage />
       <Form />
-      <TouchableOpacity style={Styles.touch} onPress={() => {
+      {/* <TouchableOpacity style={Styles.touch} onPress={() => {
         navigation.navigate("plano")
       }}>
         <Text>Next</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   )
 }

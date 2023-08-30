@@ -5,7 +5,7 @@ import React from 'react'
 
 export type RootStackParamList = {
   index: undefined;
-  plano: undefined;
+  Plano: undefined;
 };
 
 const Stack = createNativeStackNavigator()
@@ -20,7 +20,7 @@ export default function Routes() {
                 }}
             />
             <Stack.Screen
-                name="plano"
+                name="Plano"
                 component={Plano}
                 options={{
                     headerShown: false

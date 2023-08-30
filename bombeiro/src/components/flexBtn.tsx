@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, } from 'react-native'
 import React from 'react'
 
-
 const Styles = StyleSheet.create({
     textBtn: {
         textAlign: "center",
@@ -19,9 +18,9 @@ const Styles = StyleSheet.create({
 export const FlexBtn = () => {
     return (
         <View>
-            <TouchableOpacity style={Styles.containerBtn}>
+            <View style={Styles.containerBtn} >
                 <Text style={Styles.textBtn}>Entrar</Text>
-            </TouchableOpacity>
+            </View>
         </View>
     )
 }

@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import { FlexBtn } from "../components/flexBtn";
+import { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { RootStackParamList } from '../../routes'
+import { useNavigation } from '@react-navigation/native';
+
+type RouteProps = NativeStackScreenProps<RootStackParamList>;
+
 
 // const [email , setEmail] = useState({value:"", error:""})
 // const [password , setPassword] = useState({value:"", error:""})
 
 export const Form = () => {
-  
+  const navigation = useNavigation()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
@@ -34,7 +40,7 @@ export const Form = () => {
             />
             <Text style={Styles.forgotPsw}>Esqueceu sua senha?</Text>
         </View>
-        <FlexBtn />
+        <TouchableOpacity onPress={() => navigation.navigate("Plano")}><FlexBtn /></TouchableOpacity>
       </View>
     </View>
   )
