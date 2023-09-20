@@ -23,8 +23,10 @@ const Styles = StyleSheet.create({
         
     },
     touch:{
-        width: 300,
-        height: 300,
+        position: "absolute",
+        bottom: 0,
+        width: 40,
+        height: 40,
         backgroundColor: "red"
     }
     
