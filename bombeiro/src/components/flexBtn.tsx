@@ -8,6 +8,7 @@ const Styles = StyleSheet.create({
         color: "#fff"
     },
     containerBtn: {
+        marginTop: 36,
         backgroundColor: "#c21219",
         width: 200,
         justifyContent: "center",

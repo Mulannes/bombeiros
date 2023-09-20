@@ -25,20 +25,19 @@ export const Form = () => {
         <View>
           <Text style={Styles.heading}>Email:</Text>
           <TextInput 
-              placeholder="Email"
+              placeholder="Digite seu Email"
               style={Styles.input}
               value={email}
               onChangeText={(text) => setEmail(text)}
             />
             <Text style={Styles.heading}>Senha:</Text>
             <TextInput
-              placeholder="Password"
+              placeholder="Digite sua Senha"
               style={Styles.input}
               value={password}
               onChangeText={(text) => setPassword(text)}
               secureTextEntry={true}
             />
-            <Text style={Styles.forgotPsw}>Esqueceu sua senha?</Text>
         </View>
         <TouchableOpacity onPress={() => navigation.navigate("Plano")}><FlexBtn /></TouchableOpacity>
       </View>
@@ -56,8 +55,8 @@ const Styles = StyleSheet.create({
   heading: {
     fontSize: 18,
     fontWeight: '600',
-    marginBottom: 13,
-    color: 'rgba(0, 0, 0, 0.6)'
+    marginBottom: 8,
+    color: 'rgba(0, 0, 0, 0.9)'
   },
   card: {
     backgroundColor: 'white',
@@ -68,13 +67,13 @@ const Styles = StyleSheet.create({
     shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: {
       width: 4,
-      height: 4
+      height: 4,
     },
     shadowRadius: 10,
     elevation: 10,
     shadowOpacity: 1,
     flex: 1,
-    height: 371,
+    height: 300,
     textAlign: "center",
     alignItems: "center",
     position: "absolute",
