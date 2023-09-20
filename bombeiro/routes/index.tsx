@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Index from "../app/(tabs)";
-import Plano from "../app/(tabs)/plano";
+import Plano from "../app/(tabs)/home";
 import React from 'react'
 
 export type RootStackParamList = {
