@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 
-export default function doRegister() {
+export default function register() {
   return (
     <View style={Styles.container}>
         <Text></Text>
