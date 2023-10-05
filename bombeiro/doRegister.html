@@ -22,10 +22,37 @@
           </h2>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              <div class="row">
+                <div class="col-1">
+                  <input id="date" type="date" />
+                </div><div class="col-4"></div>
+                <div class="col-auto">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefaultM">
+                    <label class="form-check-label" for="flexRadioDefaultM">
+                        Masculino
+                    </label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefaultF">
+                    <label class="form-check-label" for="flexRadioDefaultF">
+                        Feminino
+                    </label></div>
+              </div><div class="row">
+                  <div class="col">
+                  <input type="text" class="form-control" placeholder="Nome do hospital:" aria-label="nomeH"></div></div>
+              
+              
+              <div class="row">
+                <div class="col-8">
+                <input type="text" class="form-control" placeholder="Nome:" aria-label="nome"
+                    aria-describedby="basic-addon1"></div>
+                    <div class="col-4">
+                      <input type="number" class="form-control" placeholder="Idade:" aria-label="idade"
+                    aria-describedby="basic-addon1">
+                    </div>
+            </div>
             </div>
           </div>
         </div>
+    </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -34,76 +61,108 @@
           </h2>
           <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
             <div class="accordion-body">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Causado por animais
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Com meio de transporte
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Desmoronamento / Deslizamento
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Emergência médica
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Queda de altura 2M
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Tentativa de suicídio
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Queda própria altura
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Afogamento
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Agressão
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Atropelamento
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Choque elétrico
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Desabamento
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Doméstico
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Esportivo
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Intoxicação
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Queda bicicleta
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Queda moto
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Queda nivel > 2M
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Trabalho
-                    </label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Transferência
-                    </label>
+              <div class="container">
+                <div class="row">
+                    <div class="col-auto">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
+                        Causado por animais
+                    </label></div>
+                    <div class="col-auto"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                    <label class="form-check-label" for="flexCheckDefault1">
+                        Com meio de transporte
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                    <label class="form-check-label" for="flexCheckDefault2">
+                        Desmoronamento / Deslizamento
+                    </label></div>
+                    <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                    <label class="form-check-label" for="flexCheckDefault3">
+                        Emergência médica
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                    <label class="form-check-label" for="flexCheckDefault4">
+                        Queda de altura 2M
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                    <label class="form-check-label" for="flexCheckDefault5">
+                        Tentativa de suicídio
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+                    <label class="form-check-label" for="flexCheckDefault6">
+                        Queda própria altura
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+                    <label class="form-check-label" for="flexCheckDefault7">
+                        Afogamento
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8">
+                    <label class="form-check-label" for="flexCheckDefault8">
+                        Agressão
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9">
+                    <label class="form-check-label" for="flexCheckDefault9">
+                        Atropelamento
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault0">
+                    <label class="form-check-label" for="flexCheckDefault0">
+                        Choque elétrico
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
+                    <label class="form-check-label" for="flexCheckDefault10">
+                        Desabamento
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
+                    <label class="form-check-label" for="flexCheckDefault11">
+                        Doméstico
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
+                    <label class="form-check-label" for="flexCheckDefault12">
+                        Esportivo
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13">
+                    <label class="form-check-label" for="flexCheckDefault13">
+                        Intoxicação
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14">
+                    <label class="form-check-label" for="flexCheckDefault14">
+                        Queda bicicleta
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15">
+                    <label class="form-check-label" for="flexCheckDefault15">
+                        Queda moto
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16">
+                    <label class="form-check-label" for="flexCheckDefault16">
+                        Queda nivel > 2M
+                    </label></div></div><div class="row">
+                      <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault17">
+                    <label class="form-check-label" for="flexCheckDefault17">
+                        Trabalho
+                    </label></div><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault18">
+                    <label class="form-check-label" for="flexCheckDefault18">
+                        Transferência
+                    </label></div></div><div class="row"><div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault19">
+                    <label class="form-check-label" for="flexCheckDefault19">
                       <textarea class="form-control" aria-label="Área de texto"></textarea>
-                    </label>
+                    </label></div></div>
+                  
+                  </div>
+                </div>
             </div>
             </div>
-            </div>
-          </div>
-        </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
@@ -111,8 +170,21 @@
             </button>
           </h2>
           <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="accordion-body" style="padding: 0;">
+              <div class="row justify-content-center fs-4">Nivel de consciência</div>
+              <div class="row h-auto" style="font-size: 12px;"><div class="col-2">Abertura ocular</div>
+              <div class="col-5">Maiores de 5 anos <br><div class="col-auto">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20">
+                <label class="form-check-label" for="flexCheckDefault20">
+                    Espontânea
+                </label></div>
+                <div class="col-auto">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20">
+                  <label class="form-check-label" for="flexCheckDefault20">
+                      Comando Verbal
+                  </label></div></div>
+              <div class="col-5">Menores de 5 anos <br></div>
+            </div>
             </div>
           </div>
         </div>
