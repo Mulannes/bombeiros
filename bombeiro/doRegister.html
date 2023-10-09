@@ -13,7 +13,7 @@
             <p class="display-1">Ocorrência</p>
           </div>
         </div>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -45,13 +45,35 @@
                 <input type="text" class="form-control" placeholder="Nome:" aria-label="nome"
                     aria-describedby="basic-addon1"></div>
                     <div class="col-4">
-                      <input type="number" class="form-control" placeholder="Idade:" aria-label="idade"
+                <input type="number" class="form-control" placeholder="Idade:" aria-label="idade"
                     aria-describedby="basic-addon1">
                     </div>
-            </div>
+                  <div class="col-8">
+                  <input type="number" name="cpf" 
+                    pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+                    placeholder="CPF paciente:" class="form-control"></div>
+                <div class="col-4">
+                  <input type="number" name="fone" \
+                    placeholder="Fone:" class="form-control"></div>
+              </div>
+
+              <div class="row">
+                  <div class="col-8">
+                  <input type="text" name="acompanhante" class="form-control" placeholder="Acompanhante:"></div>
+                <div class="col-4">
+                  <input type="number" class="form-control" placeholder="Idade:" aria-label="idade"
+                      aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" name="localdeocorrencia" class="form-control" placeholder="Local de ocorrência:">
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
@@ -172,19 +194,106 @@
           <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
             <div class="accordion-body" style="padding: 0;">
               <div class="row justify-content-center fs-4">Nivel de consciência</div>
-              <div class="row h-auto" style="font-size: 12px;"><div class="col-2">Abertura ocular</div>
-              <div class="col-5">Maiores de 5 anos <br><div class="col-auto">
+              <div class="row h-auto" style="font-size: 12px;"><div class="col-2 text-center">Abertura ocular</div>
+              <div class="col-5">Maiores de 5 anos <br>
+                <div class="col-auto">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20">
                 <label class="form-check-label" for="flexCheckDefault20">
                     Espontânea
                 </label></div>
                 <div class="col-auto">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20">
-                  <label class="form-check-label" for="flexCheckDefault20">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault21">
+                  <label class="form-check-label" for="flexCheckDefault21">
                       Comando Verbal
-                  </label></div></div>
-              <div class="col-5">Menores de 5 anos <br></div>
-            </div>
+                  </label></div>
+                <div class="col-auto">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault22">
+                  <label class="form-check-label" for="flexCheckDefault22">
+                      Estímulo Doloroso
+                  </label></div>
+                <div class="col-auto">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault23">
+                  <label class="form-check-label" for="flexCheckDefault23">
+                      Nenhuma
+                  </label></div>
+                </div>
+                <div class="col-5">Menores de 5 anos <br>
+                  <div class="col-auto">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault24">
+                  <label class="form-check-label" for="flexCheckDefault24">
+                      Espontânea
+                  </label></div>
+                  <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault25">
+                    <label class="form-check-label" for="flexCheckDefault25">
+                        Comando Verbal
+                    </label></div>
+                  <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault26">
+                    <label class="form-check-label" for="flexCheckDefault26">
+                        Estímulo Doloroso
+                    </label></div>
+                  <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault27">
+                    <label class="form-check-label" for="flexCheckDefault27">
+                        Nenhuma
+                    </label></div>
+                  </div></div>
+                  <div class="row h-auto" style="font-size: 12px;"><div class="col-2 text-center">Resposta verbal</div><div class="col-5">
+                    <div class="col-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault28">
+                    <label class="form-check-label" for="flexCheckDefault28">
+                        Orientado
+                    </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault29">
+                      <label class="form-check-label" for="flexCheckDefault29">
+                          Confuso
+                      </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault30">
+                      <label class="form-check-label" for="flexCheckDefault30">
+                          Palavras inapropriadas
+                      </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault31">
+                      <label class="form-check-label" for="flexCheckDefault31">
+                        Palavras incompreensível
+                      </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault32">
+                      <label class="form-check-label" for="flexCheckDefault32">
+                        Nenhuma
+                      </label></div>
+                    </div>
+                    <div class="col-5">
+                      <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault33">
+                      <label class="form-check-label" for="flexCheckDefault33">
+                        Palavras e frases apropriadas
+                      </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault34">
+                      <label class="form-check-label" for="flexCheckDefault34">
+                        Palavras inapropriadas
+                      </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault35">
+                      <label class="form-check-label" for="flexCheckDefault35">
+                        Choro persistente ou gritos
+                      </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault36">
+                      <label class="form-check-label" for="flexCheckDefault36">
+                        Sons incompreensível
+                      </label></div>
+                    <div class="col-auto">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault37">
+                      <label class="form-check-label" for="flexCheckDefault37">
+                        Nenhuma resposta verbal  
+                      </label></div>
+                    </div>
+                  </div>
             </div>
           </div>
         </div>
