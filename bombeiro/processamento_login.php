@@ -1,20 +1,30 @@
 <?php
-        include('dbconnect.php'); /*arquivo de conexão com o bando de dados*/
+include('dbconnect.php');
 
-        if(isset($_POST['submit-button'])) {
-            $email = $_POST['email']; /*name do email-input*/
-            $senha = $_POST['senha']; /*name do password-input*/
-            
-            $sql = "SELECT email_usuario, senha_usuario FROM usuario WHERE email_usuario = '$email' && senha_usuario = '$senha'"; /*informações de tabela e campos de acordo como seu BD*/
-            $result = mysqli_query($conn, $sql);
-            
-            if (mysqli_num_rows($result) > 0) { 
-              header("Location: index.html"); /*local para onde deseja redirecionar o usuário*/
-            } else {
-                header("Location: login.html"); /*local para onde deseja redirecionar o usuário*/
-                /*echo "<script>document.querySelector('#form-text').innerText = 'E-mail ou senha inválidos'</script>";*/
-            }
-        }
+session_start();
+//verifica o formulário da tela de login
+// if($_SERVER["RESQUEST_METHOD"] == 'POST'){
+
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $sql = "SELECT * FROM usuario WHERE email_usuario = ? AND senha_usuario = ?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt -> bind_param('ss' ,$email,$senha);
+    $stmt ->execute();
+    $resultado = $stmt->get_result();
+
+    if($resultado->num_rows == 1) {
+        //login foi efetuado com sucesso
+        $_SESSION['email_usuario'] = $email;
+        header("Location: index.html");
+        exit();
         
-        mysqli_close($conn);
-    ?>
+    }else{
+        header("Location: login.php");
+        $error = "Credenciais inválidas. verificar seu email";
+    }
+// }
+$conn->close();
+?>
