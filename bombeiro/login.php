@@ -22,14 +22,14 @@
                             method="post">
                             <div class="d-flex flex-column h-25">
                                 Email:
-                                <input class="mt-1 shadow-lg bg-white border-0" type="text" name="usuario" placeholder="Email"
+                                <input class="mt-1 bg-white border-0" type="text" name="email" placeholder="E-mail"
                                     required>
                             </div>
                             Senha:
-                            <input class="mt-1 shadow-lg bg-white border-0" type="password" name="senha" placeholder="Senha"
+                            <input class="mt-1 bg-white border-0" type="password" name="senha" placeholder="Senha"
                                 required>
-                            <div class="d-flex w-100 h-25 align-items-center justify-content-center">
-                                <button class="mt-3 shadow-lg border-0 bg-danger w-75 h-50 text-light" type="submit">Entrar</button>
+                            <div class="d-flex justify-content-center">
+                                <button class="mt-3 border-0 bg-danger rounded-pill" type="submit">Acessar</button>
                             </div>
                         </form>
                     </div>
