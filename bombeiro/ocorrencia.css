@@ -1,0 +1,9 @@
+.borda{
+    border: 2px solid gainsboro;
+    border-radius: 20px;
+}
+
+.btn-group{
+    margin-bottom: 15px;
+    height: 30px;
+}
