@@ -20,6 +20,12 @@
                     <div class="login-container w-75 h-75 bg-white rounded-4">
                         <form class="w-100 h-100 d-flex flex-column justify-content-around p-4" action="processamento_login.php"
                             method="post">
+                            <h2 class="row justify-content-center align-items-center">Login</h2>
+
+                            	<?php if (isset($_GET['error'])) { ?>
+     		                        <p class="error"><?php echo $_GET['error']; ?></p>
+     	                        <?php } ?>
+                                
                             <div class="d-flex flex-column h-25">
                                 Email:
                                 <input class="mt-2 shadow-lg bg-white border-0" type="text" name="email" placeholder="E-mail"
