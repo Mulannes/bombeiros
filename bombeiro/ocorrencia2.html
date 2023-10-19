@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conta</title>
+    <title>Finalizar Ocorrência</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="conta.css">
+    <link rel="stylesheet" href="ocorrencia2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -22,7 +22,7 @@
                             data-bs-target="#offcanvasNav">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <img src="../bombeiro/images/botãologin.png">
+                        <a href="../bombeiro/conta.html"><img src="../bombeiro/images/botãologin.png"></a>
                     </div>
                 </nav>
                 <div class="offcanvas offcanvas-start" id="offcanvasNav">
@@ -41,7 +41,7 @@
                                 <a class="nav-link" href="../bombeiro/registro.html">Ver Registro</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../bombeiro/ocorrencia.html">Fazer Registro</a>
+                                <a class="nav-link" href="../bombeiro/conta.html">Conta</a>
                             </li>
                         </ul>
                     </div>
@@ -50,48 +50,35 @@
 
             </div>
         </header>
-        <div class="container d-flex justify-content-around align-items-center p-4">
-            <img src="../bombeiro/images/perfil.png">
-            <p class="h1">Alice Beltrane</p>
-        </div>
-        <div class="container d-flex w-100 h-100">
-            <div class="container rounded d-flex flex-column align-items-center justify-content-center"
-                style="height:100px; width:45%; background-color: #DEDADA;">
-                <h1 class="d-flex align-items-center justify-content-around">9</h1>
-                <p class="d-flex justify-content-around text-muted">Registros Realizados</p>
-            </div>
-            <div class="container rounded d-flex flex-column align-items-center justify-content-center"
-                style="height:100px; width:45%; background-color: #DEDADA;">
-                <h1 class="d-flex justify-content-around">2</h1>
-                <p class="d-flex justify-content-around text-muted">Em andamento</p>
-            </div>
+
+        <div class="container-fluid">
+            <div class="row text">
+                <div class="col-lg">
+                    <p class="display-1"><b>Ocorrência</b></p>
+                  </div>
+                </div>
+                
+        <div class="container rounded p-5"
+            style="background-color: #33338D; width: 90%; height: 300px;">
+            <div class="container" style="height: 50px; width: 100%;">
+                <h1 class="text-light text-center">Você deseja finalizar o registro da ocorrência?</h1></div>
+                <h6 class="text-light text-center" style="margin-top: 140px;">Você pode voltar depois e edita-lo novamente.</h6>
         </div>
 
-        <a href="#" class="text-decoration-none text-dark">
-            <div class="container rounded d-flex align-items-center mt-3"
-            style="background-color: #DEDADA; width: 90%; height: 50px;">
-            <img src="images/Vector.png" alt="">
-            <div class="container" style="height: 50px; width: 100%;"><b
-            class="h-100 d-flex align-items-center">Informações da conta</b></div>
+        <a href="#" class="text-decoration-none text-light">
+            <div class="container rounded mt-3"
+            style="background-color: #33338D; width: 90%; height: 50px;">
+            <div class="container d-flex align-items-center justify-content-center" style="height: 50px; width: 100%;">
+                <b class="h3">Voltar</b></div>
             </div>
         </a>
 
-        <a href="" class="text-decoration-none text-dark">
-            <div class="container rounded d-flex align-items-center mt-3" 
-            style="background-color: #DEDADA; width: 90%; height: 50px;">
-            <img src="images/suporte.png" alt="">
-            <div class="container" style="height: 50px; width: 100%;"><b
-                class="h-100 d-flex align-items-center">Suporte</b></div>
-            </div>
-        </a>
-
-        <a href="" class="text-decoration-none text-dark">
-            <div class="container rounded d-flex align-items-center mt-3" 
-            style="background-color: #DEDADA; width: 90%; height: 50px;">
-            <img src="images/sair.png" alt="">
-            <div class="container" style="height: 50px; width: 100%;"><b
-                class="h-100 d-flex align-items-center text-danger">Sair</b></div>
-            </div>
+        <a href="#" class="text-decoration-none text-light">
+            <div class="container rounded mt-3"
+            style="background-color: #078F0D; width: 90%; height: 50px;">
+            <div class="container d-flex align-items-center justify-content-center" style="height: 50px; width: 100%;">
+                <b class="h3">Continuar</b></div>
+            </div> 
         </a>
 <br>
         <ul class="nav nav-pills nav-justified">
@@ -112,5 +99,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
-
 </body>
+
+</html>
