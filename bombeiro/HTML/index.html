@@ -5,16 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/bombeiro/CSS/index.css">
+    <link rel="stylesheet" href="../CSS/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="/bombeiro/components/nav-pills.js"></script>
-    <script src="/bombeiro/components/navbar.js"></script>
+    <script src="../components/nav-pills.js"></script>
+    <script src="../components/navbar.js"></script>
 </head>
 
 <body>
     <div class="container-fluid m-0 p-0">
-        <navbar-1></navbar-1>
+        <header>
+            <div class="d-lg-none">
+
+                <nav class="navbar">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a href="../HTML/conta.html"><img src="../images/botãologin.png"></a>
+                    </div>
+                </nav>
+                <div class="offcanvas offcanvas-start" id="offcanvasNav">
+
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Fechar"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/ocorrencia.html">Fazer Registro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/registro.html">Registro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/conta.html">Conta</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
         <div class="container-fluid">
             <div class="row text">
                 <div class="col-lg">
@@ -54,7 +90,7 @@
                 </div>
                 <div class="carousel-inner" data-bs-ride="carousel">
                     <div class="carousel-item active"onclick="window.location.href='informacoes.html'">
-                        <img src="/bombeiro/images/red.png" class="d-block w-100">
+                        <img src="../images/red.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Menu</h5>
                             <p>Veja as informações<br>
@@ -62,7 +98,7 @@
                         </div>
                     </div>
                     <div class="carousel-item"onclick="window.location.href='doRegister.html'">
-                        <img src="/bombeiro/images/blue.png" class="d-block w-100">
+                        <img src="../images/blue.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Fazer Registro</h5>
                             <p>Faça o registro de sua<br>
@@ -70,7 +106,7 @@
                         </div>
                     </div>
                     <div class="carousel-item"onclick="window.location.href='registro.html'">
-                        <img src="/bombeiro/images/green.png" class="d-block w-100">
+                        <img src="../images/green.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Ver Registro</h5>
                             <p>Veja todos os registros<br>
@@ -81,7 +117,21 @@
             </div>
             <br>
             <br>
-            <navpills-1></navpills-1>
+
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <img src="../images/home.png" class="rounded mx-auto d-block">
+                    <a class="nav-link active" aria-current="page" href="../HTML/index.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <img src="../images/fazerregistro.png" class="rounded mx-auto d-block">
+                    <a class="nav-link" href="../HTML/ocorrencia.html">Fazer Registro</a>
+                </li>
+                <li class="nav-item">
+                    <img src="../images/registro.png" class="rounded mx-auto d-block">
+                    <a class="nav-link" href="../HTML/registro.html">Registros</a>
+                </li>
+            </ul>
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
