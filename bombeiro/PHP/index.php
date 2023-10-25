@@ -10,6 +10,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="../components/nav-pills.js"></script>
     <script src="../components/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
@@ -138,6 +139,34 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
 
+<?php
+            // Inicia a sessão
+            session_start();
+        
+            // Verifica se há uma mensagem de popup na sessão
+            if (isset($_SESSION['popup_msg'])) {
+                $popup_msg = $_SESSION['popup_msg'];
+                unset($_SESSION['popup_msg']);
+        
+                // Exibe o popup de boas-vindas personalizado
+                echo '<script>
+                    Swal.fire({
+                        icon: "success",
+                        title: "Bem-vindo(a)!",
+                        text: "' . $popup_msg . '",
+                        timer: 3000, // 3 segundos
+                        showConfirmButton: false,
+                        customClass: {
+                            popup: "swal-custom-popup",
+                            title: "swal-custom-title",
+                            content: "swal-custom-content"
+                        }
+                    });
+                </script>';
+            }
+            ?>
+
 </body>
+
 
 </html>
