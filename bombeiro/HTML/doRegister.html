@@ -26,6 +26,7 @@
   </head>
 <body>
   <div class="container-fluid">
+    <form action="">
     <div class="row text">
         <div class="col-lg">
             <p class="display-1">Ocorrência</p>
@@ -42,7 +43,7 @@
             <div class="accordion-body">
               <div class="row">
                 <div class="col-1">
-                  <input id="date" type="date" />
+                  <input id="date" type="date" required/>
                 </div><div class="col-4"></div>
                 <div class="col-auto">
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefaultM">
@@ -55,13 +56,13 @@
                     </label></div>
               </div><div class="row">
                   <div class="col">
-                  <input type="text" class="form-control" placeholder="Nome do hospital:" aria-label="nomeH"></div></div>
+                  <input type="text" class="form-control" placeholder="Nome do hospital:" aria-label="nomeH" required></div></div>
               
               
               <div class="row">
                 <div class="col-8">
                 <input type="text" class="form-control" placeholder="Nome:" aria-label="nome"
-                    aria-describedby="basic-addon1"></div>
+                    aria-describedby="basic-addon1" required></div>
                     <div class="col-4">
                 <input type="number" class="form-control" placeholder="Idade:" aria-label="idade"
                     aria-describedby="basic-addon1">
@@ -92,7 +93,6 @@
           </div>
         </div>
       </div>
-    </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -201,7 +201,7 @@
           <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
             <div class="accordion-body" style="padding: 0;">
               <div class="row justify-content-center fs-4">Nivel de consciência</div>
-              <div class="row h-auto" style="font-size: 12px;"><div class="col-2 text-center">Abertura ocular</div>
+              <div class="row h-auto" style="font-size: 12px;"><div class="col-2 w-10" style="rotate: 90deg; font-size: 16px; font-family: 'Courier New', Courier, monospace; padding-bottom: 20px; height: 50px;">Abertura ocular</div>
               <div class="col-5">Maiores de 5 anos <br>
                 <div class="col-auto">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20">
@@ -246,7 +246,8 @@
                         Nenhuma
                     </label></div>
                   </div></div>
-                  <div class="row h-auto" style="font-size: 12px;"><div class="col-2 text-center">Resposta verbal</div><div class="col-5">
+                  <hr>
+                  <div class="row h-auto" style="font-size: 12px;"><div class="col-2 w-10" style="rotate: 90deg; font-size: 16px; font-family: 'Courier New', Courier, monospace; padding-bottom: 20px; height: 50px;">Resposta verbal</div><div class="col-5">
                     <div class="col-auto">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault28">
                     <label class="form-check-label" for="flexCheckDefault28">
@@ -260,12 +261,12 @@
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault30">
                       <label class="form-check-label" for="flexCheckDefault30">
-                          Palavras inapropriadas
+                          Palavras <br>inapropriadas
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault31">
                       <label class="form-check-label" for="flexCheckDefault31">
-                        Palavras incompreensível
+                        Palavras <br>incompreensível
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault32">
@@ -277,35 +278,36 @@
                       <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault33">
                       <label class="form-check-label" for="flexCheckDefault33">
-                        Palavras e frases apropriadas
+                        Palavras e frases <br>apropriadas
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault34">
                       <label class="form-check-label" for="flexCheckDefault34">
-                        Palavras inapropriadas
+                        Palavras <br>inapropriadas
                       </label></div>
                     <div class="col-auto">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault35">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault35" placeholder="1">
                       <label class="form-check-label" for="flexCheckDefault35">
-                        Choro persistente ou gritos
+                        Choro persistente <br>ou gritos
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault36">
                       <label class="form-check-label" for="flexCheckDefault36">
-                        Sons incompreensível
+                        Sons <br>incompreensível
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault37">
                       <label class="form-check-label" for="flexCheckDefault37">
-                        Nenhuma resposta verbal  
+                        Nenhuma resposta <br>verbal  
                       </label></div>
                     </div>
                   </div>
-                  <div class="row h-auto" style="font-size: 12px;"><div class="col-2 text-center">Resposta motora</div><div class="col-4">
+                  <hr>
+                  <div class="row h-auto" style="font-size: 12px;"><div class="col-2 w-10" style="rotate: 90deg; font-size: 16px; font-family: 'Courier New', Courier, monospace; padding-bottom: 20px; height: 50px;">Resposta motora</div><div class="col-4 p-0">
                     <div class="col-auto">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault38">
                     <label class="form-check-label" for="flexCheckDefault38">
-                        obedece comandos
+                        Obedece <br>comandos
                     </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault39">
@@ -315,7 +317,7 @@
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault40">
                       <label class="form-check-label" for="flexCheckDefault40">
-                          Movimento de retirada
+                          Movimento de <br>retirada
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault41">
@@ -333,7 +335,7 @@
                         Nenhuma
                       </label></div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 p-0">
                       <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault44">
                       <label class="form-check-label" for="flexCheckDefault44">
@@ -342,27 +344,27 @@
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault45">
                       <label class="form-check-label" for="flexCheckDefault45">
-                        Localiza dor ou estímulo tatil
+                        Localiza dor ou <br>estímulo tatil
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault46">
                       <label class="form-check-label" for="flexCheckDefault46">
-                        Retirada do segmento estímulado
+                        Retirada do segmento <br>estímulado
                       </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault47">
                       <label class="form-check-label" for="flexCheckDefault47">
-                        Flexão anormal (decorticação)
+                        Flexão anormal <br>(decorticação)
                       </label></div>
                       <div class="col-auto">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault48">
                         <label class="form-check-label" for="flexCheckDefault48">
-                          Extensão anormal (decerfração)
+                          Extensão anormal <br>(decerfração)
                         </label></div>
                     <div class="col-auto">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault49">
                       <label class="form-check-label" for="flexCheckDefault49">
-                        Ausência pararela flácida  
+                        Ausência pararela <br>flácida  
                       </label></div>
                     </div>
                   </div>
@@ -425,7 +427,7 @@
             <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
               <div class="accordion-body">
                 <div class="row" style="height: 125px; font-size: 12px; align-items: center; ">
-                  <div class="col-4"><input class="form-check-input" type="checkbox" name="Psiquiátrico" id="Psiquiátrico">
+                  <div class="col-3"><input class="form-check-input" type="checkbox" name="Psiquiátrico" id="Psiquiátrico">
                     <label class="form-check-label" for="Psiquiátrico">
                         Psiquiátrico
                     </label></div>
@@ -433,7 +435,7 @@
                     <label class="form-check-label" for="Obstérico">
                         Obstérico
                     </label></div>
-                    <div class="col-5"><input class="form-check-input" type="checkbox" name="PartoEmergencial" id="PartoEmergencial" style="display: block;">
+                    <div class="col-6"><input class="form-check-input" type="checkbox" name="PartoEmergencial" id="PartoEmergencial" style="display: block;">
                       <label class="form-check-label" for="PartoEmergencial">
                           Parto Emergencial
                       </label><input class="form-check-input" type="checkbox" name="Gestante" id="Gestante"style="display: block;">
@@ -468,32 +470,32 @@
                         Hipoglicemia
                       </label></div>
                   </div>
-                  <div class="row"style="height: 150px; font-size: 12px; align-items: center; ">
-                  <div class="col-6"><input class="form-check-input" type="checkbox" name="Transporte" id="Transporte">
+                  <div class="row"style="height: 180px; font-size: 12px; align-items: center; ">
+                  <div class="col-3"><input class="form-check-input" type="checkbox" name="Transporte" id="Transporte">
                     <label class="form-check-label" for="Transporte">
                       Transporte
                     </label></div>
-                  <div class="col-6" style="position: relative;"><input class="form-check-input" type="checkbox" name="Aereo" id="Aereo"style="display: block;">
+                  <div class="col-9" style="position: relative;"><input class="form-check-input" type="checkbox" name="Aereo" id="Aereo"style="display: block;">
                     <label class="form-check-label" for="Aereo"style="position: absolute; top: 0;left: 32px;">
                       Aéreo
                     </label><input class="form-check-input" type="checkbox" name="Clinico" id="Clinico"style="display: block;">
-                    <label class="form-check-label" for="Clinico"style="position: absolute; top: 15px;left: 32px;">
+                    <label class="form-check-label" for="Clinico"style="position: absolute; top: 20px;left: 32px;">
                       Clínico
                     </label><input class="form-check-input" type="checkbox" name="Emergencial" id="Emergencial"style="display: block;">
-                    <label class="form-check-label" for="Emergencial"style="position: absolute; top: 30px;left: 32px;">
+                    <label class="form-check-label" for="Emergencial"style="position: absolute; top: 40px;left: 32px;">
                       Emergencial
                     </label><input class="form-check-input" type="checkbox" name="potrauma" id="potrauma"style="display: block;">
-                    <label class="form-check-label" for="potrauma"style="position: absolute; top: 45px;left: 32px;">
+                    <label class="form-check-label" for="potrauma"style="position: absolute; top: 60px;left: 32px;">
                       Pós-trauma
                     </label><input class="form-check-input" type="checkbox" name="Samu" id="Samu"style="display: block;">
-                    <label class="form-check-label" for="Samu"style="position: absolute; top: 60px;left: 32px;">
+                    <label class="form-check-label" for="Samu"style="position: absolute; top: 80px;left: 32px;">
                       Samu
                     </label><input class="form-check-input" type="checkbox" name="Outros" id="Outros"style="display: block;">
-                    <label class="form-check-label" for="Outros"style="position: absolute; top: 75px;left: 32px;">
+                    <label class="form-check-label" for="Outros"style="position: absolute; top: 100px;left: 32px;">
                       Outros
                     </label><input type="text" class="form-control">
                     <input class="form-check-input" type="checkbox" name="noRemocao" id="noRemocao"style="display: block;">
-                    <label class="form-check-label" for="noRemocao"style="position: absolute; top: 126px;left: 32px;">
+                    <label class="form-check-label" for="noRemocao"style="position: absolute; top: 158px;left: 32px;">
                       Sem remoção
                     </label></div>
                   </div>
@@ -1274,7 +1276,7 @@
                   CIT
               </label></div>
               <div class="row"style="position: relative; display: flex; align-items: center;height: 46px;">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault50">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault155">
                 <input type="text" name="outrosMeios" class="form-control" style="width: 200px; margin-left: 25px;">
                 </div>
           </div>
@@ -1287,42 +1289,122 @@
           </button>
         </h2>
         <div id="panelsStayOpen-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThirteen">
-          <div class="accordion-body" style="display: flex;align-items: center;" >
-            <div class="row" style="height: 400px;">
-              <div class="col-4 "style="padding: 0; display: flex;flex-direction: column;align-items: center;position: relative;">Material <br>
-               <p style="position: absolute; top: 30px;"> Ataduras </p><br>
-               <p style="position: absolute; top: 75px;"> Cateter TP. Ocúlos </p><br>
-               <p style="position: absolute; top: 135px;"> Compressa comum </p><br>
-               <p style="position: absolute; top: 210px;"> Kit's </p><br>
-               <p style="position: absolute; top: 260px;"> Luvas desc. (Pares) </p><br>
-               <p style="position: absolute; top: 330px;"> Máscara desc. </p>
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-4">Material</div>
+              <div class="col-2">Quant</div>
+              <div class="col-4">Material</div>
+              <div class="col-2">Quant</div>
+            </div>
+            <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
+              <div class="col-4" style="position: relative;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault156" style="display: block; ">
+              <label class="form-check-label" for="flexCheckDefault156" style="position: absolute; top: 0;left: 32px;">
+                  Ataduras
+              </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant15" class="form-control" style="width: 80%;padding: 5px;">
               </div>
-              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">Quant <br>
-                <input type="text" name="Quant1" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant2" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant3" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant4" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant5" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant6" class="form-control" style="width: 80%;padding: 5px;"><br>
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault157" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault157" style="position: absolute; top: -8px;left: 32px;">
+                  Manta aluminizada
+                </label></div>
+                <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                  <input type="text" name="Quant16" class="form-control" style="width: 80%;padding: 5px;">
+                </div>
+            </div>
+            <div class="row"style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault158" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault158" style="position: absolute; top: -8px;left: 32px;">
+                  Cateter TP. ocúlos
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant17" class="form-control" style="width: 80%;padding: 5px;">
               </div>
-              <div class="col-4"style="padding: 0; display: flex;flex-direction: column;align-items: center;position: relative;">Material <br>
-                <p style="position: absolute; top: 30px;"> Manta aluminizada </p><br>
-                <p style="position: absolute; top: 75px;"> Pás do DEA </p><br>
-                <p style="position: absolute; top: 135px;"> Sonda de aspiração </p><br>
-                <p style="position: absolute; top: 210px;"> Soro fisiológico </p><br>
-                <p style="position: absolute; top: 260px;"> Talas PAP. </p><br>
-                <p style="position: absolute; top: 330px;"> <input type="text" name="Quant6" class="form-control" style="width: 90%;padding: 5px;"> </p>
-               </div>
-              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">Quant <br>
-                <input type="text" name="Quant7" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant8" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant9" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant0" class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant11"class="form-control" style="width: 80%;padding: 5px;"><br>
-                <input type="text" name="Quant12"class="form-control" style="width: 80%;padding: 5px;"><br>
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault159" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault159" style="position: absolute; top: -0;left: 32px;">
+                  Pás do DEA
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant18" class="form-control" style="width: 80%;padding: 5px;">
               </div>
+            </div>
+            <div class="row"style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault160" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault160" style="position: absolute; top: -8px;left: 32px;">
+                  Compressa comum
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant19" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault161" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault161" style="position: absolute; top: -8px;left: 32px;">
+                  Sonda de aspiração
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant20" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+            </div>
+            <div class="row"style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault162" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault162" style="position: absolute; top: 0;left: 32px;">
+                  Kit's
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant21" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault163" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault163" style="position: absolute; top: -8px;left: 32px;">
+                  Soro fisiológico
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant22" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+            </div>
+            <div class="row"style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault164" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault164" style="position: absolute; top: -8px;left: 32px;">
+                  Luvas Desc. (Pares)
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant23" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault165" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault165" style="position: absolute; top: 0;left: 32px;">
+                  Talas PAP.
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant24" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+            </div>
+            <div class="row"style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault166" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault166" style="position: absolute; top: 0;left: 32px;">
+                  Máscara Desc
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant25" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+              <div class="col-4" style="position: relative;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault167" style="display: block; ">
+                <label class="form-check-label" for="flexCheckDefault167" style="position: absolute; top: -8px;left: 32px;">
+                  <input type="text" class="form-control" name="othersLeave1" id="">
+                </label></div>
+              <div class="col-2" style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
+                <input type="text" name="Quant26" class="form-control" style="width: 80%;padding: 5px;">
+              </div>
+            </div> 
           </div>
-        </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingFourteen">
@@ -1460,7 +1542,7 @@
             <div class="row" style="position: relative;height: 40px">Eu: <input type="text" name="" class="form-control" id="" style="width: 250px; position: absolute; right: 5px;"></div>
             <div class="row"style="position: relative;height: 40px">Portador da carteira de identidade RG Nº <input type="text" name="" class="form-control" id="" style="width: 100px; position: absolute; right: 5px;"></div>
             <div class="row"style="position: relative;height: 40px">Incrito no CPF sob nº <input type="text" name="" class="form-control" style="width: 100px; position: absolute; right: 5px;" id=""></div>
-            <div class="row" style="height:220px;">Na qualidade de vítima/Paciente, Usando dos direitos que a lei me garante, me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros voluntários de Guaramirim/SC, e assumo, individualmente a responsibilidade pelas consequências que possam ocorrer por razão da minha recusa. Declaro que fui devidamente informado sobre o procedimento pelo qual eu deveria me submeter e alertado sobre os riscos à saúde da sua não realização.</div>
+            <div class="row" style="height:260px;">Na qualidade de vítima/Paciente, Usando dos direitos que a lei me garante, me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros voluntários de Guaramirim/SC, e assumo, individualmente a responsibilidade pelas consequências que possam ocorrer por razão da minha recusa. Declaro que fui devidamente informado sobre o procedimento pelo qual eu deveria me submeter e alertado sobre os riscos à saúde da sua não realização.</div>
             <div class="row"style="position: relative; height: 40px;">Ass: </div>
             <div class="row"style="position: relative;height: 40px">Testemunha: <input type="text" name="" class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
             <div class="row"style="position: relative;height: 40px">Doc: <input type="text" name="" class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
@@ -1595,6 +1677,8 @@
           </div>
         </div>
       </div>
+      <input class="btn btn-primary" type="submit" value="Enviar" style="width: 100%;">
+    </form>
     </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
