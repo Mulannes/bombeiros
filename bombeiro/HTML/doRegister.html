@@ -1457,7 +1457,16 @@
         </h2>
         <div id="panelsStayOpen-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFifteen">
           <div class="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="row" style="position: relative;height: 40px">Eu: <input type="text" name="" class="form-control" id="" style="width: 250px; position: absolute; right: 5px;"></div>
+            <div class="row"style="position: relative;height: 40px">Portador da carteira de identidade RG Nº <input type="text" name="" class="form-control" id="" style="width: 100px; position: absolute; right: 5px;"></div>
+            <div class="row"style="position: relative;height: 40px">Incrito no CPF sob nº <input type="text" name="" class="form-control" style="width: 100px; position: absolute; right: 5px;" id=""></div>
+            <div class="row" style="height:220px;">Na qualidade de vítima/Paciente, Usando dos direitos que a lei me garante, me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros voluntários de Guaramirim/SC, e assumo, individualmente a responsibilidade pelas consequências que possam ocorrer por razão da minha recusa. Declaro que fui devidamente informado sobre o procedimento pelo qual eu deveria me submeter e alertado sobre os riscos à saúde da sua não realização.</div>
+            <div class="row"style="position: relative; height: 40px;">Ass: </div>
+            <div class="row"style="position: relative;height: 40px">Testemunha: <input type="text" name="" class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
+            <div class="row"style="position: relative;height: 40px">Doc: <input type="text" name="" class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
+            <div class="row"style="position: relative;height: 40px">Testemunha: <input type="text" name="" class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
+            <div class="row"style="position: relative;height: 40px">Doc: <input type="text" name="" class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
+            
           </div>
         </div>
       </div>
@@ -1593,19 +1602,6 @@
 
 </body>
 <script>
-  function Gravar(id)
-  {
-      c = cpf.value
-      if(document.getElementById(id).style.backgroundColor == "yellow")
-      {
-          document.getElementById(id).style.backgroundColor = ""
-          // aqui você deverá APAGAR essa opção (coluna) do banco de dados:
-          window.open("grava.php?p="+id+"&checado=0&cpf="+c,"_blank")
-      }else{
-          document.getElementById(id).style.backgroundColor = "yellow"
-          // aqui você deverá ALTERAR essa opção (coluna) do banco de dados:
-          window.open("grava.php?p="+id+"&checado=1&cpf="+c,"_blank")
-      }
-  }
+    let assinaturaBase64 = Text
 </script>
 </html>
