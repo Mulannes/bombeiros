@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Fecha a conexão com o banco de dados
             $conn->close();
 
-            header('Location: ../HTML/index.php');
+            header('Location: index.php');
             exit();
         }
     }
