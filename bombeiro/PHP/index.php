@@ -13,7 +13,43 @@
 
 <body>
     <div class="container-fluid m-0 p-0">
-        <navbar-1></navbar-1>
+    <header>
+        <div class="d-lg-none">
+
+            <nav class="navbar">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="../HTML/conta.html"><img src="../images/botãologin.png"></a>
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-start" id="offcanvasNav">
+
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                        aria-label="Fechar"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/ocorrencia.html">Fazer Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/registro.html">Ver Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/conta.html">Conta</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
         <div class="container-fluid">
             <div class="row text">
                 <div class="col-lg">
