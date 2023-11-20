@@ -107,7 +107,19 @@ $conn->close();
             <div class="container d-flex flex-column">
                 <div class="container d-flex justify-content-center"><img src="../images/perfil2.png"></div>
                 <div class="container d-flex justify-content-center">
-                    <h1><?php echo $nome_usuario; ?></h1>
+                <?php
+        if (isset($nome_usuario)) {
+            // O usuário está logado
+            ?>
+            <h1><?php echo $nome_usuario; ?></h1>
+            <?php
+        } else {
+            // O usuário não está logado
+            ?>
+                        <h1>Usuário não logado</h1>
+            <?php
+        }
+        ?>
                 </div>
             </div>
 
