@@ -4,48 +4,50 @@ session_start();
 
 include("dbconnect.php");
 
-// Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Verifica se o formulário foi enviado e se os campos estão definidos
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_POST['senha'])) {
 
     // Dados do formulário
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
     // Consulta para verificar se o usuário existe
-    $sql = "SELECT * FROM usuario WHERE email_usuario = '$email'";
-    $result = $conn->query($sql);
+    $stmt = $conn->prepare("SELECT * FROM usuario WHERE email_usuario = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
         $usuario_bd = $result->fetch_assoc();
 
         // Verifica se a senha fornecida corresponde à senha armazenada
-        if ($usuario_bd['senha_usuario'] == $senha) {
+        if ($senha == $usuario_bd['senha_usuario']) {
             $_SESSION['nome_usuario'] = $usuario_bd['nome_usuario'];
             $_SESSION['loggedIn'] = true;
-            $nomeUsuario = $_SESSION['nome_usuario'];
-
-            // Define a mensagem do popup
-            $_SESSION['popup_msg'] = "Bem-vindo(a), $nomeUsuario! Você está logado(a) e autenticado(a).";
 
             // Fecha a conexão com o banco de dados
+            $stmt->close();
             $conn->close();
 
             header('Location: index.php');
             exit();
+        } else {
+            $_SESSION['erro_autenticacao'] = "Senha incorreta.";
         }
+    } else {
+        $_SESSION['erro_autenticacao'] = "Usuário não encontrado.";
     }
 
-    // Usuário não encontrado ou senha incorreta, exibe uma mensagem de erro
-    $_SESSION['nao_autenticado'] = true;
-
     // Fecha a conexão com o banco de dados
+    $stmt->close();
     $conn->close();
 
     header('Location: login.php?msg=autenticacao-erro');
     exit();
 } else {
-    // Formulário não enviado, redireciona para a página de login
-    header('Location: login.php');
+    // Formulário não enviado ou campos não definidos, redireciona para a página de login
+    $_SESSION['erro_autenticacao'] = "Campos de formulário não definidos.";
+    header('Location: login.php?msg=autenticacao-erro');
     exit();
 }
 ?>
