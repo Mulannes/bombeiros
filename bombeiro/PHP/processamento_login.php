@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_PO
 
         // Verifica se a senha fornecida corresponde à senha armazenada
         if ($senha == $usuario_db['senha_usuario']) {
+            $_SESSION['id_usuario'] = $usuario_db['id_usuario'];
             $_SESSION['nome_usuario'] = $usuario_db['nome_usuario'];
             $_SESSION['loggedIn'] = true;
 

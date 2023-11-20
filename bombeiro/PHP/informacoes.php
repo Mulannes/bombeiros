@@ -1,3 +1,45 @@
+<?php
+session_start();
+
+include("dbconnect.php");
+
+// Verifica se a chave 'nome_usuario' está definida na sessão
+if (isset($_SESSION['nome_usuario'])) {
+    $nome_usuario = $_SESSION['nome_usuario'];
+
+    // Consulta SQL para recuperar informações do usuário
+    $sql = "SELECT * FROM usuario WHERE nome_usuario = ?";
+    $stmt = $conn->prepare($sql);
+
+    // Verifica se a preparação da consulta foi bem-sucedida
+    if ($stmt) {
+        $stmt->bind_param('s', $nome_usuario);
+
+        // Executa a consulta
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+
+            // Verifica se há algum resultado
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $nome_usuario = $row['nome_usuario'];
+
+            } else {
+                echo "Nenhum usuário encontrado com nome de usuário $nome_usuario";
+            }
+        } else {
+            echo "Erro na consulta: " . $stmt->error;
+        }
+
+        $stmt->close();
+    } else {
+        echo "Erro na preparação da consulta: " . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -65,7 +107,7 @@
             <div class="container d-flex flex-column">
                 <div class="container d-flex justify-content-center"><img src="../images/perfil2.png"></div>
                 <div class="container d-flex justify-content-center">
-                    <h1>Alice Beltrane</h1>
+                    <h1><?php echo $nome_usuario; ?></h1>
                 </div>
             </div>
 

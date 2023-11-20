@@ -3,17 +3,17 @@ session_start();
 
 include('dbconnect.php');
 
-// Verifica se a chave 'nome_usuario' está definida na sessão
-if (isset($_SESSION['nome_usuario'])) {
-    $nome_usuario = $_SESSION['nome_usuario'];
+// Verifica se a chave 'id_usuario' está definida na sessão
+if (isset($_SESSION['id_usuario'])) {
+    $id_usuario = $_SESSION['id_usuario'];
 
     // Consulta SQL para recuperar informações do usuário
-    $sql = "SELECT * FROM usuario WHERE nome_usuario = ?";
+    $sql = "SELECT * FROM usuario WHERE id_usuario = ?";
     $stmt = $conn->prepare($sql);
 
     // Verifica se a preparação da consulta foi bem-sucedida
     if ($stmt) {
-        $stmt->bind_param('i', $nome_usuario);
+        $stmt->bind_param('i', $id_usuario);
 
         // Executa a consulta
         if ($stmt->execute()) {
@@ -24,20 +24,16 @@ if (isset($_SESSION['nome_usuario'])) {
                 $row = $result->fetch_assoc();
                 $nome_usuario = $row['nome_usuario'];
             } else {
-                echo "Nenhum usuário encontrado com ID $nome_usuario";
+                echo "Nenhum usuário encontrado com ID $id_usuario";
             }
         } else {
-            // Trata erros de consulta
             echo "Erro na consulta: " . $stmt->error;
         }
 
         $stmt->close();
     } else {
-        // Trata erros na preparação da consulta
         echo "Erro na preparação da consulta: " . $conn->error;
     }
-} else {
-    echo "ID de usuário não encontrado na sessão.";
 }
 
 $conn->close();
@@ -112,13 +108,13 @@ $conn->close();
     <div style="display: flex; flex-direction: column; gap: 0;">
         <?php
         if (isset($nome_usuario)) {
-            // O usuário está logado, exibe o nome
+            // O usuário está logado
             ?>
             <p class="h1" style="color: #000; font-family: Poppins; font-size: 24px; font-style: normal; font-weight: 700; line-height: normal; margin: 0;"><?php echo $nome_usuario; ?></p>
             <p class="h2" style="color: rgba(0, 0, 0, 0.40); font-family: Poppins; font-size: 20px; font-style: normal; font-weight: 300; line-height: normal;">Bombeiro</p>
             <?php
         } else {
-            // O usuário não está logado, exibe uma mensagem
+            // O usuário não está logado
             ?>
             <p class="h1" style="color: #000; font-family: Poppins; font-size: 24px; font-style: normal; font-weight: 700; line-height: normal; margin: 0;">Usuário não logado</p>
             <p class="h2" style="color: rgba(0, 0, 0, 0.40); font-family: Poppins; font-size: 20px; font-style: normal; font-weight: 300; line-height: normal;">Faça login para visualizar as informações</p>
@@ -142,7 +138,7 @@ $conn->close();
             </div>
         </div>
 
-        <a href="../HTML/informacoes.html" class="text-decoration-none text-dark">
+        <a href="../PHP/informacoes.php" class="text-decoration-none text-dark">
             <div class="container d-flex align-items-center mt-3"
                 style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px;">
                 <img src="../images/contaP.png" alt="">
