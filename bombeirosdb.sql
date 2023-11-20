@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Banco de dados: `bombeirosdb`
@@ -41,7 +41,7 @@ CREATE TABLE `fichas` (
   `idProcedimentos_Efetuados` int DEFAULT NULL,
   `idMateriais_Utilizados_Descartavel` int DEFAULT NULL,
   `idMateriais_Utilizados_Deixados` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -51,7 +51,7 @@ CREATE TABLE `fichas` (
 
 CREATE TABLE `ficha_anamnese_emergência_médica` (
   `idAnamnese_Emergência_Médica` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ CREATE TABLE `ficha_avaliacao_glasgow` (
   `idFicha_Avaliacao_Glasgow_AO` varchar(1) DEFAULT NULL,
   `idFicha_Avaliacao_Glasgow_RV` varchar(1) DEFAULT NULL,
   `idFicha_Avaliacao_Glasgow_RM` varchar(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,7 @@ CREATE TABLE `ficha_avaliacao_glasgow` (
 
 CREATE TABLE `ficha_localizacao_dos_traumas` (
   `idFicha_Localizacao_dos_Traumas` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE `ficha_materiais_utilizados_deixados` (
   `idMateriais_Utilizados_Deixados` int NOT NULL,
   `Materiais` varchar(45) NOT NULL,
   `Quant.` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE `ficha_materiais_utilizados_descartavel` (
   `idMateriais_Utilizados_Descartavel` int NOT NULL,
   `Materiais` varchar(45) NOT NULL,
   `Quant.` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,7 @@ CREATE TABLE `ficha_materiais_utilizados_descartavel` (
 CREATE TABLE `ficha_observacoes_importantes` (
   `idObservacoes_Importantes` int NOT NULL,
   `Observações` varchar(450) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -126,7 +126,7 @@ CREATE TABLE `ficha_paciente` (
   `idade_paciente` varchar(3) DEFAULT NULL,
   `idade_acompanhante` varchar(3) DEFAULT NULL,
   `telefone_paciente` varchar(12) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -137,7 +137,7 @@ CREATE TABLE `ficha_paciente` (
 CREATE TABLE `ficha_problemas_encontrados` (
   `idProblemas_Encontrados` int NOT NULL,
   `Problemas_Encontrados` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -148,7 +148,7 @@ CREATE TABLE `ficha_problemas_encontrados` (
 CREATE TABLE `ficha_procedimentos_efetuados` (
   `idProcedimentos_Efetuados` int NOT NULL,
   `Procedimentos_Efetuados` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -159,7 +159,7 @@ CREATE TABLE `ficha_procedimentos_efetuados` (
 CREATE TABLE `ficha_sinais_e_sintomas` (
   `idSinais_e_Sintomas` int NOT NULL,
   `Sinais_e_Sintomas` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -175,7 +175,7 @@ CREATE TABLE `ficha_sinais_vitais` (
   `Temperatura` varchar(45) DEFAULT NULL,
   `Perfusão` varchar(45) DEFAULT NULL,
   `HGT` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -186,7 +186,7 @@ CREATE TABLE `ficha_sinais_vitais` (
 CREATE TABLE `ficha_tipo_de_ocorrencia` (
   `idTipo_de_Ocorrencia` int NOT NULL,
   `Tipo_de_Ocorrencia` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -200,7 +200,7 @@ CREATE TABLE `ficha_transporte` (
   `idFicha_Forma_de_Conducao` int DEFAULT NULL,
   `idFicha_Vitima_Era` int DEFAULT NULL,
   `idFicha_Equipe` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -211,7 +211,7 @@ CREATE TABLE `ficha_transporte` (
 CREATE TABLE `ficha_transporte_decisao_transporte` (
   `idFicha_Decisao_Transporte` int NOT NULL,
   `Ficha_Transporte_Decisao_Transporte` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -225,7 +225,7 @@ CREATE TABLE `ficha_transporte_equipe` (
   `Motorista` varchar(45) DEFAULT NULL,
   `Socorristas` varchar(45) DEFAULT NULL,
   `Demandante` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -236,7 +236,7 @@ CREATE TABLE `ficha_transporte_equipe` (
 CREATE TABLE `ficha_transporte_forma_de_conducao` (
   `idFicha_Forma_de_Conducao` int NOT NULL,
   `Ficha_Forma_de_Conducao` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -247,7 +247,7 @@ CREATE TABLE `ficha_transporte_forma_de_conducao` (
 CREATE TABLE `ficha_transporte_vitima_era` (
   `idFicha_Transporte_Vitima_Era` int NOT NULL,
   `Ficha_Transporte_Vitima_Era` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -262,7 +262,7 @@ CREATE TABLE `usuario` (
   `CPF_usuario` varchar(11) NOT NULL,
   `senha_usuario` varchar(45) NOT NULL,
   `id_fichas` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='User data.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='User data.';
 
 --
 -- Extraindo dados da tabela `usuario`

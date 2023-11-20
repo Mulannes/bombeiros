@@ -1,3 +1,10 @@
+<?php
+session_start(); // Inicialização da sessão
+
+$erro_autenticacao = isset($_GET['msg']) && $_GET['msg'] == 'autenticacao-erro' && isset($_SESSION['erro_autenticacao']) ? $_SESSION['erro_autenticacao'] : null;
+unset($_SESSION['erro_autenticacao']); // Remove a mensagem da sessão
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,26 +26,28 @@
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-3 d-flex align-items-center justify-content-center w-100 p-3 h-75">
                     <div class="login-container w-75 h-75 bg-white rounded-4">
-                        <form class="w-100 h-100 d-flex flex-column justify-content-around p-4" action="processamento_login.php"
-                            method="post">
-                            <h2 class="row justify-content-center align-items-center">Login</h2>
+                        <form class="w-100 h-100 d-flex flex-column justify-content-around p-4"
+                            action="processamento_login.php" method="post">
+                            <h2 class="text-center mb-4">Login</h2>
 
-                            	<?php if (isset($_GET['error'])) { ?>
-     		                        <p class="error"><?php echo $_GET['error']; ?></p>
-     	                        <?php } ?>
-                                
-                            <div class="d-flex flex-column h-25">
-                                Email:
-                                <input class="mt-2 shadow-lg bg-white border-0" type="text" name="email" placeholder="E-mail"
-                                    required>
+                            <?php
+                            if ($erro_autenticacao) {
+                                echo '<p class="error text-center">' . $erro_autenticacao . '</p>';
+                            }
+                            ?>
+
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" class="form-control" name="email" placeholder="E-mail" required>
                             </div>
-                            <div class="d-flex flex-column h-25">
-                            Senha:
-                            <input class="mt-1 shadow-lg bg-white border-0" type="password" name="senha" placeholder="Senha"
-                                required>
+
+                            <div class="form-group">
+                                <label for="senha">Senha:</label>
+                                <input type="password" class="form-control" name="senha" placeholder="Senha" required>
                             </div>
+
                             <div class="d-flex justify-content-center">
-                                <button class="border-0 bg-danger w-75 h-100 shadow-lg" type="submit">Acessar</button>
+                                <button class="btn btn-danger w-75" type="submit">Acessar</button>
                             </div>
                         </form>
                     </div>
@@ -47,7 +56,9 @@
         </div>
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI/tZ1Zl3zOBOO7fWoeGdx9pd21tT+0zUm+RDk= sha512-fpEzQhVeoB9Zg8pZNr+1RQDiNunBz2a6JbT2uAGSV7OfeL6qm2UHNIfMvF3MC2jcBQ9h8BEz1tqBz66lZ9hjnA=="
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
