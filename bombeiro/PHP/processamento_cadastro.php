@@ -8,6 +8,13 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $senha = $_POST['senha'];
     $cpf = $_POST['CPF'];
 
+    // Verificar se o CPF tem 11 dígitos
+    if (strlen($cpf) !== 11) {
+    $_SESSION['cadastro_erro_cpf'] = 'O CPF digitado é inválido.';
+    header("Location: cadastro.php");
+    exit();
+    }
+
     // Verificar se o e-mail já está cadastrado
     $verificar_email = "SELECT * FROM usuario WHERE email_usuario = ?";
     $stmt_verificar_email = $conn->prepare($verificar_email);
