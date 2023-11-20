@@ -10,6 +10,12 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="/bombeiro/components/nav-pills.js"></script>
     <style>
+        :root {
+            --dedada2: rgba(222, 218, 218, 0.45);
+            --bg-itens: rgba(222, 218, 218, 0.45);
+
+
+        }
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
         *{
             font-family: "Poppins",sans-serif;
@@ -58,16 +64,29 @@
         </header>
         <div class="container d-flex justify-content-around align-items-center p-4">
             <img src="../images/perfil.png">
-            <p class="h1">Alice Beltrane</p>
+            <div style="display: flex; flex-direction: column; gap: 0;">
+            <p class="h1" style="color: #000;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal; margin: 0;">Alice Beltrane</p>
+            <p class="h2" style="color: rgba(0, 0, 0, 0.40);
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;">Bombeiro</p>
+            </div>
         </div>
         <div class="container d-flex w-100 h-100" style="gap: 8px;">
             <div class="container d-flex flex-column align-items-center justify-content-center"
-                style="height:95px; width:50%; background-color: #DEDADA; border-radius: 15px;">
+                style="height:80px; width:50%; background-color: var(--dedada2); border-radius: 15px;">
                 <p class="d-flex align-items-center justify-content-around" style="font-size: 24px; font-weight: 800; margin: 0;">9</p>
                 <p class="d-flex justify-content-around text-muted" style="font-size: 15px; width: 90%;margin: 0;">Registros Realizados</p>
             </div>
             <div class="container d-flex flex-column align-items-center justify-content-center"
-                style="height:95px; width:50%; background-color: #DEDADA; border-radius: 15px">
+                style="height:80px; width:50%; background-color:  var(--dedada2); border-radius: 15px">
                 <p class="d-flex justify-content-around" style="font-size: 24px; font-weight: 800; margin: 0">2</p>
                 <p class="d-flex justify-content-around text-muted" style="font-size: 15px; width: 90%; margin: 0;">Em andamento</p>
             </div>
@@ -75,45 +94,49 @@
 
         <a href="../HTML/informacoes.html" class="text-decoration-none text-dark">
             <div class="container d-flex align-items-center mt-3"
-                style="background-color: #DEDADA; width: 95%; height: 50px; border-radius: 15px">
-                <img src="../images/Vector.png" alt="">
+                style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px;">
+                <img src="../images/contaP.png" alt="">
                 <div class="container" style="height: 50px; width: 100%;"><b
-                        class="h-100 d-flex align-items-center" style="font-size: 16px;">Informações da conta</b></div>
+                        class="h-100 d-flex align-items-center" style="font-size: 16px; padding-left: 25px;">Informações da conta</b></div>
             </div>
         </a>
 
         <a href="" class="text-decoration-none text-dark">
             <div class="container  d-flex align-items-center mt-3"
-                style="background-color: #DEDADA; width: 95%; height: 50px; border-radius: 15px">
+                style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px">
                 <img src="../images/suporte.png" alt="">
                 <div class="container" style="height: 50px; width: 100%;"><b
-                        class="h-100 d-flex align-items-center"style="font-size: 16px;">Suporte</b></div>
+                        class="h-100 d-flex align-items-center"style="font-size: 16px;padding-left: 25px;">Suporte</b></div>
             </div>
         </a>
 
         <a href="../PHP/logout.php" class="text-decoration-none text-dark">
             <div class="container  d-flex align-items-center mt-3"
-                style="background-color: #DEDADA; width: 95%; height: 50px; border-radius: 15px">
+                style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px; margin-bottom: 100px;">
                 <img src="../images/sair.png" alt="">
                 <div class="container" style="height: 50px; width: 100%;"><b
-                        class="h-100 d-flex align-items-center text-danger"style="font-size: 16px;">Sair</b></div>
+                        class="h-100 d-flex align-items-center text-danger"style="font-size: 16px;padding-left: 25px;">Sair</b></div>
             </div>
         </a>
         <br>
     <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
-        <div class="nav-pills-style" style="width: 400px; height: 70px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
+        <div class="nav-pills-style" style="width: 95%; height: 70px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
             <ul class="nav nav-pills nav-justified">
-                <li class="nav-item" style="width: 33%; max-height: 65px;">
+                <li class="nav-item" style=" max-height: 65px;">
                     <img src="../images/home.png" class=" mx-auto d-block" style="padding: 10px;">
                     <a class="nav-link" href="../PHP/index.php" style="color: black; padding: 0; font-size: 14px">Menu</a>
                 </li>
-                <li class="nav-item" style="width: 33%; max-height: 65px;">
-                    <img src="../images/fazerregistro.png" class=" mx-auto d-block" style="padding: 10px;"> 
-                    <a class="nav-link" href="../HTML/ocorrencia.html" style="color: black; padding: 0; font-size: 14px;">Fazer Registro</a>
+                <li class="nav-item" style="max-height: 65px;">
+                    <img src="../images/fazerregistro.png" class=" mx-auto d-block" style="padding: 10px 10px 5px 10px;"> 
+                    <a class="nav-link" href="../HTML/ocorrencia.html" style="color: black; padding: 0; font-size: 14px; height: 28px; line-height: 13px;">Fazer<br>Registro</a>
                 </li>
-                <li class="nav-item" style="width: 33%; max-height: 65px;">
+                <li class="nav-item" style="max-height: 65px;">
                     <img src="../images/registro.png" class=" mx-auto d-block" style="padding: 10px;">
                     <a class="nav-link" href="registro.html" style="color: black; padding: 0; font-size: 14px">Registros</a>
+                </li>
+                <li class="nav-item" style="max-height: 65px;">
+                    <img src="../images/contaR.png" class=" mx-auto d-block" style="padding: 10px;">
+                    <a class="nav-link" href="../HTML/conta.html" style="color: #C21219; padding: 0; font-size: 14px; font-weight: bold;">Conta</a>
                 </li>
             </ul>
         </div>
