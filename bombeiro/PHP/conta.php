@@ -1,3 +1,48 @@
+<?php
+session_start();
+
+include('dbconnect.php');
+
+// Verifica se a chave 'nome_usuario' está definida na sessão
+if (isset($_SESSION['nome_usuario'])) {
+    $nome_usuario = $_SESSION['nome_usuario'];
+
+    // Consulta SQL para recuperar informações do usuário
+    $sql = "SELECT * FROM usuario WHERE nome_usuario = ?";
+    $stmt = $conn->prepare($sql);
+
+    // Verifica se a preparação da consulta foi bem-sucedida
+    if ($stmt) {
+        $stmt->bind_param('i', $nome_usuario);
+
+        // Executa a consulta
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+
+            // Verifica se há algum resultado
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $nome_usuario = $row['nome_usuario'];
+            } else {
+                echo "Nenhum usuário encontrado com ID $nome_usuario";
+            }
+        } else {
+            // Trata erros de consulta
+            echo "Erro na consulta: " . $stmt->error;
+        }
+
+        $stmt->close();
+    } else {
+        // Trata erros na preparação da consulta
+        echo "Erro na preparação da consulta: " . $conn->error;
+    }
+} else {
+    echo "ID de usuário não encontrado na sessão.";
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -34,7 +79,7 @@
                             data-bs-target="#offcanvasNav" style="width: 50px; height: 50px; position: relative; border: transparent;">
                             <img src="../images/MenuIcon.png" class="navbar-toggler-icon" style="width: 58px; height: 58px; position: absolute;top: 0; left: 0; background-image: none;">
                         </button>
-                        <a href="../HTML/conta.html"><img src="../images/botãologin.png"></a>
+                        <a href="../PHP/conta.php"><img src="../images/botãologin.png"></a>
                     </div>
                 </nav>
                 <div class="offcanvas offcanvas-start" id="offcanvasNav">
@@ -63,23 +108,28 @@
             </div>
         </header>
         <div class="container d-flex justify-content-around align-items-center p-4">
-            <img src="../images/perfil.png">
-            <div style="display: flex; flex-direction: column; gap: 0;">
-            <p class="h1" style="color: #000;
-            font-family: Poppins;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal; margin: 0;">Alice Beltrane</p>
-            <p class="h2" style="color: rgba(0, 0, 0, 0.40);
-            font-family: Poppins;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;">Bombeiro</p>
-            </div>
-        </div>
-        <div class="container d-flex w-100 h-100" style="gap: 8px;">
+    <img src="../images/perfil.png">
+    <div style="display: flex; flex-direction: column; gap: 0;">
+        <?php
+        if (isset($nome_usuario)) {
+            // O usuário está logado, exibe o nome
+            ?>
+            <p class="h1" style="color: #000; font-family: Poppins; font-size: 24px; font-style: normal; font-weight: 700; line-height: normal; margin: 0;"><?php echo $nome_usuario; ?></p>
+            <p class="h2" style="color: rgba(0, 0, 0, 0.40); font-family: Poppins; font-size: 20px; font-style: normal; font-weight: 300; line-height: normal;">Bombeiro</p>
+            <?php
+        } else {
+            // O usuário não está logado, exibe uma mensagem
+            ?>
+            <p class="h1" style="color: #000; font-family: Poppins; font-size: 24px; font-style: normal; font-weight: 700; line-height: normal; margin: 0;">Usuário não logado</p>
+            <p class="h2" style="color: rgba(0, 0, 0, 0.40); font-family: Poppins; font-size: 20px; font-style: normal; font-weight: 300; line-height: normal;">Faça login para visualizar as informações</p>
+            <?php
+        }
+        ?>
+    </div>
+</div>
+    </div>
+    </div>
+        <div class="container d-flex w-20 h-20" style="gap: 8px;">
             <div class="container d-flex flex-column align-items-center justify-content-center"
                 style="height:80px; width:50%; background-color: var(--dedada2); border-radius: 15px;">
                 <p class="d-flex align-items-center justify-content-around" style="font-size: 24px; font-weight: 800; margin: 0;">9</p>
@@ -136,7 +186,7 @@
                 </li>
                 <li class="nav-item" style="max-height: 65px;">
                     <img src="../images/contaR.png" class=" mx-auto d-block" style="padding: 10px;">
-                    <a class="nav-link" href="../HTML/conta.html" style="color: #C21219; padding: 0; font-size: 14px; font-weight: bold;">Conta</a>
+                    <a class="nav-link" href="../PHP/conta.php" style="color: #C21219; padding: 0; font-size: 14px; font-weight: bold;">Conta</a>
                 </li>
             </ul>
             <p class="mx-auto d-block" style="font-size: 17px; width: 90%; margin: 0;">&copy; 2023 Noar. Todos os direitos reservados.</p>

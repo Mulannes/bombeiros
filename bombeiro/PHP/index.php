@@ -22,7 +22,7 @@
                         data-bs-target="#offcanvasNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a href="../HTML/conta.html"><img src="../images/botãologin.png"></a>
+                    <a href="conta.php"><img src="../images/botãologin.png"></a>
                 </div>
             </nav>
             <div class="offcanvas offcanvas-start" id="offcanvasNav">
@@ -41,7 +41,7 @@
                             <a class="nav-link" href="../HTML/registro.html">Ver Registro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/conta.html">Conta</a>
+                            <a class="nav-link" href="conta.php">Conta</a>
                         </li>
                     </ul>
                 </div>

@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_PO
     $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
-        $usuario_bd = $result->fetch_assoc();
+        $usuario_db = $result->fetch_assoc();
 
         // Verifica se a senha fornecida corresponde à senha armazenada
-        if ($senha == $usuario_bd['senha_usuario']) {
-            $_SESSION['nome_usuario'] = $usuario_bd['nome_usuario'];
+        if ($senha == $usuario_db['senha_usuario']) {
+            $_SESSION['nome_usuario'] = $usuario_db['nome_usuario'];
             $_SESSION['loggedIn'] = true;
 
             // Fecha a conexão com o banco de dados
