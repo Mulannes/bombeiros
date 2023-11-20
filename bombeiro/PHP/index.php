@@ -88,7 +88,7 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner" data-bs-ride="carousel">
-                    <div class="carousel-item active"onclick="window.location.href='informacoes.html'">
+                    <div class="carousel-item active"onclick="window.location.href='#'">
                         <img src="../images/red.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Menu</h5>
@@ -96,7 +96,7 @@
                             do aplicativo aqui.</p>
                         </div>
                     </div>
-                    <div class="carousel-item"onclick="window.location.href='doRegister.html'">
+                    <div class="carousel-item"onclick="window.location.href='../HTML/ocorrencia.html'">
                         <img src="../images/blue.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Fazer Registro</h5>
@@ -104,7 +104,7 @@
                                 ocorrência aqui.</p>
                         </div>
                     </div>
-                    <div class="carousel-item"onclick="window.location.href='registro.html'">
+                    <div class="carousel-item"onclick="window.location.href='../HTML/registro.html'">
                         <img src="../images/green.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Ver Registro</h5>
