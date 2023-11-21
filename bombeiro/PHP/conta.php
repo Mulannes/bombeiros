@@ -178,7 +178,7 @@ $conn->close();
                 </li>
                 <li class="nav-item" style="max-height: 65px;">
                     <img src="../images/registro.png" class=" mx-auto d-block" style="padding: 10px;">
-                    <a class="nav-link" href="registro.html" style="color: black; padding: 0; font-size: 14px">Registros</a>
+                    <a class="nav-link" href="../HTMl/registro.html" style="color: black; padding: 0; font-size: 14px">Registros</a>
                 </li>
                 <li class="nav-item" style="max-height: 65px;">
                     <img src="../images/contaR.png" class=" mx-auto d-block" style="padding: 10px;">
