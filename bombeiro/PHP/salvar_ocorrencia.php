@@ -41,9 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $trabalho = isset($_POST['Trabalho']) ? 1 : 0;
     $transferencia = isset($_POST['Transferencia']) ? 1 : 0;
     $outro_campo = isset($_POST['Outro_Campo']) ? $_POST['Outro_Campo'] : '';
-    $outro_campo_text = isset($_POST['Outro_Campo_Text']) ? $_POST['Outro_Campo_Text'] : '';
-
-    $outro_campo = mysqli_real_escape_string($conn, $outro_campo);
+    $outro_campo_text = isset($_POST['Outro_Campo_Text']) ? mysqli_real_escape_string($conn, $_POST['Outro_Campo_Text']) : '';
 
     // Inserir no banco de dados
     $sql = "INSERT INTO ficha_tipo_de_ocorrencia (
@@ -51,8 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Queda_De_Altura_2M, Tentativa_De_Suicidio, Queda_Propria_Altura, Afogamento, Agressao,
         Atropelamento, Choque_Eletrico, Desabamento, Domestico, Esportivo, Intoxicacao,
         Queda_Bicicleta, Queda_Moto, Queda_Nivel_2M, Trabalho, Transferencia, Outro_Campo
-     ) VALUES (...,
-        '$outro_campo_text'
+     ) VALUES (
+        $causado_por_animais, $com_meio_de_transporte, $desmoronamento_deslizamento, $emergencia_medica,
+        $queda_de_altura_2m, $tentativa_de_suicidio, $queda_propria_altura, $afogamento, $agressao,
+        $atropelamento, $choque_eletrico, $desabamento, $domestico, $esportivo, $intoxicacao,
+        $queda_bicicleta, $queda_moto, $queda_nivel_2m, $trabalho, $transferencia, '$outro_campo_text'
      )";
      
         if ($conn->query($sql) === TRUE) {
