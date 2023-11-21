@@ -24,7 +24,13 @@ if ($result) {
 
     // Exibe as colunas na tabela
     foreach ($column_names as $col_name) {
-        echo "<th>$col_name</th>";
+        // Verifica se a coluna tem pelo menos um valor não nulo ou não zero
+        $sql_check = "SELECT $col_name FROM ficha_tipo_de_ocorrencia WHERE $col_name IS NOT NULL AND $col_name <> 0";
+        $result_check = $conn->query($sql_check);
+
+        if ($result_check->num_rows > 0) {
+            echo "<th>$col_name</th>";
+        }
     }
 
     echo "</tr>";
@@ -38,7 +44,14 @@ if ($result) {
         foreach ($column_names as $col_name) {
             // Verifica se o valor é nulo antes de exibir
             $value = ($row[$col_name] !== null) ? $row[$col_name] : "N/A";
-            echo "<td>" . $value . "</td>";
+
+            // Exibe a célula somente se a coluna tem pelo menos um valor não nulo ou não zero
+            $sql_check_cell = "SELECT $col_name FROM ficha_tipo_de_ocorrencia WHERE idTipo_de_Ocorrencia = {$row['idTipo_de_Ocorrencia']} AND $col_name IS NOT NULL AND $col_name <> 0";
+            $result_check_cell = $conn->query($sql_check_cell);
+
+            if ($result_check_cell->num_rows > 0) {
+                echo "<td>" . $value . "</td>";
+            }
         }
 
         echo "</tr>";
