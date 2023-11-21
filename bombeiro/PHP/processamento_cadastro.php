@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     // Verificar se o CPF tem 11 dígitos
     if (strlen($cpf) !== 11) {
     $_SESSION['cadastro_erro_cpf'] = 'O CPF digitado é inválido.';
-    header("Location: cadastro.php");
+    header("Location: ../PHP/admin/cadastro.php");
     exit();
     }
 
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     if ($result_verificar_email->num_rows > 0) {
         $_SESSION['cadastro_erro_email'] = 'Este e-mail já está cadastrado.';
-        header("Location: cadastro.php");
+        header("Location: ../PHP/admin/cadastro.php");
         exit();
     }
 
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     if ($result_verificar_cpf->num_rows > 0) {
         $_SESSION['cadastro_erro_cpf'] = 'Este CPF já está cadastrado.';
-        header("Location: cadastro.php");
+        header("Location: ../PHP/admin/cadastro.php");
         exit();
     }
 
@@ -52,11 +52,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     if ($stmt->execute()) {
         // O INSERT foi bem-sucedido
         $_SESSION['cadastro_sucesso'] = 'Usuário cadastrado com sucesso!';
-        header("Location: cadastro.php");
+        header("Location: ../PHP/admin/cadastro.php");
         exit();
     } else {
         $_SESSION['cadastro_erro'] = 'Erro ao inserir usuário no banco de dados: ' . $stmt->error;
-        header("Location: cadastro.php");
+        header("Location: ../PHP/admin/cadastro.php");
         exit();
     }
 }

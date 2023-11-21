@@ -1,5 +1,5 @@
 <?php
-include('processamento_cadastro.php');
+include('../../PHP/processamento_cadastro.php');
 ?>
 
 <!DOCTYPE html>
@@ -18,16 +18,16 @@ include('processamento_cadastro.php');
 <body>
 
     <div class="container-fluid m-0 p-0"
-        style="background-image: url('../images/bg-drop-fade-marquinhos.png'); background-size: cover; height: 100vh;">
+        style="background-image: url('../../images/bg-drop-fade-marquinhos.png'); background-size: cover; height: 100vh;">
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-3 d-flex align-items-center justify-content-center w-100 p-3 h-75">
                     <div class="login-container w-75 h-75 bg-white rounded-4">
                         <!-- Adicione um botão de voltar no canto superior esquerdo -->
-                        <a href="index.php" class="btn btn-light fixed-top m-1">Voltar</a>
+                        <a href="../../PHP/index.php" class="btn btn-light fixed-top m-1">Voltar</a>
 
                         <form class="w-100 h-100 d-flex flex-column justify-content-around p-4"
-                            action="processamento_cadastro.php" method="post">
+                            action="../../PHP/processamento_cadastro.php" method="post">
 
                             <h2 class="text-center mb-4">Cadastro</h2>
                             <?php
