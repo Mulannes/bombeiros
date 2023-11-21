@@ -31,7 +31,7 @@
 
 <body>
   <div class="container-fluid">
-    <form action="">
+    <form action="salvar_ocorrencia.php" method="post">
       <div class="row text">
         <div class="col-lg">
           <p class="display-1">Ocorrência</p>
@@ -54,56 +54,52 @@
             <div class="accordion-body">
               <div class="row">
                 <div class="col-1">
-                  <input id="date" type="date" />
+                <input id="date" type="date" name="date" min="yyyy-mm-dd" />
                 </div>
                 <div class="col-4"></div>
                 <div class="col-auto">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefaultM">
-                  <label class="form-check-label" for="flexRadioDefaultM">
-                    Masculino
-                  </label>
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefaultF">
-                  <label class="form-check-label" for="flexRadioDefaultF">
-                    Feminino
-                  </label>
+                  <input class="form-check-input" type="radio" name="genero_DP" id="flexRadioDefaultM_DP" value="Masculino">
+                  <label class="form-check-label" for="flexRadioDefaultM_DP">Masculino
+                </label>
+                  <input class="form-check-input" type="radio" name="genero_DP" id="flexRadioDefaultF_DP" value="Feminino">
+                  <label class="form-check-label" for="flexRadioDefaultF_DP">Feminino
+                 </label>
+            </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" name="nome_hospital_DP" class="form-control" placeholder="Nome do hospital:" aria-label="nomeH_DP">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <input type="text" name="nome_paciente_DP" class="form-control" placeholder="Nome:" aria-label="nome_DP"
+                  aria-describedby="basic-addon1">              
+                </div>
+                <div class="col-4">
+                  <input type="number" name="idade_paciente_DP" class="form-control" placeholder="Idade:" aria-label="idade_DP"
+                  aria-describedby="basic-addon1" id="idadePaciente_DP">
+                </div>
+                <div class="col-8">
+                  <input type="number" name="cpf_paciente_DP" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="CPF paciente:"
+                  class="form-control">
+                </div>
+                <div class="col-4">
+                  <input type="number" name="telefone_paciente_DP" placeholder="Fone:" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <input type="text" name="acompanhante_DP" class="form-control" placeholder="Acompanhante:">
+                </div>
+                <div class="col-4">
+                  <input type="number" name="idade_acompanhante_DP" class="form-control" placeholder="Idade:" aria-label="idade_DP"
+                  aria-describedby="basic-addon1">              
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Nome do hospital:" aria-label="nomeH">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-8">
-                  <input type="text" class="form-control" placeholder="Nome:" aria-label="nome"
-                    aria-describedby="basic-addon1">
-                </div>
-                <div class="col-4">
-                  <input type="number" class="form-control" placeholder="Idade:" aria-label="idade"
-                    aria-describedby="basic-addon1" id="idadePacientee">
-                </div>
-                <div class="col-8">
-                  <input type="number" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="CPF paciente:"
-                    class="form-control">
-                </div>
-                <div class="col-4">
-                  <input type="number" name="fone" \ placeholder="Fone:" class="form-control">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-8">
-                  <input type="text" name="acompanhante" class="form-control" placeholder="Acompanhante:">
-                </div>
-                <div class="col-4">
-                  <input type="number" class="form-control" placeholder="Idade:" aria-label="idade"
-                    aria-describedby="basic-addon1">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input type="text" name="localdeocorrencia" class="form-control" placeholder="Local de ocorrência:">
+                  <input type="text" name="local_ocorrencia_DP" class="form-control" placeholder="Local de ocorrência:">
                 </div>
               </div>
             </div>
