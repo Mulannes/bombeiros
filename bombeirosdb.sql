@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2023 at 05:53 AM
+-- Generation Time: Nov 22, 2023 at 03:35 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -61,9 +61,9 @@ CREATE TABLE `ficha_anamnese_emergência_médica` (
 
 CREATE TABLE `ficha_avaliacao_glasgow` (
   `idFicha_Avaliacao_Glasgow` int(11) NOT NULL,
-  `idFicha_Avaliacao_Glasgow_AO` varchar(1) DEFAULT NULL,
-  `idFicha_Avaliacao_Glasgow_RV` varchar(1) DEFAULT NULL,
-  `idFicha_Avaliacao_Glasgow_RM` varchar(1) DEFAULT NULL
+  `idFicha_Avaliacao_Glasgow_AO` varchar(50) DEFAULT NULL,
+  `idFicha_Avaliacao_Glasgow_RV` varchar(50) DEFAULT NULL,
+  `idFicha_Avaliacao_Glasgow_RM` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -108,8 +108,15 @@ CREATE TABLE `ficha_materiais_utilizados_descartavel` (
 
 CREATE TABLE `ficha_observacoes_importantes` (
   `idObservacoes_Importantes` int(11) NOT NULL,
-  `Observações` varchar(450) DEFAULT NULL
+  `observacoes_importantes` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `ficha_observacoes_importantes`
+--
+
+INSERT INTO `ficha_observacoes_importantes` (`idObservacoes_Importantes`, `observacoes_importantes`) VALUES
+(1, 'dadada');
 
 -- --------------------------------------------------------
 
@@ -119,14 +126,25 @@ CREATE TABLE `ficha_observacoes_importantes` (
 
 CREATE TABLE `ficha_paciente` (
   `idFicha_Paciente` int(11) NOT NULL,
+  `data_ocorrencia` date NOT NULL,
+  `genero_paciente` varchar(9) NOT NULL,
+  `nome_hospital` varchar(255) NOT NULL,
   `nome_paciente` varchar(45) DEFAULT NULL,
-  `CPF_paciente` varchar(11) DEFAULT NULL,
-  `nome_acompanhante` varchar(45) DEFAULT NULL,
-  `local_da_ocorrencia` varchar(150) DEFAULT NULL,
   `idade_paciente` varchar(3) DEFAULT NULL,
+  `CPF_paciente` varchar(11) DEFAULT NULL,
+  `telefone_paciente` varchar(12) DEFAULT NULL,
+  `nome_acompanhante` varchar(45) DEFAULT NULL,
   `idade_acompanhante` varchar(3) DEFAULT NULL,
-  `telefone_paciente` varchar(12) DEFAULT NULL
+  `local_da_ocorrencia` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `ficha_paciente`
+--
+
+INSERT INTO `ficha_paciente` (`idFicha_Paciente`, `data_ocorrencia`, `genero_paciente`, `nome_hospital`, `nome_paciente`, `idade_paciente`, `CPF_paciente`, `telefone_paciente`, `nome_acompanhante`, `idade_acompanhante`, `local_da_ocorrencia`) VALUES
+(5, '2023-11-21', 'Masculino', 'Hospital São José', 'Pedro Sampaio', '17', '13382385719', '999484848', 'Gabriel Sampaio', '22', 'Rua Marques de Olinda'),
+(6, '2023-06-20', 'Feminino', 'Hospital São Marcos', 'Gabriela Salvador', '27', '13394548422', '999449495', 'Peter Jordan', '44', 'Rua Benjamin Constant');
 
 -- --------------------------------------------------------
 
@@ -185,7 +203,27 @@ CREATE TABLE `ficha_sinais_vitais` (
 
 CREATE TABLE `ficha_tipo_de_ocorrencia` (
   `idTipo_de_Ocorrencia` int(11) NOT NULL,
-  `Tipo_de_Ocorrencia` varchar(45) DEFAULT NULL
+  `Causado_Por_Animais` int(11) DEFAULT NULL,
+  `Com_Meio_De_Transporte` int(11) DEFAULT NULL,
+  `Desmoronamento_Deslizamento` int(11) DEFAULT NULL,
+  `Emergencia_Medica` int(11) DEFAULT NULL,
+  `Queda_De_Altura_2M` int(11) DEFAULT NULL,
+  `Tentativa_De_Suicidio` int(11) DEFAULT NULL,
+  `Queda_Propria_Altura` int(11) DEFAULT NULL,
+  `Afogamento` int(11) DEFAULT NULL,
+  `Agressao` int(11) DEFAULT NULL,
+  `Atropelamento` int(11) DEFAULT NULL,
+  `Choque_Eletrico` int(11) DEFAULT NULL,
+  `Desabamento` int(11) DEFAULT NULL,
+  `Domestico` int(11) DEFAULT NULL,
+  `Esportivo` int(11) DEFAULT NULL,
+  `Intoxicacao` int(11) DEFAULT NULL,
+  `Queda_Bicicleta` int(11) DEFAULT NULL,
+  `Queda_Moto` int(11) DEFAULT NULL,
+  `Queda_Nivel_2M` int(11) DEFAULT NULL,
+  `Trabalho` int(11) DEFAULT NULL,
+  `Transferencia` int(11) DEFAULT NULL,
+  `Outro_Campo` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -235,7 +273,7 @@ CREATE TABLE `ficha_transporte_equipe` (
 
 CREATE TABLE `ficha_transporte_forma_de_conducao` (
   `idFicha_Forma_de_Conducao` int(11) NOT NULL,
-  `Ficha_Forma_de_Conducao` varchar(20) DEFAULT NULL
+  `forma_conducao` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -455,10 +493,16 @@ ALTER TABLE `ficha_materiais_utilizados_descartavel`
   MODIFY `idMateriais_Utilizados_Descartavel` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `ficha_observacoes_importantes`
+--
+ALTER TABLE `ficha_observacoes_importantes`
+  MODIFY `idObservacoes_Importantes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `ficha_paciente`
 --
 ALTER TABLE `ficha_paciente`
-  MODIFY `idFicha_Paciente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFicha_Paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `ficha_problemas_encontrados`
@@ -488,7 +532,7 @@ ALTER TABLE `ficha_sinais_vitais`
 -- AUTO_INCREMENT for table `ficha_tipo_de_ocorrencia`
 --
 ALTER TABLE `ficha_tipo_de_ocorrencia`
-  MODIFY `idTipo_de_Ocorrencia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTipo_de_Ocorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte`
@@ -512,7 +556,7 @@ ALTER TABLE `ficha_transporte_equipe`
 -- AUTO_INCREMENT for table `ficha_transporte_forma_de_conducao`
 --
 ALTER TABLE `ficha_transporte_forma_de_conducao`
-  MODIFY `idFicha_Forma_de_Conducao` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFicha_Forma_de_Conducao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte_vitima_era`

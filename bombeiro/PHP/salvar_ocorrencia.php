@@ -90,6 +90,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Erro ao salvar registro para ficha_paciente: " . $conn->error;
         }
     }
+// Receber dados do formulário para Observações Importantes
+    $observacoes_importantes = isset($_POST['obsImpor']) ? mysqli_real_escape_string($conn, $_POST['obsImpor']) : '';
+
+    // Inserir no banco de dados para Observações Importantes
+    $sql_observacoes = "INSERT INTO ficha_observacoes_importantes (observacoes_importantes) VALUES ('$observacoes_importantes')";
+
+    // Executar a query para Observações Importantes
+    if ($conn->query($sql_observacoes) === TRUE) {
+        echo "Observações importantes salvas com sucesso!";
+    } else {
+        echo "Erro ao salvar observações importantes: " . $conn->error;
+    }
 
     // Fecha a conexão com o banco de dados
     $conn->close();
