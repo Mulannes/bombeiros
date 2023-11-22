@@ -1092,40 +1092,40 @@
       <!-- Forma de Condução -->
       <!--                   -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingNine">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+    <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false"
             aria-controls="panelsStayOpen-collapseNine">
             Forma de condução
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse"
-          aria-labelledby="panelsStayOpen-headingNine">
-          <div class="accordion-body">
+        </button>
+    </h2>
+    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingNine">
+        <div class="accordion-body">
             <div class="row" style="position: relative;">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultDeitada">
-              <label class="form-check-label" for="flexCheckDefaultDeitada"
-                style="position: absolute; top: 0;left: 32px;">
-                Deitada
-              </label>
+                <input class="form-check-input" type="checkbox" value="Deitada" id="flexCheckDefaultDeitada" name="forma_conducao">
+                <label class="form-check-label" for="flexCheckDefaultDeitada"
+                    style="position: absolute; top: 0;left: 32px;">
+                    Deitada
+                </label>
             </div>
             <div class="row" style="position: relative;">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultSemiDeitada">
-              <label class="form-check-label" for="flexCheckDefaultSemiDeitada"
-                style="position: absolute; top: 0;left: 32px;">
-                Semi-Deitada
-              </label>
+                <input class="form-check-input" type="checkbox" value="Semi-Deitada" id="flexCheckDefaultSemiDeitada" name="forma_conducao">
+                <label class="form-check-label" for="flexCheckDefaultSemiDeitada"
+                    style="position: absolute; top: 0;left: 32px;">
+                    Semi-Deitada
+                </label>
             </div>
             <div class="row" style="position: relative;">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultSentada">
-              <label class="form-check-label" for="flexCheckDefaultSentada"
-                style="position: absolute; top: 0;left: 32px;">
-                Sentada
-              </label>
+                <input class="form-check-input" type="checkbox" value="Sentada" id="flexCheckDefaultSentada" name="forma_conducao">
+                <label class="form-check-label" for="flexCheckDefaultSentada"
+                    style="position: absolute; top: 0;left: 32px;">
+                    Sentada
+                </label>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
       <!--            -->
       <!-- Vítima Era -->
       <!--            -->
@@ -2545,6 +2545,19 @@
   //     document.getElementsByClassName("none").style.display = "block"
   //   }
   // }
+</script>
+
+<script>
+  //desmarcar checkbox forma condução
+    document.querySelectorAll('input[name="forma_conducao"]').forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            document.querySelectorAll('input[name="forma_conducao"]').forEach(function (otherCheckbox) {
+                if (otherCheckbox !== checkbox) {
+                    otherCheckbox.checked = false;
+                }
+            });
+        });
+    });
 </script>
 
 </html>
