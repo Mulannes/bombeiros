@@ -10,6 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <style>
+        .btn:hover{
+            transform: scale(1.05);transition: .5s ease-in-out;background: rgba(0, 0, 0, 0.50);
+                }
+    </style>
 </head>
 
 <body>
@@ -70,20 +75,16 @@
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
 
                 <label class="btn btn-outline-danger" for="btnradio1" data-bs-target="#carouselExampleDark"
-                    data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="border-radius: 10px;border: 1px solid rgba(0, 0, 0, 0.10);background: #FFF;
-"><p style="color: #000;
-text-align: center;
-font-family: Poppins;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: normal; margin:0;">Menu</p></label>
+                    data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="border-radius: 10px;border: 1px solid rgba(0, 0, 0, 0.10);background: #FFF; transition: .5s ease-in-out;
+"><p style="color: #000;text-align: center;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal; margin:0;">Menu</p></label>
 
                 <label class="btn btn-outline-danger" for="btnradio2" data-bs-target="#carouselExampleDark"
-                    data-bs-slide-to="1" aria-label="Slide 2">Fazer Registro</label>
+                    data-bs-slide-to="1" aria-label="Slide 2" style="border-radius: 10px;border: 1px solid rgba(0, 0, 0, 0.10);background: #FFF;
+"><p style="color: #000;text-align: center;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal; margin:0;">Fazer Registro</p></label>
 
                 <label class="btn btn-outline-danger" for="btnradio3" data-bs-target="#carouselExampleDark"
-                    data-bs-slide-to="2" aria-label="Slide 3">Ver Registro</label>
+                    data-bs-slide-to="2" aria-label="Slide 3" style="border-radius: 10px;border: 1px solid rgba(0, 0, 0, 0.10);background: #FFF;
+"><p style="color: #000;text-align: center;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal; margin:0;">Ver Registro</p></label>
             </div>
 
             <div id="carouselExampleDark" class="carousel carousel-dark slide">
