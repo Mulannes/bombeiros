@@ -27,28 +27,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql_paciente) === TRUE) {
 
 // Receber dados do formulário para ficha_tipo_de_ocorrencia
-            $causado_por_animais = isset($_POST['Causado_Por_Animais']) ? 1 : 0;
-            $com_meio_de_transporte = isset($_POST['Com_Meio_De_Transporte']) ? 1 : 0;
-            $desmoronamento_deslizamento = isset($_POST['Desmoronamento_Deslizamento']) ? 1 : 0;
-            $emergencia_medica = isset($_POST['Emergencia_Medica']) ? 1 : 0;
-            $queda_de_altura_2m = isset($_POST['Queda_De_Altura_2M']) ? 1 : 0;
-            $tentativa_de_suicidio = isset($_POST['Tentativa_De_Suicidio']) ? 1 : 0;
-            $queda_propria_altura = isset($_POST['Queda_Propria_Altura']) ? 1 : 0;
-            $afogamento = isset($_POST['Afogamento']) ? 1 : 0;
-            $agressao = isset($_POST['Agressao']) ? 1 : 0;
-            $atropelamento = isset($_POST['Atropelamento']) ? 1 : 0;
-            $choque_eletrico = isset($_POST['Choque_Eletrico']) ? 1 : 0;
-            $desabamento = isset($_POST['Desabamento']) ? 1 : 0;
-            $domestico = isset($_POST['Domestico']) ? 1 : 0;
-            $esportivo = isset($_POST['Esportivo']) ? 1 : 0;
-            $intoxicacao = isset($_POST['Intoxicacao']) ? 1 : 0;
-            $queda_bicicleta = isset($_POST['Queda_Bicicleta']) ? 1 : 0;
-            $queda_moto = isset($_POST['Queda_Moto']) ? 1 : 0;
-            $queda_nivel_2m = isset($_POST['Queda_Nivel_2M']) ? 1 : 0;
-            $trabalho = isset($_POST['Trabalho']) ? 1 : 0;
-            $transferencia = isset($_POST['Transferencia']) ? 1 : 0;
-            $outro_campo = isset($_POST['Outro_Campo']) ? $_POST['Outro_Campo'] : '';
-            $outro_campo_text = isset($_POST['Outro_Campo_Text']) ? mysqli_real_escape_string($conn, $_POST['Outro_Campo_Text']) : '';
+                $causado_por_animais = isset($_POST['Causado_Por_Animais']) ? 1 : null;
+                $com_meio_de_transporte = isset($_POST['Com_Meio_De_Transporte']) ? 1 : null;
+                $desmoronamento_deslizamento = isset($_POST['Desmoronamento_Deslizamento']) ? 1 : null;
+                $emergencia_medica = isset($_POST['Emergencia_Medica']) ? 1 : null;
+                $queda_de_altura_2m = isset($_POST['Queda_De_Altura_2M']) ? 1 : null;
+                $tentativa_de_suicidio = isset($_POST['Tentativa_De_Suicidio']) ? 1 : null;
+                $queda_propria_altura = isset($_POST['Queda_Propria_Altura']) ? 1 : null;
+                $afogamento = isset($_POST['Afogamento']) ? 1 : null;
+                $agressao = isset($_POST['Agressao']) ? 1 : null;
+                $atropelamento = isset($_POST['Atropelamento']) ? 1 : null;
+                $choque_eletrico = isset($_POST['Choque_Eletrico']) ? 1 : null;
+                $desabamento = isset($_POST['Desabamento']) ? 1 : null;
+                $domestico = isset($_POST['Domestico']) ? 1 : null;
+                $esportivo = isset($_POST['Esportivo']) ? 1 : null;
+                $intoxicacao = isset($_POST['Intoxicacao']) ? 1 : null;
+                $queda_bicicleta = isset($_POST['Queda_Bicicleta']) ? 1 : null;
+                $queda_moto = isset($_POST['Queda_Moto']) ? 1 : null;
+                $queda_nivel_2m = isset($_POST['Queda_Nivel_2M']) ? 1 : null;
+                $trabalho = isset($_POST['Trabalho']) ? 1 : null;
+                $transferencia = isset($_POST['Transferencia']) ? 1 : null;
+                $outro_campo = isset($_POST['Outro_Campo']) ? $_POST['Outro_Campo'] : null;
+                $outro_campo_text = isset($_POST['Outro_Campo_Text']) ? mysqli_real_escape_string($conn, $_POST['Outro_Campo_Text']) : null;
+
 
             // Inserir no banco de dados para ficha_tipo_de_ocorrencia
             $sql_tipo_ocorrencia = "INSERT INTO ficha_tipo_de_ocorrencia (
@@ -56,39 +57,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 Queda_De_Altura_2M, Tentativa_De_Suicidio, Queda_Propria_Altura, Afogamento, Agressao,
                 Atropelamento, Choque_Eletrico, Desabamento, Domestico, Esportivo, Intoxicacao,
                 Queda_Bicicleta, Queda_Moto, Queda_Nivel_2M, Trabalho, Transferencia, Outro_Campo
-                ) VALUES (
-                 $causado_por_animais, $com_meio_de_transporte, $desmoronamento_deslizamento, $emergencia_medica,
-                 $queda_de_altura_2m, $tentativa_de_suicidio, $queda_propria_altura, $afogamento, $agressao,
-                 $atropelamento, $choque_eletrico, $desabamento, $domestico, $esportivo, $intoxicacao,
-                 $queda_bicicleta, $queda_moto, $queda_nivel_2m, $trabalho, $transferencia, '$outro_campo_text'
-                 )";
+            ) VALUES (
+                " . ($causado_por_animais ?? 'NULL') . ",
+                " . ($com_meio_de_transporte ?? 'NULL') . ",
+                " . ($desmoronamento_deslizamento ?? 'NULL') . ",
+                " . ($emergencia_medica ?? 'NULL') . ",
+                " . ($queda_de_altura_2m ?? 'NULL') . ",
+                " . ($tentativa_de_suicidio ?? 'NULL') . ",
+                " . ($queda_propria_altura ?? 'NULL') . ",
+                " . ($afogamento ?? 'NULL') . ",
+                " . ($agressao ?? 'NULL') . ",
+                " . ($atropelamento ?? 'NULL') . ",
+                " . ($choque_eletrico ?? 'NULL') . ",
+                " . ($desabamento ?? 'NULL') . ",
+                " . ($domestico ?? 'NULL') . ",
+                " . ($esportivo ?? 'NULL') . ",
+                " . ($intoxicacao ?? 'NULL') . ",
+                " . ($queda_bicicleta ?? 'NULL') . ",
+                " . ($queda_moto ?? 'NULL') . ",
+                " . ($queda_nivel_2m ?? 'NULL') . ",
+                " . ($trabalho ?? 'NULL') . ",
+                " . ($transferencia ?? 'NULL') . ",
+                " . ($outro_campo !== '' ? "'$outro_campo'" : 'NULL') . "
+            )";
 
             // Executar a query para ficha_tipo_de_ocorrencia
             if ($conn->query($sql_tipo_ocorrencia) === TRUE) {
 
-// Receber dados do formulário para ficha_transporte_forma_de_conducao
-                $forma_conducao = isset($_POST['forma_conducao']) ? $_POST['forma_conducao'] : '';
+ // Receber dados do formulário para ficha_transporte_forma_de_conducao
+            $forma_conducao = isset($_POST['forma_conducao']) ? $_POST['forma_conducao'] : null;
 
-                // Verificar se a checkbox da forma de condução foi marcada
-                if (!empty($forma_conducao)) {
-                    // Inserir no banco de dados para forma_conducao
-                    $sql_forma_conducao = "INSERT INTO ficha_transporte_forma_de_conducao (forma_conducao) VALUES ('$forma_conducao')";            
+            // Verificar se a checkbox da forma de condução foi marcada
+            if ($forma_conducao !== null) {
+                // Inserir no banco de dados para forma_conducao
+                $sql_forma_conducao = "INSERT INTO ficha_transporte_forma_de_conducao (forma_conducao) VALUES ('$forma_conducao')";            
 
-                    // Executar a query para forma_conducao
-                    if ($conn->query($sql_forma_conducao) === TRUE) {
-                        echo "Registro salvo com sucesso!";
-                    } else {
-                        echo "Erro ao salvar registro para forma_conducao: " . $conn->error;
-                    }
+                // Executar a query para forma_conducao
+                if ($conn->query($sql_forma_conducao) === TRUE) {
+                    echo "Registro salvo com sucesso!";
+                } else {
+                    echo "Erro ao salvar registro para forma_conducao: " . $conn->error;
+                }
+            } else {
+                // Nenhuma opção de forma de condução selecionada, inserir NULL
+                $sql_forma_conducao = "INSERT INTO ficha_transporte_forma_de_conducao (forma_conducao) VALUES (NULL)";
+
+                // Executar a query para forma_conducao
+                if ($conn->query($sql_forma_conducao) === TRUE) {
+                    echo "Registro salvo com sucesso!";
+                } else {
+                    echo "Erro ao salvar registro para forma_conducao: " . $conn->error;
+                }
+            }
                 } else {
                     echo "Nenhuma opção de forma de condução selecionada.";
                 }
             } else {
                 echo "Erro ao salvar registro para ficha_tipo_de_ocorrencia: " . $conn->error;
             }
-        } else {
-            echo "Erro ao salvar registro para ficha_paciente: " . $conn->error;
-        }
     }
 // Receber dados do formulário para Observações Importantes
     $observacoes_importantes = isset($_POST['obsImpor']) ? mysqli_real_escape_string($conn, $_POST['obsImpor']) : '';
@@ -98,7 +124,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para Observações Importantes
     if ($conn->query($sql_observacoes) === TRUE) {
-        echo "Observações importantes salvas com sucesso!";
     } else {
         echo "Erro ao salvar observações importantes: " . $conn->error;
     }
