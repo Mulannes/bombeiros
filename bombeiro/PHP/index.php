@@ -14,6 +14,9 @@
         .btn:hover{
             transform: scale(1.05);transition: .5s ease-in-out;background: rgba(0, 0, 0, 0.50);
                 }
+        .carousel-item{
+            transition: none;
+        }
     </style>
 </head>
 
