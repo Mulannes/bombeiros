@@ -281,7 +281,7 @@
               <div class="col-2 w-10"
                 style="rotate: 90deg; font-size: 16px; font-family: 'Courier New', Courier, monospace; padding-bottom: 20px; height: 50px;">
                 Abertura ocular</div>
-              <div class="col-5">Maiores de 5 anos <br>
+              <div class="col-5" id="maior5" style="display: block;">Maiores de 5 anos <br>
                 <div class="col-auto">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20">
                   <label class="form-check-label" for="flexCheckDefault20">
@@ -307,7 +307,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-5 none" style="display: none;">Menores de 5 anos <br>
+              <div class="col-5 none" id="menor5" style="display: none;">Menores de 5 anos <br>
                 <div class="col-auto">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault24">
                   <label class="form-check-label" for="flexCheckDefault24">
@@ -2905,21 +2905,6 @@
 
 </body>
 <script>
-  var idade = document.getElementById("idadePacientee")
-  idade.value.on('change', function ada() {
-    if (idade > 5) {
-      console.log('aaaaaa')
-    }
-  })
-  // function idadePaciente(area){
-  //   if(menor > 5){
-  //     console.log("oi")
-  //     document.getElementsByClassName("none").style.display = "block"
-  //   }
-  // }
-</script>
-
-<script>
   //desmarcar checkbox forma condução
   document.querySelectorAll('input[name="forma_conducao"]').forEach(function (checkbox) {
     checkbox.addEventListener('change', function () {
@@ -2930,6 +2915,35 @@
       });
     });
   });
+
+ // Obtém o elemento de input pelo ID
+var inputIdade = document.getElementById("idadePaciente_DP");
+
+// Adiciona um ouvinte de evento de input para detectar alterações no valor
+inputIdade.addEventListener("input", function() {
+  // Obtém o valor atual do campo de entrada
+  var valorIdade = inputIdade.value;
+
+  // Exibe o valor no console (ou faça o que quiser com o valor)
+  console.log("Valor da idade:", valorIdade);
+});
+
+var inputIdade = document.getElementById("idadePaciente_DP");
+var menor5 = document.getElementById("menor5");
+var maior5 = document.getElementById("maior5");
+
+inputIdade.addEventListener("input", function() {
+  var valorIdade = parseInt(inputIdade.value); 
+
+  if (valorIdade > 4) {
+    menor5.style.display = "none";
+    maior5.style.display = "block";
+  } else {
+    menor5.style.display = "block"; 
+    maior5.style.display = "none";
+  }
+});
+
 </script>
 
 </html>
