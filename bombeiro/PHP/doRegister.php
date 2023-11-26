@@ -577,23 +577,23 @@
                             <div class="col-4">Temperatura:</div>
                             <div class="col-4"><input type="text" name="HGT" class="form-control"></div>
                             <div class="col-4" style="padding: 0; display: flex; align-items: center;"><input
-                                    type="checkbox" name="anormalTemp" class="form-check-input" id="anormalTemp">
+                                    type="radio" name="Temp" class="form-check-input" id="anormalTemp">
                                 <label for="anormalTemp" class="form-check-label">Anormal</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-4" style="display: flex; align-self: center;">Perfusão:</div>
                             <div class="col-4">
-                                <input class="form-check-input" type="checkbox" name="perfusão" id="perfusão2maior">
+                                <input class="form-check-input" type="radio" name="perfusão" id="perfusão2maior">
                                 <label class="form-check-label" for="perfusão2maior">
                                     > 2seg
                                 </label>
-                                <input class="form-check-input" type="checkbox" name="perfusão" id="perfusão2menor">
+                                <input class="form-check-input" type="radio" name="perfusão" id="perfusão2menor">
                                 <label class="form-check-label" for="perfusão2menor">
                                     < 2 seg </label>
                             </div>
                             <div class="col-4" style="padding: 0; display: flex; align-items: center;"><input
-                                    type="checkbox" name="perfusão" class="form-check-input" id="normalPerf">
+                                    type="radio" name="perfusãoT" class="form-check-input" id="normalPerf">
                                 <label for="normalPerf" class="form-check-label">Normal</label>
                             </div>
                         </div>
@@ -1617,70 +1617,70 @@
                     aria-labelledby="panelsStayOpen-headingTen">
                     <div class="accordion-body">
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultCiclista">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultCiclista">
                             <label class="form-check-label" for="flexCheckDefaultCiclista"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Ciclista
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultCondutorMoto">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultCondutorMoto">
                             <label class="form-check-label" for="flexCheckDefaultCondutorMoto"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Condutor moto
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultGestante">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultGestante">
                             <label class="form-check-label" for="flexCheckDefaultGestante"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Gestante
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultPasFrente">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPasFrente">
                             <label class="form-check-label" for="flexCheckDefaultPasFrente"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pass. Ban frente
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultPasMoto">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPasMoto">
                             <label class="form-check-label" for="flexCheckDefaultPasMoto"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pas. moto
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultCondutorcarro">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultCondutorcarro">
                             <label class="form-check-label" for="flexCheckDefaultCondutorcarro"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Condutor carro
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultClinico">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultClinico">
                             <label class="form-check-label" for="flexCheckDefaultClinico"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Clínico
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultTrauma">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultTrauma">
                             <label class="form-check-label" for="flexCheckDefaultTrauma"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Trauma
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultPassTras">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPassTras">
                             <label class="form-check-label" for="flexCheckDefaultPassTras"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pass. Bco. trás
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultPedestre">
+                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPedestre">
                             <label class="form-check-label" for="flexCheckDefaultPedestre"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pedestre
@@ -1705,14 +1705,14 @@
                     <div class="accordion-body">
                         <div class="row">
                             <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="checkbox" value="" id="flexCheckDefaultcritico">
+                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultcritico">
                                 <label class="form-check-label" for="flexCheckDefaultcritico"
                                     style="position: absolute; top: 0;left: 32px;">
                                     Crítico
                                 </label>
                             </div>
                             <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="checkbox" value="" id="flexCheckDefaultinstavel">
+                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultinstavel">
                                 <label class="form-check-label" for="flexCheckDefaultinstavel"
                                     style="position: absolute; top: 0;left: 32px;">
                                     Instável
@@ -1721,14 +1721,14 @@
                         </div>
                         <div class="row" style="height: 40px;">
                             <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="checkbox" value="" id="flexCheckDefaultPotencialmente">
+                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultPotencialmente">
                                 <label class="form-check-label" for="flexCheckDefaultPotencialmente"
                                     style="position: absolute; top: 0;left: 32px;">
                                     Potencialmente instável
                                 </label>
                             </div>
                             <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="checkbox" value="" id="flexCheckDefaultestavel">
+                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultestavel">
                                 <label class="form-check-label" for="flexCheckDefaultestavel"
                                     style="position: absolute; top: 0;left: 32px;">
                                     Estável
