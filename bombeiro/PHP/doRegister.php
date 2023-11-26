@@ -322,25 +322,29 @@
                                 Abertura ocular</div>
                             <div1 class="col-5" id="maior5">Maiores de 5 anos <br>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault20"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault20">
                                         Espontânea
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault21">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault21"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault21">
                                         Comando Verbal
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault22">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault22"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault22">
                                         Estímulo Doloroso
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault23">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault23"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault23">
                                         Nenhuma
                                     </label>
@@ -348,25 +352,29 @@
                             </div1>
                             <div1 class="col-5 none" id="menor5">Menores de 5 anos <br>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault24">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault24"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault24">
                                         Espontânea
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault25">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault25"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault25">
                                         Comando Verbal
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault26">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault26"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault26">
                                         Estímulo Doloroso
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault27">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault27"
+                                        name="Abertura">
                                     <label class="form-check-label" for="flexCheckDefault27">
                                         Nenhuma
                                     </label>
@@ -380,31 +388,36 @@
                                 Resposta verbal</div>
                             <div1 class="col-5" id="maior7">
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault28">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault28"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault28">
                                         Orientado
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault29">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault29"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault29">
                                         Confuso
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault30">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault30"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault30">
                                         Palavras <br>inapropriadas
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault31">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault31"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault31">
                                         Palavras <br>incompreensível
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault32">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault32"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault32">
                                         Nenhuma
                                     </label>
@@ -412,32 +425,36 @@
                             </div1>
                             <div1 class="col-5 none" id="menor6">
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault33">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault33"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault33">
                                         Palavras e frases <br>apropriadas
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault34">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault34"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault34">
                                         Palavras <br>inapropriadas
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault35"
-                                        placeholder="1">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault35"
+                                        name="RespostaVerbal" placeholder="1">
                                     <label class="form-check-label" for="flexCheckDefault35">
                                         Choro persistente <br>ou gritos
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault36">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault36"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault36">
                                         Sons <br>incompreensível
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault37">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault37"
+                                        name="RespostaVerbal">
                                     <label class="form-check-label" for="flexCheckDefault37">
                                         Nenhuma resposta <br>verbal
                                     </label>
@@ -451,37 +468,43 @@
                                 Resposta motora</div>
                             <div1 class="col-4 p-0" id="maior6">
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault38">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault38"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault38">
                                         Obedece <br>comandos
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault39">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault39"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault39">
                                         Localiza dor
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault40">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault40"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault40">
                                         Movimento de <br>retirada
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault41">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault41"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault41">
                                         Flexão anormal
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault42">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault42"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault42">
                                         Extensão <br>anormal
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault43">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault43"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault43">
                                         Nenhuma
                                     </label>
@@ -489,37 +512,43 @@
                             </div1>
                             <div1 class="col-6 p-0 none" id="menor7">
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault44">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault44"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault44">
                                         Obedece prontamente
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault45">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault45"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault45">
                                         Localiza dor ou <br>estímulo tatil
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault46">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault46"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault46">
                                         Retirada do segmento <br>estímulado
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault47">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault47"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault47">
                                         Flexão anormal <br>(decorticação)
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault48">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault48"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault48">
                                         Extensão anormal <br>(decerfração)
                                     </label>
                                 </div>
                                 <div class="col-auto">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault49">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault49"
+                                        name="RespostaMotora">
                                     <label class="form-check-label" for="flexCheckDefault49">
                                         Ausência pararela <br>flácida
                                     </label>
