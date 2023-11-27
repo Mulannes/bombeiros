@@ -147,12 +147,21 @@ $conn->close();
             </div>
         </a>
 
-        <a href="" class="text-decoration-none text-dark">
+        <a href="../HTML/suporte.html" class="text-decoration-none text-dark">
             <div class="container  d-flex align-items-center mt-3"
                 style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px">
                 <img src="../images/suporte.png" alt="">
                 <div class="container" style="height: 50px; width: 100%;"><b
                         class="h-100 d-flex align-items-center"style="font-size: 16px;padding-left: 25px;">Suporte</b></div>
+            </div>
+        </a>
+
+        <a href="admin/cadastro.php" class="text-decoration-none text-dark">
+            <div class="container  d-flex align-items-center mt-3"
+                style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px">
+                <img src="../images/cadastro2.png" alt="">
+                <div class="container" style="height: 50px; width: 100%;"><b
+                        class="h-100 d-flex align-items-center"style="font-size: 16px;padding-left: 25px;">Fazer Cadastro</b></div>
             </div>
         </a>
 
@@ -166,7 +175,7 @@ $conn->close();
         </a>
         <br>
     <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
-        <div class="nav-pills-style" style="width: 95%; height: 100px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
+        <div class="nav-pills-style" style="width: 95%; height: 75px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
             <ul class="nav nav-pills nav-justified">
                 <li class="nav-item" style=" max-height: 65px;">
                     <img src="../images/home.png" class=" mx-auto d-block" style="padding: 10px;">
