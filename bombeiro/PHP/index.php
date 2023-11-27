@@ -14,15 +14,15 @@ include("admin/redirectadm.php");
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <style>
-        .btn:hover {
-            transform: scale(1.05);
-            transition: .5s ease-in-out;
-            background: rgba(0, 0, 0, 0.50);
-        }
+    .btn:hover {
+        transform: scale(1.05);
+        transition: .5s ease-in-out;
+        background: rgba(0, 0, 0, 0.50);
+    }
 
-        .carousel-item {
-            transition: none;
-        }
+    .carousel-item {
+        transition: none;
+    }
     </style>
 </head>
 
@@ -59,10 +59,10 @@ include("admin/redirectadm.php");
                                 <a class="nav-link" href="../PHP/index.php">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../HTML/ocorrencia.html">Fazer Registro</a>
+                                <a class="nav-link" href="../HTML/ocorrencia.php">Fazer Registro</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../HTML/registro.html">Registro</a>
+                                <a class="nav-link" href="../HTML/registro.php">Registro</a>
                             </li>
                         </ul>
                     </div>
@@ -136,7 +136,7 @@ include("admin/redirectadm.php");
                                 do aplicativo aqui.</p>
                         </div>
                     </div>
-                    <div class="carousel-item" onclick="window.location.href='../HTML/ocorrencia.html'">
+                    <div class="carousel-item" onclick="window.location.href='../PHP/ocorrencia.php'">
                         <img src="../images/blue.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Fazer Registro</h5>
@@ -144,7 +144,7 @@ include("admin/redirectadm.php");
                                 ocorrência aqui.</p>
                         </div>
                     </div>
-                    <div class="carousel-item" onclick="window.location.href='../HTML/registro.html'">
+                    <div class="carousel-item" onclick="window.location.href='../PHP/registro.php'">
                         <img src="../images/green.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Ver Registro</h5>
@@ -195,8 +195,8 @@ include("admin/redirectadm.php");
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
 
 </body>
 
