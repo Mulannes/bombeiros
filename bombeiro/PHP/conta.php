@@ -166,7 +166,7 @@ $conn->close();
         </a>
         <br>
     <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
-        <div class="nav-pills-style" style="width: 95%; height: 100px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
+        <div class="nav-pills-style" style="width: 95%; height: 75px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
             <ul class="nav nav-pills nav-justified">
                 <li class="nav-item" style=" max-height: 65px;">
                     <img src="../images/home.png" class=" mx-auto d-block" style="padding: 10px;">
