@@ -182,6 +182,32 @@ $vitima_era = isset($_POST['Vitima_Era']) ? $_POST['Vitima_Era'] : '';
         echo "Erro ao salvar vitima era: " . $conn->error;
     }
 
+// Receber dados do formulário para ficha_avaliacao_cinematica
+$disturbio_comportamento = isset($_POST['disturbio_comportamento']) ? $_POST['disturbio_comportamento'] : null;
+$encontra_capacete = isset($_POST['encontra_capacete']) ? $_POST['encontra_capacete'] : null;
+$encontrado_cinto = isset($_POST['encontrado_cinto']) ? $_POST['encontrado_cinto'] : null;
+$para_brisa_avariado = isset($_POST['para_brisa_avariado']) ? $_POST['para_brisa_avariado'] : null;
+$caminhando_na_cena = isset($_POST['caminhando_na_cena']) ? $_POST['caminhando_na_cena'] : null;
+$painel_avariado = isset($_POST['painel_avariado']) ? $_POST['painel_avariado'] : null;
+$volante_torcido = isset($_POST['volante_torcido']) ? $_POST['volante_torcido'] : null;
+
+// Se o campo não for enviado deixar o valor como nulo
+$disturbio_comportamento = ($disturbio_comportamento === null) ? null : ($disturbio_comportamento === 'Sim' ? 'Sim' : 'Não');
+$encontra_capacete = ($encontra_capacete === null) ? null : ($encontra_capacete === 'Sim' ? 'Sim' : 'Não');
+$encontrado_cinto = ($encontrado_cinto === null) ? null : ($encontrado_cinto === 'Sim' ? 'Sim' : 'Não');
+$para_brisa_avariado = ($para_brisa_avariado === null) ? null : ($para_brisa_avariado === 'Sim' ? 'Sim' : 'Não');
+$caminhando_na_cena = ($caminhando_na_cena === null) ? null : ($caminhando_na_cena === 'Sim' ? 'Sim' : 'Não');
+$painel_avariado = ($painel_avariado === null) ? null : ($painel_avariado === 'Sim' ? 'Sim' : 'Não');
+$volante_torcido = ($volante_torcido === null) ? null : ($volante_torcido === 'Sim' ? 'Sim' : 'Não');
+
+// Inserir dados no banco de dados para ficha_avaliacao_cinematica
+$sql_cinematica = "INSERT INTO ficha_avaliacao_cinematica (disturbio_comportamento, encontra_capacete, encontrado_cinto, para_brisa_avariado, caminhando_na_cena, painel_avariado, volante_torcido) 
+VALUES ('$disturbio_comportamento', '$encontra_capacete', '$encontrado_cinto', '$para_brisa_avariado', '$caminhando_na_cena', '$painel_avariado', '$volante_torcido')";
+
+if ($conn->query($sql_cinematica) === TRUE) {
+} else {
+    echo "Erro ao inserir dados: " . $conn->error;
+}
 
     // Fecha a conexão com o banco de dados
     $conn->close();

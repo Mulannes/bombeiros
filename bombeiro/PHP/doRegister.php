@@ -297,13 +297,13 @@
                                 <textarea class="form-control" name="Outro_Campo_Text" aria-label="Área de texto"
                                     placeholder="Descreva aqui..."></textarea>
                             </div>
-                            <!--                     -->
-                            <!-- ✘ Avaliação GLASGOW -->
-                            <!--                     -->
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
+                <!--                     -->
+                <!-- ✘ Avaliação GLASGOW -->
+                <!--                     -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -3042,12 +3042,12 @@
                                 <div class="col-8">
                                     Distúrbio de comportamento</div>
                                 <div class="col-4">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault5"
+                                    <input class="form-check-input" type="radio" name="disturbio_comportamento" value="Sim"
                                         id="flexRadioDefaultSim5">
                                     <label class="form-check-label" for="flexRadioDefaultSim5">
                                         Sim
                                     </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault5"
+                                    <input class="form-check-input" type="radio" name="disturbio_comportamento" value="Não"
                                         id="flexRadioDefaultNao5">
                                     <label class="form-check-label" for="flexRadioDefaultNao5">
                                         Não
@@ -3058,12 +3058,12 @@
                                 <div class="col-8">
                                     Encontra de capacete</div>
                                 <div class="col-4">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault6"
+                                    <input class="form-check-input" type="radio" name="encontra_capacete" value="Sim"
                                         id="flexRadioDefaultSim6">
                                     <label class="form-check-label" for="flexRadioDefaultSim6">
                                         Sim
                                     </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault6"
+                                    <input class="form-check-input" type="radio" name="encontra_capacete" value="Não"
                                         id="flexRadioDefaultNao6">
                                     <label class="form-check-label" for="flexRadioDefaultNao6">
                                         Não
@@ -3074,12 +3074,12 @@
                                 <div class="col-8">
                                     Encontrado de cinto</div>
                                 <div class="col-4">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault7"
+                                    <input class="form-check-input" type="radio" name="encontrado_cinto" value="Sim"
                                         id="flexRadioDefaultSim7">
                                     <label class="form-check-label" for="flexRadioDefaultSim7">
                                         Sim
                                     </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault7"
+                                    <input class="form-check-input" type="radio" name="encontrado_cinto" value="Não"
                                         id="flexRadioDefaultNao7">
                                     <label class="form-check-label" for="flexRadioDefaultNao7">
                                         Não
@@ -3090,12 +3090,12 @@
                                 <div class="col-8">
                                     Para-brisa avariado</div>
                                 <div class="col-4">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault8"
+                                    <input class="form-check-input" type="radio" name="para_brisa_avariado" value="Sim"
                                         id="flexRadioDefaultSim8">
                                     <label class="form-check-label" for="flexRadioDefaultSim8">
                                         Sim
                                     </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault8"
+                                    <input class="form-check-input" type="radio" name="para_brisa_avariado" value="Não"
                                         id="flexRadioDefaultNao8">
                                     <label class="form-check-label" for="flexRadioDefaultNao8">
                                         Não
@@ -3106,12 +3106,12 @@
                                 <div class="col-8">
                                     Caminhando na cena</div>
                                 <div class="col-4">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault9"
+                                    <input class="form-check-input" type="radio" name="caminhando_na_cena" value="Sim"
                                         id="flexRadioDefaultSim9">
                                     <label class="form-check-label" for="flexRadioDefaultSim9">
                                         Sim
                                     </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault9"
+                                    <input class="form-check-input" type="radio" name="caminhando_na_cena" value="Não"
                                         id="flexRadioDefaultNao9">
                                     <label class="form-check-label" for="flexRadioDefaultNao9">
                                         Não
@@ -3122,12 +3122,12 @@
                                 <div class="col-8">
                                     Painel avariado</div>
                                 <div class="col-4">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault10"
+                                    <input class="form-check-input" type="radio" name="painel_avariado" value="Sim"
                                         id="flexRadioDefaultSim10">
                                     <label class="form-check-label" for="flexRadioDefaultSim10">
                                         Sim
                                     </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault10"
+                                    <input class="form-check-input" type="radio" name="painel_avariado" value="Não"
                                         id="flexRadioDefaultNao10">
                                     <label class="form-check-label" for="flexRadioDefaultNao10">
                                         Não
@@ -3138,12 +3138,12 @@
                                 <div class="col-8">
                                     Volante torcido</div>
                                 <div class="col-4">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault11"
+                                    <input class="form-check-input" type="radio" name="volante_torcido" value="Sim"
                                         id="flexRadioDefaultSim11">
                                     <label class="form-check-label" for="flexRadioDefaultSim11">
                                         Sim
                                     </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault11"
+                                    <input class="form-check-input" type="radio" name="volante_torcido" value="Não"
                                         id="flexRadioDefaultNao11">
                                     <label class="form-check-label" for="flexRadioDefaultNao11">
                                         Não
