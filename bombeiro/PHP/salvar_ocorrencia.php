@@ -160,6 +160,18 @@ $perfusao = ($perfusao_option === 'perfusão2maior' || $perfusao_option === 'per
         echo "Erro ao salvar dados: " . $stmt->error;
     }
 
+// Receber dados do formulário para ficha_objetos_recolhidos
+$objetos_recolhidos = isset($_POST['objRec']) ? mysqli_real_escape_string($conn, $_POST['objRec']) : '';
+
+// Inserir no banco de dados para ficha_objetos_recolhidos
+$sql_objetos = "INSERT INTO ficha_objetos_recolhidos (objetos_recolhidos) VALUES ('$objetos_recolhidos')";
+
+// Executar a query para ficha_objetos_recolhidos
+if ($conn->query($sql_objetos) === TRUE) {
+} else {
+    echo "Erro ao salvar objetos recolhidos: " . $conn->error;
+}
+
     // Fecha a conexão com o banco de dados
     $conn->close();
 } else {

@@ -3,19 +3,13 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2023 at 03:35 AM
+-- Generation Time: Nov 27, 2023 at 03:01 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `bombeirosdb`
@@ -103,6 +97,17 @@ CREATE TABLE `ficha_materiais_utilizados_descartavel` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ficha_objetos_recolhidos`
+--
+
+CREATE TABLE `ficha_objetos_recolhidos` (
+  `idObjetos_Recolhidos` int(11) NOT NULL,
+  `objetos_recolhidos` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ficha_observacoes_importantes`
 --
 
@@ -110,13 +115,6 @@ CREATE TABLE `ficha_observacoes_importantes` (
   `idObservacoes_Importantes` int(11) NOT NULL,
   `observacoes_importantes` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `ficha_observacoes_importantes`
---
-
-INSERT INTO `ficha_observacoes_importantes` (`idObservacoes_Importantes`, `observacoes_importantes`) VALUES
-(1, 'dadada');
 
 -- --------------------------------------------------------
 
@@ -137,14 +135,6 @@ CREATE TABLE `ficha_paciente` (
   `idade_acompanhante` varchar(3) DEFAULT NULL,
   `local_da_ocorrencia` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `ficha_paciente`
---
-
-INSERT INTO `ficha_paciente` (`idFicha_Paciente`, `data_ocorrencia`, `genero_paciente`, `nome_hospital`, `nome_paciente`, `idade_paciente`, `CPF_paciente`, `telefone_paciente`, `nome_acompanhante`, `idade_acompanhante`, `local_da_ocorrencia`) VALUES
-(5, '2023-11-21', 'Masculino', 'Hospital São José', 'Pedro Sampaio', '17', '13382385719', '999484848', 'Gabriel Sampaio', '22', 'Rua Marques de Olinda'),
-(6, '2023-06-20', 'Feminino', 'Hospital São Marcos', 'Gabriela Salvador', '27', '13394548422', '999449495', 'Peter Jordan', '44', 'Rua Benjamin Constant');
 
 -- --------------------------------------------------------
 
@@ -187,11 +177,13 @@ CREATE TABLE `ficha_sinais_e_sintomas` (
 
 CREATE TABLE `ficha_sinais_vitais` (
   `idFicha_Sinais_Vitais` int(11) NOT NULL,
-  `Pressao_Arterial` varchar(45) DEFAULT NULL,
-  `Pulso` varchar(45) DEFAULT NULL,
-  `Saturacao` varchar(45) DEFAULT NULL,
-  `Temperatura` varchar(45) DEFAULT NULL,
-  `Perfusão` varchar(45) DEFAULT NULL,
+  `pressao_arterial0` varchar(45) DEFAULT NULL,
+  `pressao_arterial1` varchar(45) NOT NULL,
+  `pulso` varchar(45) NOT NULL,
+  `respiracao` varchar(45) DEFAULT NULL,
+  `saturacao` varchar(45) DEFAULT NULL,
+  `temperatura` varchar(45) DEFAULT NULL,
+  `perfusao` varchar(45) DEFAULT NULL,
   `HGT` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -368,6 +360,12 @@ ALTER TABLE `ficha_materiais_utilizados_descartavel`
   ADD UNIQUE KEY `idMateriais_Utilizados_Descartavel_UNIQUE` (`idMateriais_Utilizados_Descartavel`);
 
 --
+-- Indexes for table `ficha_objetos_recolhidos`
+--
+ALTER TABLE `ficha_objetos_recolhidos`
+  ADD PRIMARY KEY (`idObjetos_Recolhidos`);
+
+--
 -- Indexes for table `ficha_observacoes_importantes`
 --
 ALTER TABLE `ficha_observacoes_importantes`
@@ -493,16 +491,22 @@ ALTER TABLE `ficha_materiais_utilizados_descartavel`
   MODIFY `idMateriais_Utilizados_Descartavel` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `ficha_objetos_recolhidos`
+--
+ALTER TABLE `ficha_objetos_recolhidos`
+  MODIFY `idObjetos_Recolhidos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
 -- AUTO_INCREMENT for table `ficha_observacoes_importantes`
 --
 ALTER TABLE `ficha_observacoes_importantes`
-  MODIFY `idObservacoes_Importantes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idObservacoes_Importantes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `ficha_paciente`
 --
 ALTER TABLE `ficha_paciente`
-  MODIFY `idFicha_Paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `idFicha_Paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `ficha_problemas_encontrados`
@@ -526,13 +530,13 @@ ALTER TABLE `ficha_sinais_e_sintomas`
 -- AUTO_INCREMENT for table `ficha_sinais_vitais`
 --
 ALTER TABLE `ficha_sinais_vitais`
-  MODIFY `idFicha_Sinais_Vitais` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFicha_Sinais_Vitais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `ficha_tipo_de_ocorrencia`
 --
 ALTER TABLE `ficha_tipo_de_ocorrencia`
-  MODIFY `idTipo_de_Ocorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `idTipo_de_Ocorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte`
@@ -556,7 +560,7 @@ ALTER TABLE `ficha_transporte_equipe`
 -- AUTO_INCREMENT for table `ficha_transporte_forma_de_conducao`
 --
 ALTER TABLE `ficha_transporte_forma_de_conducao`
-  MODIFY `idFicha_Forma_de_Conducao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idFicha_Forma_de_Conducao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte_vitima_era`
@@ -605,7 +609,3 @@ ALTER TABLE `ficha_transporte`
 ALTER TABLE `usuario`
   ADD CONSTRAINT `id_fichas` FOREIGN KEY (`id_fichas`) REFERENCES `fichas` (`id_fichas`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
