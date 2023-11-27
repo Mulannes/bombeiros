@@ -576,10 +576,10 @@
                             <div class="col-3">
                                 <p>Pressão arterial:</p>
                             </div>
-                            <div class="col-4"><input type="text" name="Pressão arterial0" class="form-control"
+                            <div class="col-4"><input type="text" name="Pressão_arterial0" class="form-control"
                                     placeholder="mmHg">
                             </div>X
-                            <div class="col-4"><input type="text" name="Pressão arterial1" class="form-control"
+                            <div class="col-4"><input type="text" name="Pressão_arterial1" class="form-control"
                                     placeholder="mmHg">
                             </div>
                         </div>
@@ -604,26 +604,26 @@
                         </div>
                         <div class="row">
                             <div class="col-4">Temperatura:</div>
-                            <div class="col-4"><input type="text" name="HGT" class="form-control"></div>
+                            <div class="col-4"><input type="text" name="Temperatura" class="form-control"></div>
                             <div class="col-4" style="padding: 0; display: flex; align-items: center;"><input
-                                    type="radio" name="Temp" class="form-check-input" id="anormalTemp">
-                                <label for="anormalTemp" class="form-check-label">Anormal</label>
+                                    type="radio" name="FichaANN" class="form-check-input" id="FichaAN">
+                                <label for="FichaANN" class="form-check-label">Anormal</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-4" style="display: flex; align-self: center;">Perfusão:</div>
                             <div class="col-4">
-                                <input class="form-check-input" type="radio" name="perfusão" id="perfusão2maior">
+                                <input class="form-check-input" type="radio" name="perfusão" value="perfusão" id="perfusão2maior">
                                 <label class="form-check-label" for="perfusão2maior">
                                     > 2seg
                                 </label>
-                                <input class="form-check-input" type="radio" name="perfusão" id="perfusão2menor">
+                                <input class="form-check-input" type="radio" name="perfusão" value="perfusão" id="perfusão2menor">
                                 <label class="form-check-label" for="perfusão2menor">
                                     < 2 seg </label>
                             </div>
                             <div class="col-4" style="padding: 0; display: flex; align-items: center;"><input
-                                    type="radio" name="perfusãoT" class="form-check-input" id="normalPerf">
-                                <label for="normalPerf" class="form-check-label">Normal</label>
+                                    type="radio" name="FichaANN" class="form-check-input" id="FichaN">
+                                <label for="FichaANN" class="form-check-label">Normal</label>
                             </div>
                         </div>
 

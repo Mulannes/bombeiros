@@ -116,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Erro ao salvar registro para ficha_tipo_de_ocorrencia: " . $conn->error;
             }
     }
-// Receber dados do formulário para Observações Importantes
+// Receber dados do formulário para ficha_observacoes_importantes
     $observacoes_importantes = isset($_POST['obsImpor']) ? mysqli_real_escape_string($conn, $_POST['obsImpor']) : '';
 
     // Inserir no banco de dados para Observações Importantes
@@ -126,6 +126,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql_observacoes) === TRUE) {
     } else {
         echo "Erro ao salvar observações importantes: " . $conn->error;
+    }
+    
+// Obter valores do formulário Sinais Vitais
+function getSafePost($key, $default = '') {
+    return isset($_POST[$key]) ? $_POST[$key] : $default;
+}
+
+    // Obter valor do campo 'perfusao'
+$perfusao_option = isset($_POST['perfusão']) ? $_POST['perfusão'] : null;
+
+// Definir $perfusao diretamente ou como NULL
+$perfusao = ($perfusao_option === 'perfusão2maior' || $perfusao_option === 'perfusão2menor') ? $perfusao_option : null;
+
+
+    // Inserir dados no banco de dados para Sinais Vitais usando declaração preparada
+    $stmt = $conn->prepare("INSERT INTO ficha_sinais_vitais (pressao_arterial0, pressao_arterial1, pulso, respiracao, saturacao, hgt, temperatura, perfusao) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssss", $pressao_arterial0, $pressao_arterial1, $pulso, $respiracao, $saturacao, $hgt, $temperatura, $perfusao);
+
+    $pressao_arterial0 = getSafePost('Pressão_arterial0');
+    $pressao_arterial1 = getSafePost('Pressão_arterial1');
+    $pulso = getSafePost('Pulso');
+    $respiracao = getSafePost('Respiracao');
+    $saturacao = getSafePost('Saturação');
+    $hgt = getSafePost('HGT');
+    $temperatura = getSafePost('Temperatura');
+
+    $stmt->execute();
+
+    if ($stmt->affected_rows > 0) {
+        echo "Dados salvos com sucesso.";
+    } else {
+        echo "Erro ao salvar dados: " . $stmt->error;
     }
 
     // Fecha a conexão com o banco de dados
