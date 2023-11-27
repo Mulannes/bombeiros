@@ -191,23 +191,41 @@ $caminhando_na_cena = isset($_POST['caminhando_na_cena']) ? $_POST['caminhando_n
 $painel_avariado = isset($_POST['painel_avariado']) ? $_POST['painel_avariado'] : null;
 $volante_torcido = isset($_POST['volante_torcido']) ? $_POST['volante_torcido'] : null;
 
-// Se o campo não for enviado deixar o valor como nulo
-$disturbio_comportamento = ($disturbio_comportamento === null) ? null : ($disturbio_comportamento === 'Sim' ? 'Sim' : 'Não');
-$encontra_capacete = ($encontra_capacete === null) ? null : ($encontra_capacete === 'Sim' ? 'Sim' : 'Não');
-$encontrado_cinto = ($encontrado_cinto === null) ? null : ($encontrado_cinto === 'Sim' ? 'Sim' : 'Não');
-$para_brisa_avariado = ($para_brisa_avariado === null) ? null : ($para_brisa_avariado === 'Sim' ? 'Sim' : 'Não');
-$caminhando_na_cena = ($caminhando_na_cena === null) ? null : ($caminhando_na_cena === 'Sim' ? 'Sim' : 'Não');
-$painel_avariado = ($painel_avariado === null) ? null : ($painel_avariado === 'Sim' ? 'Sim' : 'Não');
-$volante_torcido = ($volante_torcido === null) ? null : ($volante_torcido === 'Sim' ? 'Sim' : 'Não');
+    // Se o campo não for enviado deixar o valor como nulo
+    $disturbio_comportamento = ($disturbio_comportamento === null) ? null : ($disturbio_comportamento === 'Sim' ? 'Sim' : 'Não');
+    $encontra_capacete = ($encontra_capacete === null) ? null : ($encontra_capacete === 'Sim' ? 'Sim' : 'Não');
+    $encontrado_cinto = ($encontrado_cinto === null) ? null : ($encontrado_cinto === 'Sim' ? 'Sim' : 'Não');
+    $para_brisa_avariado = ($para_brisa_avariado === null) ? null : ($para_brisa_avariado === 'Sim' ? 'Sim' : 'Não');
+    $caminhando_na_cena = ($caminhando_na_cena === null) ? null : ($caminhando_na_cena === 'Sim' ? 'Sim' : 'Não');
+    $painel_avariado = ($painel_avariado === null) ? null : ($painel_avariado === 'Sim' ? 'Sim' : 'Não');
+    $volante_torcido = ($volante_torcido === null) ? null : ($volante_torcido === 'Sim' ? 'Sim' : 'Não');
 
-// Inserir dados no banco de dados para ficha_avaliacao_cinematica
-$sql_cinematica = "INSERT INTO ficha_avaliacao_cinematica (disturbio_comportamento, encontra_capacete, encontrado_cinto, para_brisa_avariado, caminhando_na_cena, painel_avariado, volante_torcido) 
-VALUES ('$disturbio_comportamento', '$encontra_capacete', '$encontrado_cinto', '$para_brisa_avariado', '$caminhando_na_cena', '$painel_avariado', '$volante_torcido')";
+    // Inserir dados no banco de dados para ficha_avaliacao_cinematica
+    $sql_cinematica = "INSERT INTO ficha_avaliacao_cinematica (disturbio_comportamento, encontra_capacete, encontrado_cinto, para_brisa_avariado, caminhando_na_cena, painel_avariado, volante_torcido) 
+    VALUES ('$disturbio_comportamento', '$encontra_capacete', '$encontrado_cinto', '$para_brisa_avariado', '$caminhando_na_cena', '$painel_avariado', '$volante_torcido')";
 
-if ($conn->query($sql_cinematica) === TRUE) {
-} else {
-    echo "Erro ao inserir dados: " . $conn->error;
-}
+    if ($conn->query($sql_cinematica) === TRUE) {
+    } else {
+        echo "Erro ao inserir dados: " . $conn->error;
+    }
+
+// Recebe os dados do formulário para ficha_transporte_decisao_transporte
+$decisao_transporte = isset($_POST['Decisao_Transporte']) ? $_POST['Decisao_Transporte'] : '';
+$M = isset($_POST['M']) ? $_POST['M'] : '';
+$S1 = isset($_POST['S1']) ? $_POST['S1'] : '';
+$S2 = isset($_POST['S2']) ? $_POST['S2'] : '';
+$S3 = isset($_POST['S3']) ? $_POST['S3'] : '';
+$demandante = isset($_POST['Demandante']) ? $_POST['Demandante'] : '';
+$equipe = isset($_POST['Equipe']) ? $_POST['Equipe'] : '';
+
+    // Inserir dados no banco de dados para ficha_transporte_decisao_transporte
+    $sql_decisao_transporte = "INSERT INTO ficha_transporte_decisao_transporte (decisao_transporte, M, S1, S2, S3, Demandante, Equipe) 
+    VALUES ('$decisao_transporte', '$M', '$S1', '$S2', '$S3', '$demandante', '$equipe')";
+
+    if ($conn->query($sql_decisao_transporte) === TRUE) {
+    } else {
+        echo "Erro ao inserir dados: " . $conn->error;
+    }
 
     // Fecha a conexão com o banco de dados
     $conn->close();

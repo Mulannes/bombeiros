@@ -37,15 +37,15 @@
                     <p class="display-1">Ocorrência</p>
                 </div>
             </div>
+<!--                     -->
+<!-- ✓ Detalhes Paciente -->
+<!--                     -->
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                             aria-controls="panelsStayOpen-collapseOne">
-                            <!--                     -->
-                            <!-- ✓ Detalhes Paciente -->
-                            <!--                     -->
                             Detalhes Paciente
                         </button>
                     </h2>
@@ -1719,83 +1719,83 @@
                 </div>
             </div>
             <!--                      -->
-            <!-- ✘ Decisão Transporte -->
+            <!-- ✓ Decisão Transporte -->
             <!--                      -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseEleven">
-                        Decisão transporte
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingEleven">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultcritico">
-                                <label class="form-check-label" for="flexCheckDefaultcritico"
-                                    style="position: absolute; top: 0;left: 32px;">
-                                    Crítico
-                                </label>
-                            </div>
-                            <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultinstavel">
-                                <label class="form-check-label" for="flexCheckDefaultinstavel"
-                                    style="position: absolute; top: 0;left: 32px;">
-                                    Instável
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row" style="height: 40px;">
-                            <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultPotencialmente">
-                                <label class="form-check-label" for="flexCheckDefaultPotencialmente"
-                                    style="position: absolute; top: 0;left: 32px;">
-                                    Potencialmente instável
-                                </label>
-                            </div>
-                            <div class="col-6" style="position: relative;"><input class="form-check-input"
-                                    type="radio" value="" name="Decisao_Transporte" id="flexCheckDefaultestavel">
-                                <label class="form-check-label" for="flexCheckDefaultestavel"
-                                    style="position: absolute; top: 0;left: 32px;">
-                                    Estável
-                                </label>
-                            </div>
-                        </div>
+    <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseEleven">
+            Decisão transporte
+        </button>
+    </h2>
+    <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingEleven">
+        <div class="accordion-body">
+            <div class="row">
+                <div class="col-6" style="position: relative;">
+                    <input class="form-check-input" type="radio" value="Crítico" name="Decisao_Transporte"
+                        id="flexCheckDefaultcritico">
+                    <label class="form-check-label" for="flexCheckDefaultcritico">
+                        Crítico
+                    </label>
+                </div>
+                <div class="col-6" style="position: relative;">
+                    <input class="form-check-input" type="radio" value="Instável" name="Decisao_Transporte"
+                        id="flexCheckDefaultinstavel">
+                    <label class="form-check-label" for="flexCheckDefaultinstavel">
+                        Instável
+                    </label>
+                </div>
+            </div>
+            <div class="row" style="height: 40px;">
+                <div class="col-6" style="position: relative;">
+                    <input class="form-check-input" type="radio" value="Potencialmente Instável"
+                        name="Decisao_Transporte" id="flexCheckDefaultPotencialmente">
+                    <label class="form-check-label" for="flexCheckDefaultPotencialmente">
+                        Potencialmente Instável
+                    </label>
+                </div>
+                <div class="col-6" style="position: relative;">
+                    <input class="form-check-input" type="radio" value="Estável" name="Decisao_Transporte"
+                        id="flexCheckDefaultestavel">
+                    <label class="form-check-label" for="flexCheckDefaultestavel">
+                        Estável
+                    </label>
+                </div>
+            </div>
                         <hr>
                         <div class="row" style="text-align: center;">
                             <p>Equipe de atendimento</p>
                         </div>
                         <div class="row" style="display: flex; position: relative;">
                             <p style="font-size: 1em;padding: 0;" class="textA">M:</p><input type="text"
-                                class="form-control" name="medico" id=""
+                                class="form-control" name="M" id="M"
                                 style="width: 200px; position: absolute; right: 5px;">
                         </div>
                         <div class="row" style="display: flex; position: relative;">
                             <p style="font-size: 1em;padding: 0;" class="textA">S1:</p><input type="text"
-                                class="form-control" name="medicoS1" id=""
+                                class="form-control" name="S1" id="S1"
                                 style="width: 200px; position: absolute; right: 5px;">
                         </div>
                         <div class="row" style="display: flex; position: relative;">
                             <p style="font-size: 1em;padding: 0;" class="textA">S2:</p><input type="text"
-                                class="form-control" name="medicoS2" id=""
+                                class="form-control" name="S2" id="S2"
                                 style="width: 200px; position: absolute; right: 5px;">
                         </div>
                         <div class="row" style="display: flex; position: relative;">
                             <p style="font-size: 1em;padding: 0;" class="textA">S3:</p><input type="text"
-                                class="form-control" name="medicoS3" id=""
+                                class="form-control" name="S3" id="S3"
                                 style="width: 200px; position: absolute; right: 5px;">
                         </div>
                         <div class="row" style="display: flex; position: relative;">
                             <p style="font-size: 1em;padding: 0;" class="textA">Demandante:</p><input type="text"
-                                class="form-control" name="Demandante" id=""
+                                class="form-control" name="Demandante" id="Demandante"
                                 style="width: 200px; position: absolute; right: 5px;">
                         </div>
                         <div class="row" style="display: flex; position: relative;">
                             <p style="font-size: 1em;padding: 0;" class="textA">Equipe:</p><input type="text"
-                                class="form-control" name="Equipe" id=""
+                                class="form-control" name="Equipe" id="Equipe"
                                 style="width: 200px; position: absolute; right: 5px;">
                         </div>
                     </div>
@@ -3025,7 +3025,7 @@
                     </div>
                 </div>
                 <!--                           -->
-                <!-- ✘ Avaliação da Cinemática -->
+                <!-- ✓ Avaliação da Cinemática -->
                 <!--                           -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingNineteen">
