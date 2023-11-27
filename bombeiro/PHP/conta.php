@@ -147,7 +147,7 @@ $conn->close();
             </div>
         </a>
 
-        <a href="" class="text-decoration-none text-dark">
+        <a href="../HTML/suporte.html" class="text-decoration-none text-dark">
             <div class="container  d-flex align-items-center mt-3"
                 style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px">
                 <img src="../images/suporte.png" alt="">
