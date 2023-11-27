@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include("admin/redirectadm.php")
+?>
 
 <head>
     <meta charset="UTF-8">

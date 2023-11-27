@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include("admin/redirectadm.php")
 include("dbconnect.php");
 
 // Verifica se a chave 'nome_usuario' está definida na sessão
