@@ -43,9 +43,9 @@
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                             aria-controls="panelsStayOpen-collapseOne">
-                            <!--                   -->
-                            <!-- Detalhes Paciente -->
-                            <!--                   -->
+                            <!--                     -->
+                            <!-- ✓ Detalhes Paciente -->
+                            <!--                     -->
                             Detalhes Paciente
                         </button>
                     </h2>
@@ -113,9 +113,9 @@
                     </div>
                 </div>
             </div>
-            <!--                    -->
-            <!-- Tipo de Ocorrência -->
-            <!--                    -->
+            <!--                      -->
+            <!-- ✓ Tipo de Ocorrência -->
+            <!--                      -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -297,9 +297,9 @@
                                 <textarea class="form-control" name="Outro_Campo_Text" aria-label="Área de texto"
                                     placeholder="Descreva aqui..."></textarea>
                             </div>
-                            <!--                   -->
-                            <!-- Avaliação GLASGOW -->
-                            <!--                   -->
+                            <!--                     -->
+                            <!-- ✘ Avaliação GLASGOW -->
+                            <!--                     -->
                         </div>
                     </div>
                 </div>
@@ -558,9 +558,9 @@
                     </div3>
                 </div>
             </div>
-            <!--                   -->
-            <!--   Sinais Vitais   -->
-            <!--                   -->
+            <!--                     -->
+            <!--   ✓ Sinais Vitais   -->
+            <!--                     -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -630,9 +630,9 @@
                     </div>
                 </div>
             </div>
-            <!--                       -->
-            <!-- Problemas Encontrados -->
-            <!--                       -->
+            <!--                         -->
+            <!-- ✘ Problemas Encontrados -->
+            <!--                         -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -755,9 +755,9 @@
                     </div>
                 </div>
             </div>
-            <!--                         -->
-            <!-- Localização dos Traumas -->
-            <!--                         -->
+            <!--                           -->
+            <!-- ✘ Localização dos Traumas -->
+            <!--                           -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingSix">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1147,9 +1147,9 @@
                     </div>
                 </div>
             </div>
-            <!--                    -->
-            <!-- Objetos Recolhidos -->
-            <!--                    -->
+            <!--                      -->
+            <!-- ✓ Objetos Recolhidos -->
+            <!--                      -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1165,9 +1165,9 @@
                     </div>
                 </div>
             </div>
-            <!--                   -->
-            <!-- Sinais e Sintomas -->
-            <!--                   -->
+            <!--                     -->
+            <!-- ✘ Sinais e Sintomas -->
+            <!--                     -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingEight">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1590,9 +1590,9 @@
                     </div>
                 </div>
             </div>
-            <!--                   -->
-            <!-- Forma de Condução -->
-            <!--                   -->
+            <!--                     -->
+            <!-- ✓ Forma de Condução -->
+            <!--                     -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingNine">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1631,9 +1631,9 @@
                     </div>
                 </div>
             </div>
-            <!--            -->
-            <!-- Vítima Era -->
-            <!--            -->
+            <!--              -->
+            <!-- ✓ Vítima Era -->
+            <!--              -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTen">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1646,70 +1646,70 @@
                     aria-labelledby="panelsStayOpen-headingTen">
                     <div class="accordion-body">
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultCiclista">
+                            <input class="form-check-input" type="radio" value="Ciclista" name="Vitima_Era" id="flexCheckDefaultCiclista">
                             <label class="form-check-label" for="flexCheckDefaultCiclista"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Ciclista
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultCondutorMoto">
+                            <input class="form-check-input" type="radio" value="Condutor Moto" name="Vitima_Era" id="flexCheckDefaultCondutorMoto">
                             <label class="form-check-label" for="flexCheckDefaultCondutorMoto"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Condutor moto
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultGestante">
+                            <input class="form-check-input" type="radio" value="Gestante" name="Vitima_Era" id="flexCheckDefaultGestante">
                             <label class="form-check-label" for="flexCheckDefaultGestante"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Gestante
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPasFrente">
+                            <input class="form-check-input" type="radio" value="Pass. Banco da Frente" name="Vitima_Era" id="flexCheckDefaultPasFrente">
                             <label class="form-check-label" for="flexCheckDefaultPasFrente"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pass. Ban frente
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPasMoto">
+                            <input class="form-check-input" type="radio" value="Pass. Moto" name="Vitima_Era" id="flexCheckDefaultPasMoto">
                             <label class="form-check-label" for="flexCheckDefaultPasMoto"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pas. moto
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultCondutorcarro">
+                            <input class="form-check-input" type="radio" value="Condutor Carro" name="Vitima_Era" id="flexCheckDefaultCondutorcarro">
                             <label class="form-check-label" for="flexCheckDefaultCondutorcarro"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Condutor carro
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultClinico">
+                            <input class="form-check-input" type="radio" value="Clínico" name="Vitima_Era" id="flexCheckDefaultClinico">
                             <label class="form-check-label" for="flexCheckDefaultClinico"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Clínico
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultTrauma">
+                            <input class="form-check-input" type="radio" value="Trauma" name="Vitima_Era" id="flexCheckDefaultTrauma">
                             <label class="form-check-label" for="flexCheckDefaultTrauma"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Trauma
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPassTras">
+                            <input class="form-check-input" type="radio" value="Pass. Banco de Trás" name="Vitima_Era" id="flexCheckDefaultPassTras">
                             <label class="form-check-label" for="flexCheckDefaultPassTras"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pass. Bco. trás
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                            <input class="form-check-input" type="radio" value="Vitima_Era" name="Vitima_Era" id="flexCheckDefaultPedestre">
+                            <input class="form-check-input" type="radio" value="Pedestre" name="Vitima_Era" id="flexCheckDefaultPedestre">
                             <label class="form-check-label" for="flexCheckDefaultPedestre"
                                 style="position: absolute; top: 0;left: 32px;">
                                 Pedestre
@@ -1718,9 +1718,9 @@
                     </div>
                 </div>
             </div>
-            <!--                    -->
-            <!-- Decisão Transporte -->
-            <!--                    -->
+            <!--                      -->
+            <!-- ✘ Decisão Transporte -->
+            <!--                      -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1801,9 +1801,9 @@
                     </div>
                 </div>
             </div>
-            <!--                         -->
-            <!-- Procedimentos Efetuados -->
-            <!--                         -->
+            <!--                           -->
+            <!-- ✘ Procedimentos Efetuados -->
+            <!--                           -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwelve">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -2234,9 +2234,9 @@
                     </div>
                 </div>
             </div>
-            <!--                            -->
-            <!-- Materiais Utilizados Desc. -->
-            <!--                            -->
+            <!--                              -->
+            <!-- ✘ Materiais Utilizados Desc. -->
+            <!--                              -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThirteen">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -2418,9 +2418,9 @@
                         </div>
                     </div>
                 </div>
-                <!--                               -->
-                <!-- Materiais Utilizados N. Desc. -->
-                <!--                               -->
+                <!--                                 -->
+                <!-- ✘ Materiais Utilizados N. Desc. -->
+                <!--                                 -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFourteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -2615,9 +2615,9 @@
                         </div>
                     </div>
                 </div>
-                <!--                 -->
-                <!-- Termo de recusa -->
-                <!--                 -->
+                <!--                   -->
+                <!-- ✘ Termo de recusa -->
+                <!--                   -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFifteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -2665,9 +2665,9 @@
                         </div>
                     </div>
                 </div>
-                <!--                         -->
-                <!-- Observações Importantes -->
-                <!--                         -->
+                <!--                           -->
+                <!-- ✓ Observações Importantes -->
+                <!--                           -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingSixteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -2683,9 +2683,9 @@
                         </div>
                     </div>
                 </div>
-                <!--                            -->
-                <!-- Anamnese Emergência Médica -->
-                <!--                            -->
+                <!--                              -->
+                <!-- ✘ Anamnese Emergência Médica -->
+                <!--                              -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingSeventeen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -2823,9 +2823,9 @@
                         </div>
                     </div>
                 </div>
-                <!--                      -->
-                <!-- Anamnese Gestacional -->
-                <!--                      -->
+                <!--                        -->
+                <!-- ✘ Anamnese Gestacional -->
+                <!--                        -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingEighteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -3024,9 +3024,9 @@
                         </div>
                     </div>
                 </div>
-                <!--                         -->
-                <!-- Avaliação da Cinemática -->
-                <!--                         -->
+                <!--                           -->
+                <!-- ✘ Avaliação da Cinemática -->
+                <!--                           -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingNineteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
