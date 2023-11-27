@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <?php
-include("admin/redirectadm.php")
+include("admin/redirectadm.php");
     ?>
 
 <head>
