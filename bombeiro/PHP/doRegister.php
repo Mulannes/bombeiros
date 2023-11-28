@@ -38,7 +38,7 @@ include("admin/redirectadm.php");
         <form action="salvar_ocorrencia.php" method="post">
             <div class="row text">
                 <div class="col-lg">
-                    <p class="display-1">Ocorrência</p>
+                    <a href="ocorrencia.php" class="display-1" style="color: black; text-decoration: none; font-weight: 600;">Ocorrência</a>
                 </div>
             </div>
             <!--                     -->
