@@ -661,24 +661,23 @@ include("admin/redirectadm.php");
                         </div>
                         <div class="row"
                             style="height: 150px; font-size: 12px; align-items: center; border-bottom: 2px solid rgba(0,0,0,0.3);">
-                            <div class="col-4" style="position:relative;"><input class=" form-check-input"
-                                    type="checkbox" name="Obstérico" id="Obstérico">
-                                <label class="form-check-label" for="Obstérico" style="position: absolute; top: 0;">
-                                    Obstérico
+                            <div class="col-4" style="position:relative;">
+                                <label class="form-check-label" for="Obstetrico" style="position: absolute; top: 0;">
+                                    Obstétrico
                                 </label>
                             </div>
-                            <div class="col-8" style="position:relative;"><input class="form-check-input"
-                                    type="checkbox" name="PartoEmergencial" id="PartoEmergencial"
+                            <div class="col-8" style="position:relative;"><input class="form-check-input" value="Parto Emergencial"
+                                    type="radio" name="Obstetrico" id="PartoEmergencial"
                                     style="display: block;">
                                 <label class="form-check-label" for="PartoEmergencial"
                                     style="position: absolute; top: 0; left: 30px;width: 200px">
                                     Parto Emergencial
-                                </label><input class="form-check-input" type="checkbox" name="Gestante" id="Gestante"
+                                </label><input class="form-check-input" type="radio" name="Obstetrico" id="Gestante" value="Gestante"
                                     style="display: block;">
                                 <label class="form-check-label" for="Gestante"
                                     style="position: absolute; top: 20px; left: 30px;width: 200px">
                                     Gestante
-                                </label><input class=" form-check-input" type="checkbox" name="Hemor" id="Hemor"
+                                </label><input class=" form-check-input" type="radio" name="Obstetrico" id="Hemor" value="Hemor. excessiva"
                                     style="display: block;">
                                 <label class="form-check-label" for="Hemor"
                                     style="position: absolute; top: 40px;  left: 30px;width: 200px">
@@ -688,18 +687,17 @@ include("admin/redirectadm.php");
                         </div>
                         <div class="row"
                             style="height: 125px; font-size: 12px; align-items: center; border-bottom: 2px solid rgba(0,0,0,0.3);">
-                            <div class="col-6" style="position:relative;"><input class=" form-check-input"
-                                    type="checkbox" name="Respiratório" id="Respiratório">
-                                <label class="form-check-label" for="Respiratório" style="position: absolute; top: 0;">
+                            <div class="col-6" style="position:relative;">
+                                <label class="form-check-label" for="Respiratorio" style="position: absolute; top: 0;">
                                     Respiratório
                                 </label>
                             </div>
-                            <div class="col-6" style="position:relative;"><input class=" form-check-input"
-                                    type="checkbox" name="DPOC" id="DPOC" style="display: block;">
+                            <div class="col-6" style="position:relative;"><input class=" form-check-input" value="DPOC"
+                                    type="radio" name="Respiratorio" id="DPOC" style="display: block;">
                                 <label class="form-check-label" for="DPOC"
                                     style="position: absolute; top: 0; left: 30px;width: 200px">
                                     DPOC
-                                </label><input class="form-check-input" type="checkbox" name="Inalação" id="Inalação"
+                                </label><input class="form-check-input" type="radio" name="Respiratorio" id="Inalação" value="Inalação fumaça"
                                     style="display: block;">
                                 <label class="form-check-label" for="Inalação"
                                     style="position: absolute; top: 20px; left: 30px;width: 200px">
@@ -709,18 +707,17 @@ include("admin/redirectadm.php");
                         </div>
                         <div class="row"
                             style="height: 125px; font-size: 12px; align-items: center; border-bottom: 2px solid rgba(0,0,0,0.3);">
-                            <div class="col-6" style="position:relative;"><input class="form-check-input"
-                                    type="checkbox" name="Diabetes" id="Diabetes">
+                            <div class="col-6" style="position:relative;">
                                 <label class="form-check-label" for="Diabetes" style="position: absolute; top: 0;">
                                     Diabetes
                                 </label>
                             </div>
-                            <div class="col-6" style="position:relative;"><input class="form-check-input"
-                                    type="checkbox" name="Hiperglicemia" id="Hiperglicemia" style="display: block;">
+                            <div class="col-6" style="position:relative;"><input class="form-check-input" value="Hiperglicemia"
+                                    type="radio" name="Diabetes" id="Hiperglicemia" style="display: block;">
                                 <label class="form-check-label" for="Hiperglicemia"
                                     style="position: absolute; top: 0; left: 30px;width: 200px">
                                     Hiperglicemia
-                                </label><input class="form-check-input" type="checkbox" name="Hipoglicemia"
+                                </label><input class="form-check-input" type="radio" name="Diabetes" value="Hipoglicemia"
                                     id="Hipoglicemia" style="display: block;">
                                 <label class="form-check-label" for="Hipoglicemia"
                                     style="position: absolute; top: 20px; left: 30px;width: 200px">
@@ -730,58 +727,49 @@ include("admin/redirectadm.php");
                         </div>
                         <div class="row"
                             style="height: 225px; font-size: 12px; align-items: center; border-bottom: 2px solid rgba(0,0,0,0.3);" ">
-                        <div class=" col-4"><input class="form-check-input" type="checkbox" name="Transporte"
-                                id="Transporte">
+                        <div class=" col-4">
                             <label class="form-check-label" for="Transporte">
                                 Transporte
                             </label>
                         </div>
-                        <div class="col-8" style="position: relative;"><input class="form-check-input" type="checkbox"
+                        <div class="col-8" style="position: relative;"><input class="form-check-input" type="radio" value="Aéreo"
                                 name="Aereo" id="Aereo" style="display: block;">
                             <label class="form-check-label" for="Aereo" style="position: absolute; top: 0;left: 32px;">
                                 Aéreo
-                            </label><input class="form-check-input" type="checkbox" name="Clinico" id="Clinico"
+                            </label><input class="form-check-input" type="radio" name="Transporte" id="Clinico" value="Clínico"
                                 style="display: block;">
                             <label class="form-check-label" for="Clinico"
                                 style="position: absolute; top: 20px;left: 32px;">
                                 Clínico
-                            </label><input class="form-check-input" type="checkbox" name="Emergencial" id="Emergencial"
+                            </label><input class="form-check-input" type="radio" name="Transporte" id="Emergencial" value="Emergencial"
                                 style="display: block;">
                             <label class="form-check-label" for="Emergencial"
                                 style="position: absolute; top: 40px;left: 32px;">
                                 Emergencial
-                            </label><input class="form-check-input" type="checkbox" name="potrauma" id="potrauma"
+                            </label><input class="form-check-input" type="radio" name="Transporte" id="potrauma" value="Pós-trauma"
                                 style="display: block;">
                             <label class="form-check-label" for="potrauma"
                                 style="position: absolute; top: 60px;left: 32px;">
                                 Pós-trauma
-                            </label><input class="form-check-input" type="checkbox" name="Samu" id="Samu"
+                            </label><input class="form-check-input" type="radio" name="Transporte" id="Samu" value="Samu"
                                 style="display: block;">
                             <label class="form-check-label" for="Samu"
                                 style="position: absolute; top: 80px;left: 32px;">
                                 Samu
-                            </label><input class="form-check-input" type="checkbox" name="Outros" id="Outros"
-                                style="display: block;">
-                            <label class="form-check-label" for="Outros"
-                                style="position: absolute; top: 100px;left: 32px;">
-                                Outros
-                            </label><input type="text" class="form-control">
-                            <input class="form-check-input" type="checkbox" name="noRemocao" id="noRemocao"
+                            </label><input class="form-check-input" type="radio" name="Transporte" id="noRemocao" value="Sem remoção"
                                 style="display: block;">
                             <label class="form-check-label" for="noRemocao"
-                                style="position: absolute; top: 158px;left: 32px;">
+                                style="position: absolute; top: 100px;left: 32px;">
                                 Sem remoção
                             </label>
                         </div>
                     </div>
                     <div class="row"
                         style="height: 150px; font-size: 12px; align-items: center; border-bottom: 2px solid rgba(0,0,0,0.3);">
-                        <div class="col" style="position:relative;"><input class="form-check-input" type="checkbox"
-                                name="Outros" id="Outros" style="display: block;">
+                        <div class="col" style="position:relative;">
                             <label class="form-check-label" for="Outros2"
                                 style="position: absolute; top: 0;left: 32px;">
-                                Outros
-                            </label><input type="text" class="form-control">
+                            </label><input type="text" class="form-control" name="Outros" id="Outros" placeholder="Outros">
                         </div>
                     </div>
                 </div>
@@ -3290,7 +3278,6 @@ include("admin/redirectadm.php");
             maior7.style.display = "none";
         }
     });
-
 
     // var inputIdade = document.getElementById("idadePaciente_DP");
     // var menor5 = document.getElementById("menor5");

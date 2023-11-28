@@ -351,15 +351,33 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
     $bebe_nome = $_POST["bebeNome"];
 
     // Insere os dados no banco de dados
-    $sql = "INSERT INTO ficha_anamnese_gestacional (tempoGestacao, fezPreNatal, nomeMedico, complicacoes, primeiroFilho, numFilhos, inicioContracoes, duracaoContracoes, 
+    $sql_gestacional = "INSERT INTO ficha_anamnese_gestacional (tempoGestacao, fezPreNatal, nomeMedico, complicacoes, primeiroFilho, numFilhos, inicioContracoes, duracaoContracoes, 
     intervaloContracoes, pressaoQuadril, rupturaBolsa, inspecaoVisual, partoRealizado, horaNascimento, bebeSexo, bebeNome) 
     VALUES ('$tempo_gestacao', '$pre_natal', '$nome_medico', '$complicacoes', '$primeiro_filho', '$num_filhos', '$inicio_contracoes', '$duracao_contracoes', 
     '$intervalo_contracoes', '$pressao_quadril', '$ruptura_bolsa', '$inspecao_visual', '$parto_realizado', '$hora_nascimento', '$bebe_sexo', '$bebe_nome')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($conn->query($sql_gestacional) === TRUE) {
     } else {
         echo "Erro ao inserir dados: " . $conn->error;
     }
+
+// Receber dados do formulário ficha_problemas_encontrados
+    $psiquiatrico = isset($_POST['Psiquiátrico']) ? 1 : 0;
+    $obstetrico = isset($_POST['Obstetrico']) ? $_POST['Obstetrico'] : null;
+    $respiratorio = isset($_POST['Respiratorio']) ? $_POST['Respiratorio'] : null;
+    $diabetes = isset($_POST['Diabetes']) ? $_POST['Diabetes'] : null;
+    $transporte = isset($_POST['Transporte']) ? $_POST['Transporte'] : null;
+    $outros = isset($_POST['Outros']) ? $_POST['Outros'] : null;
+
+        // Insere os dados no banco de dados
+        $sql_problemas = "INSERT INTO ficha_problemas_encontrados (psiquiatrico, obstetrico, respiratorio, diabetes, transporte, outros) 
+        VALUES('$psiquiatrico', '$obstetrico', '$respiratorio','$diabetes','$transporte','$outros')";
+
+        if($conn->query($sql_problemas) === TRUE) {
+        }else{
+            echo "Erro ao inserir dados:". $conn->error;
+        }
+
 
     // Fecha a conexão com o banco de dados
     $conn->close();
