@@ -2259,7 +2259,7 @@ include("admin/redirectadm.php");
         </div>
     </div>
     <!--                              -->
-    <!-- ✘ Materiais Utilizados Desc. -->
+    <!-- ✓ Materiais Utilizados Desc. -->
     <!--                              -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingThirteen">
@@ -2289,7 +2289,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant15" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantAtaduras" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault157"
@@ -2301,7 +2301,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant16" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantManta" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2315,7 +2315,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant17" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantCateter" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault159"
@@ -2327,7 +2327,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant18" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantPas" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2341,7 +2341,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant19" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantCompressa" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault161"
@@ -2353,7 +2353,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant20" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantSonda" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2367,7 +2367,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant21" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantKits" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault163"
@@ -2379,7 +2379,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant22" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantSoro" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2393,7 +2393,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant23" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantLuvas" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault165"
@@ -2405,7 +2405,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant24" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantTalas" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2419,26 +2419,26 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant25" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantMascara" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault167"
                             style="display: block; ">
                         <label class="form-check-label" for="flexCheckDefault167"
                             style="position: absolute; top: -8px;left: 32px;">
-                            <input type="text" class="form-control" name="othersLeave1" id="">
+                            <input type="text" class="form-control" name="Outro_Mat" id="">
                         </label>
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant26" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantOutro" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--                                 -->
-    <!-- ✘ Materiais Utilizados N. Desc. -->
+    <!-- ✓ Materiais Utilizados N. Desc. -->
     <!--                                 -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingFourteen">
@@ -2468,7 +2468,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant13" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantBase" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
@@ -2480,7 +2480,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant14" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantTTF" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2494,7 +2494,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant13" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="QuantColar1" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
@@ -2506,7 +2506,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant14" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantTiranteA" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2520,7 +2520,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant13" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantColar2" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
@@ -2532,7 +2532,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant14" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantTiranteC" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2546,7 +2546,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant13" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantCoxins" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
@@ -2558,7 +2558,7 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant14" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantCanula" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2572,19 +2572,19 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant13" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantKED" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
                             style="display: block; ">
                         <label class="form-check-label" for="flexCheckDefault89"
                             style="position: absolute; top: -8px;left: 32px;">
-                            <input type="text" class="form-control" name="othersLeave0" id="">
+                            <input type="text" class="form-control" name="Outro_Mat1" id="Outro_Mat1">
                         </label>
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant14" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantOutro1" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
@@ -2598,19 +2598,19 @@ include("admin/redirectadm.php");
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant13" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantMaca" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
                             style="display: block; ">
                         <label class="form-check-label" for="flexCheckDefault89"
                             style="position: absolute; top: -8px;left: 32px;">
-                            <input type="text" class="form-control" name="othersLeave1" id="">
+                            <input type="text" class="form-control" name="Outro_Mat2" id="Outro_Mat2">
                         </label>
                     </div>
                     <div class="col-2"
                         style="border-left: 1px solid black; border-right:1px solid black; padding: 0;display: flex;flex-direction: column;align-items: center;">
-                        <input type="text" name="Quant14" class="form-control" style="width: 80%;padding: 5px;">
+                        <input type="text" name="quantOutro2" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                 </div>
             </div>

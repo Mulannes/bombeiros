@@ -334,7 +334,7 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
 
 // Receber dados do formulário ficha_anamnese_gestacional
     $tempo_gestacao = $_POST["tempoGestacao"];
-    $pre_natal = isset($_POST['flexRadioDefault7']) ? $_POST['flexRadioDefault7'] : null;
+    $pre_natal = isset($_POST['flexRadioDefault6']) ? $_POST['flexRadioDefault6'] : null;
     $nome_medico = $_POST["nomeMedico"];
     $complicacoes = isset($_POST['flexRadioDefault7']) ? $_POST['flexRadioDefault7'] : null;
     $primeiro_filho = isset($_POST['flexRadioDefault8']) ? $_POST['flexRadioDefault8'] : null;
@@ -350,7 +350,7 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
     $bebe_sexo = isset($_POST['bebeSexo']) ? $_POST['bebeSexo'] : null;
     $bebe_nome = $_POST["bebeNome"];
 
-    // Insere os dados no banco de dados
+    // Insere os dados na tabela formulário ficha_anamnese_gestacional
     $sql_gestacional = "INSERT INTO ficha_anamnese_gestacional (tempoGestacao, fezPreNatal, nomeMedico, complicacoes, primeiroFilho, numFilhos, inicioContracoes, duracaoContracoes, 
     intervaloContracoes, pressaoQuadril, rupturaBolsa, inspecaoVisual, partoRealizado, horaNascimento, bebeSexo, bebeNome) 
     VALUES ('$tempo_gestacao', '$pre_natal', '$nome_medico', '$complicacoes', '$primeiro_filho', '$num_filhos', '$inicio_contracoes', '$duracao_contracoes', 
@@ -369,7 +369,7 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
     $transporte = isset($_POST['Transporte']) ? $_POST['Transporte'] : null;
     $outros = isset($_POST['Outros']) ? $_POST['Outros'] : null;
 
-        // Insere os dados no banco de dados
+        // Insere os dados na tabela ficha_problemas_encontrados
         $sql_problemas = "INSERT INTO ficha_problemas_encontrados (psiquiatrico, obstetrico, respiratorio, diabetes, transporte, outros) 
         VALUES('$psiquiatrico', '$obstetrico', '$respiratorio','$diabetes','$transporte','$outros')";
 
@@ -378,6 +378,54 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
             echo "Erro ao inserir dados:". $conn->error;
         }
 
+// Receber dados do formulário ficha_materiais_utilizados_descartavel 
+    $ataduras = $_POST['quantAtaduras'];
+    $cateter = $_POST['quantCateter'];
+    $compressa = $_POST['quantCompressa'];
+    $kit = $_POST['quantKits'];
+    $luvas = $_POST['quantLuvas'];
+    $mascara = $_POST['quantMascara'];
+    $manta = $_POST['quantManta'];
+    $pas = $_POST['quantPas'];
+    $sonda = $_POST['quantSonda'];
+    $soro = $_POST['quantSoro'];
+    $talas = $_POST['quantTalas'];
+    $outro_nome = $_POST['Outro_Mat'];
+    $outro_valor = $_POST['quantOutro'];
+
+    // Insere os dados na tabela ficha_materiais_utilizados_descartavel
+    $sql_matdesc = "INSERT INTO ficha_materiais_utilizados_descartavel (ataduras, cateter, compressa, kit, luvas, mascara, manta, pas, sonda, soro, talas, outro_nome, outro_valor) 
+    VALUES('$ataduras', '$cateter', '$compressa','$kit','$luvas','$mascara', '$manta', '$pas', '$sonda', '$soro', '$talas', '$outro_nome', '$outro_valor')";
+
+    if($conn->query($sql_matdesc) === TRUE) {
+    }else{
+        echo "Erro ao inserir dados:". $conn->error;
+    }
+
+// Receber dados do formulário ficha_materiais_utilizados_deixados 
+    $base = $_POST['quantBase'];
+    $colar1 = $_POST['QuantColar1'];
+    $colar2 = $_POST['quantColar2'];
+    $coxins = $_POST['quantCoxins'];
+    $KED = $_POST['quantKED'];
+    $maca = $_POST['quantMaca'];
+    $TTF = $_POST['quantTTF'];
+    $tirante_aranha = $_POST['quantTiranteA'];
+    $tirante_cabeca = $_POST['quantTiranteC'];
+    $canula = $_POST['quantCanula'];
+    $outro_campo1 = $_POST['Outro_Mat1'];
+    $outro_valor1 = $_POST['quantOutro1'];
+    $outro_campo2 = $_POST['Outro_Mat2'];
+    $outro_valor2 = $_POST['quantOutro2'];
+
+    // Insere os dados na tabela ficha_materiais_utilizados_deixados
+    $sql_matdeix = "INSERT INTO ficha_materiais_utilizados_deixados (base, colar1, colar2, coxins, KED, maca, TTF, tirante_aranha, tirante_cabeca, canula, outro_campo1, outro_valor1, outro_campo2, outro_valor2) 
+    VALUES('$base', '$colar1', '$colar2', '$coxins', '$KED', '$maca', '$TTF', '$tirante_aranha', '$tirante_cabeca', '$canula', '$outro_campo1', '$outro_valor1', '$outro_campo2', '$outro_valor2')";
+
+    if($conn->query($sql_matdeix) === TRUE) {
+    }else{
+        echo "Erro ao inserir dados:". $conn->error;
+    }
 
     // Fecha a conexão com o banco de dados
     $conn->close();
