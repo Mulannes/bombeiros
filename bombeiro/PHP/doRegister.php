@@ -2820,7 +2820,7 @@
         </div>
     </div>
     <!--                        -->
-    <!-- ✘ Anamnese Gestacional -->
+    <!-- ✓ Anamnese Gestacional -->
     <!--                        -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingEighteen">
@@ -2844,11 +2844,11 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Fez pré-natal?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefaultSim6">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefaultSim6" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim6">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefaultNao6">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefaultNao6" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao6">
                             Não
                         </label>
@@ -2865,11 +2865,11 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Existe a possibilidade de complicações?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefaultSim7">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefaultSim7" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim7">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefaultNao7">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefaultNao7" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao7">
                             Não
                         </label>
@@ -2878,11 +2878,11 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">É o primeiro filho?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefaultSim8">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefaultSim8" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim8">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefaultNao8">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefaultNao8" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao8">
                             Não
                         </label>
@@ -2898,7 +2898,7 @@
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <p>Que horas iniciarão as contrações?</p>
+                        <p>Que horas iniciaram as contrações?</p>
                     </div>
                     <div class="col-8">
                         <input type="text" name="inicoContracoes" class="form-control">
@@ -2925,11 +2925,11 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-8">Sente pressão na região do quadril ou vontade de evacuar?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefaultSim9">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefaultSim9" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim9">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefaultNao9">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefaultNao9" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao9">
                             Não
                         </label>
@@ -2938,12 +2938,12 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Já houve ruptura da bolsa?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault10"
+                        <input class="form-check-input" type="radio" name="flexRadioDefault10" value="Sim"
                             id="flexRadioDefaultSim10">
                         <label class="form-check-label" for="flexRadioDefaultSim10">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault10"
+                        <input class="form-check-input" type="radio" name="flexRadioDefault10" value="Não"
                             id="flexRadioDefaultNao10">
                         <label class="form-check-label" for="flexRadioDefaultNao10">
                             Não
@@ -2953,12 +2953,12 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Foi feito inspeção visual?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault11"
+                        <input class="form-check-input" type="radio" name="flexRadioDefault11" value="Sim"
                             id="flexRadioDefaultSim11">
                         <label class="form-check-label" for="flexRadioDefaultSim11">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault11"
+                        <input class="form-check-input" type="radio" name="flexRadioDefault11" value="Não"
                             id="flexRadioDefaultNao11">
                         <label class="form-check-label" for="flexRadioDefaultNao11">
                             Não
@@ -2968,12 +2968,12 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Parto realizado?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault12"
+                        <input class="form-check-input" type="radio" name="flexRadioDefault12" value="Sim"
                             id="flexRadioDefaultSim12">
                         <label class="form-check-label" for="flexRadioDefaultSim12">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault12"
+                        <input class="form-check-input" type="radio" name="flexRadioDefault12" value="Não"
                             id="flexRadioDefaultNao12">
                         <label class="form-check-label" for="flexRadioDefaultNao12">
                             Não
@@ -2991,11 +2991,11 @@
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-4">Sexo do Bebe:</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="bebeMasc" id="bebeMasc">
+                        <input class="form-check-input" type="radio" name="bebeSexo" value="Masculino" id="bebeMasc">
                         <label class="form-check-label" for="bebeMasc">
                             Masculino
                         </label>
-                        <input class="form-check-input" type="radio" name="bebeFem" id="bebeFem">
+                        <input class="form-check-input" type="radio" name="bebeSexo" value="Feminino" id="bebeFem">
                         <label class="form-check-label" for="bebeFem">
                             Feminino
                         </label>

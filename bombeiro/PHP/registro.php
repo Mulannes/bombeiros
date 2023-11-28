@@ -23,15 +23,21 @@ include("admin/redirectadm.php")
     <header>
         <div class="d-lg-none">
 
-            <nav class="navbar">
-                <div class="container">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNav" style="width: 50px; height: 50px; position: relative; border: transparent;">
-                        <img src="../images/MenuIcon.png" class="navbar-toggler-icon" style="width: 58px; height: 58px; position: absolute;top: 0; left: 0; background-image: none;">
-                    </button>
-                    <a href="../PHP/conta.php"><img src="../images/botãologin.png"></a>
-                </div>
-            </nav>
+        <nav class="navbar">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNav"
+                            style="width: 50px; height: 50px; position: relative; border: transparent;">
+                            <img src="../images/MenuIcon.png" class="navbar-toggler-icon"
+                                style="width: 58px; height: 58px; position: absolute; top: 0; left: 0; background-image: none;">
+                        </button>
+                        <form method="post" action="admin/redirectadm.php">
+                            <button type="submit" name="btnRedirect" class="btn btn">
+                                <img src="../images/botãologin.png" alt="Botão de Login">
+                            </button>
+                        </form>
+                    </div>
+                </nav>
             <div class="offcanvas offcanvas-start" id="offcanvasNav">
 
                 <div class="offcanvas-header">
@@ -42,13 +48,13 @@ include("admin/redirectadm.php")
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../PHP/index.php">Menu</a>
+                            <a class="nav-link" href="index.php">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/ocorrencia.html">Fazer Registro</a>
+                            <a class="nav-link" href="ocorrencia.php">Fazer Registro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/registro.html">Registro</a>
+                            <a class="nav-link" href="registro.php">Registro</a>
                         </li>
                     </ul>
                 </div>
@@ -253,15 +259,15 @@ include("admin/redirectadm.php")
             <ul class="nav nav-pills nav-justified">
                 <li class="nav-item" style=" max-height: 65px;">
                     <img src="../images/home.png" class=" mx-auto d-block" style="padding: 10px;">
-                    <a class="nav-link" href="../PHP/index.php" style="color: black; padding: 0; font-size: 14px">Menu</a>
+                    <a class="nav-link" href="index.php" style="color: black; padding: 0; font-size: 14px">Menu</a>
                 </li>
                 <li class="nav-item" style="max-height: 65px;">
                     <img src="../images/fazerregistro.png" class=" mx-auto d-block" style="padding: 10px 10px 5px 10px;"> 
-                    <a class="nav-link" href="../HTML/ocorrencia.html" style="color: black; padding: 0; font-size: 14px; height: 28px; line-height: 13px;">Fazer<br>Registro</a>
+                    <a class="nav-link" href="ocorrencia.php" style="color: black; padding: 0; font-size: 14px; height: 28px; line-height: 13px;">Fazer<br>Registro</a>
                 </li>
                 <li class="nav-item" style="max-height: 65px;">
                     <img src="../images/registroR.png" class=" mx-auto d-block" style="padding: 10px;">
-                    <a class="nav-link" href="../HTMl/registro.html" style="color: #C21219; padding: 0; font-size: 14px;font-weight: bold;">Registros</a>
+                    <a class="nav-link" href="registro.php" style="color: #C21219; padding: 0; font-size: 14px;font-weight: bold;">Registros</a>
                 </li>
                 <li class="nav-item" style="max-height: 65px;">
                     <img src="../images/contaP.png" class=" mx-auto d-block" style="padding: 10px;">

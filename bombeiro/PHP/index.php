@@ -56,13 +56,13 @@ include("admin/redirectadm.php");
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="../PHP/index.php">Menu</a>
+                                <a class="nav-link" href="index.php">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../HTML/ocorrencia.php">Fazer Registro</a>
+                                <a class="nav-link" href="ocorrencia.php">Fazer Registro</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../HTML/registro.php">Registro</a>
+                                <a class="nav-link" href="registro.php">Registro</a>
                             </li>
                         </ul>
                     </div>
@@ -136,7 +136,7 @@ include("admin/redirectadm.php");
                                 do aplicativo aqui.</p>
                         </div>
                     </div>
-                    <div class="carousel-item" onclick="window.location.href='../PHP/ocorrencia.php'">
+                    <div class="carousel-item" onclick="window.location.href='ocorrencia.php'">
                         <img src="../images/blue.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Fazer Registro</h5>
@@ -144,7 +144,7 @@ include("admin/redirectadm.php");
                                 ocorrência aqui.</p>
                         </div>
                     </div>
-                    <div class="carousel-item" onclick="window.location.href='../PHP/registro.php'">
+                    <div class="carousel-item" onclick="window.location.href='registro.php'">
                         <img src="../images/green.png" class="d-block w-100">
                         <div class="carousel-caption text-light">
                             <h5>Ver Registro</h5>
@@ -163,18 +163,18 @@ include("admin/redirectadm.php");
                     <ul class="nav nav-pills nav-justified">
                         <li class="nav-item" style=" max-height: 65px;">
                             <img src="../images/homeR.png" class=" mx-auto d-block" style="padding: 10px;">
-                            <a class="nav-link" href="../PHP/index.php"
+                            <a class="nav-link" href="index.php"
                                 style="color: #C21219; padding: 0; font-size: 14px;font-weight: bold; ">Menu</a>
                         </li>
                         <li class="nav-item" style="max-height: 65px;">
                             <img src="../images/fazerregistro.png" class=" mx-auto d-block"
                                 style="padding: 10px 10px 5px 10px;">
-                            <a class="nav-link" href="../HTML/ocorrencia.html"
+                            <a class="nav-link" href="ocorrencia.php"
                                 style="color: black; padding: 0; font-size: 14px; height: 28px; line-height: 13px;">Fazer<br>Registro</a>
                         </li>
                         <li class="nav-item" style="max-height: 65px;">
                             <img src="../images/registro.png" class=" mx-auto d-block" style="padding: 10px;">
-                            <a class="nav-link" href="../HTMl/registro.html"
+                            <a class="nav-link" href="registro.php"
                                 style="color: black; padding: 0; font-size: 14px">Registros</a>
                         </li>
                         <li class="nav-item" style="max-height: 65px;">
