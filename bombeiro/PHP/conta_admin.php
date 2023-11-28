@@ -196,8 +196,10 @@ $conn->close();
                     <a class="nav-link" href="registro.php" style="color: black; padding: 0; font-size: 14px">Registros</a>
                 </li>
                 <li class="nav-item" style="max-height: 65px;">
+                <form action="admin/redirectadm.php" method="post">
                     <img src="../images/contaR.png" class=" mx-auto d-block" style="padding: 10px;">
-                    <a class="nav-link" href="../PHP/conta.php" style="color: #C21219; padding: 0; font-size: 14px; font-weight: bold;">Conta</a>
+                    <button type="submit" name="btnRedirect" style="color: #C21219; padding: 0; font-size: 14px; font-weight: bold; background-color: transparent; border: none;">Conta</button>
+                </form>
                 </li>
             </ul>
         </div>
