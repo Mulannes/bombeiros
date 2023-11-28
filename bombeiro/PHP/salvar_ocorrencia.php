@@ -313,6 +313,26 @@ if ($conn->query($sql_sinais_sintomas) === TRUE) {
     echo "Erro ao salvar dados: " . $conn->error;
 }
 
+
+// Receber dados do formulário ficha_transporte_detalhes_viagem
+$NumeroUSB = mysqli_real_escape_string($conn, $_POST['NumeroUSB']);
+$CodigoIR = mysqli_real_escape_string($conn, $_POST['CodigoIR']);
+$NumeroOcorrencia = isset($_POST['NumeroOcorrencia']) ? mysqli_real_escape_string($conn, $_POST['NumeroOcorrencia']) : null;
+$CodigoPS = mysqli_real_escape_string($conn, $_POST['CodigoPS']);
+$Desp = mysqli_real_escape_string($conn, $_POST['Desp']);
+$HCH = mysqli_real_escape_string($conn, $_POST['HCH']);
+$KMFinal = mysqli_real_escape_string($conn, $_POST['KMFinal']);
+$CodigoSIASUS = mysqli_real_escape_string($conn, $_POST['CodigoSIASUS']);
+
+// Inserir dados na tabela ficha_transporte_detalhes_viagem
+$sql_detalhes_viagem = "INSERT INTO ficha_transporte_detalhes_viagem (NumeroUSB, CodigoIR, NumeroOcorrencia, CodigoPS, Desp, HCH, KMFinal, CodigoSIASUS)
+        VALUES ('$NumeroUSB', '$CodigoIR', '$NumeroOcorrencia', '$CodigoPS', '$Desp', '$HCH', '$KMFinal', '$CodigoSIASUS')";
+
+if (mysqli_query($conn, $sql_detalhes_viagem)) {
+} else {
+    echo "Erro ao salvar dados: " . mysqli_error($conn);
+}
+
     // Fecha a conexão com o banco de dados
     $conn->close();
 } else {

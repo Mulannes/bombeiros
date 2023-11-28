@@ -3141,6 +3141,9 @@
             </div>
         </div>
     </div>
+    <!--                   -->
+    <!-- ✓ Detalhes Viagem -->
+    <!--                   -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingTwenty">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -3173,7 +3176,7 @@
                         <p>Número Ocorrência:</p>
                     </div>
                     <div class="col-8">
-                        <input type="text" name="NumeroOcorrência" class="form-control">
+                        <input type="text" name="NumeroOcorrencia" class="form-control">
                     </div>
                 </div>
                 <div class="row">
@@ -3222,9 +3225,6 @@
         </form>
     </div>
     </div>
-    <!--                           -->
-    <!-- ✓ Detalhes Viagem -->
-    <!--                           -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
