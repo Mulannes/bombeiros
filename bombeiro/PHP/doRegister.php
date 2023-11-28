@@ -1,3 +1,7 @@
+<?php
+include("admin/redirectadm.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
