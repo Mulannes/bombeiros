@@ -1610,8 +1610,8 @@
                             </label>
                         </div>
                         <div class="row" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault107" name="Observacoes">
-                <input type="text" class="form-control" style="position: absolute; top: 0;left: 32px; height: 35px; width: 200px;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault107">
+                <input type="text" name="Observacoes" class="form-control" style="position: absolute; top: 0;left: 32px; height: 35px; width: 200px;">
                         </div>
 
                     </div>

@@ -294,7 +294,7 @@ $sudorese = isset($_POST['Sudorese']) ? 1 : 0;
 $taquipneia = isset($_POST['Taquipneia']) ? 1 : 0;
 $taquicardia = isset($_POST['Taquicardia']) ? 1 : 0;
 $tontura = isset($_POST['Tontura']) ? 1 : 0;
-$observacoes = isset($_POST['Observacoes']) ? mysqli_real_escape_string($conn, $_POST['Observacoes']) : null;
+$observacoes = isset($_POST['Observacoes']) ? $_POST['Observacoes'] : '';
 
 $sql_sinais_sintomas = "INSERT INTO ficha_sinais_e_sintomas (Abdomen_Sensivel_Rigido, Afundamento_Cranio, Agitacao, Amnesia, Angna_Peito, Apneia, Bradicardia, Bradipneia, Bronco_Aspiracao, 
 Cefaleia, Cianose_Labios, Cianose_Extremidade, Convulsao, Decorticacao, Deformidade, Descerebracao, Desmaio, Desvio_Traqueia, Despineia, Dor_Local, Edema_Generalizado, 
