@@ -111,7 +111,7 @@ include("admin/redirectadm.php")
                         <li class="nav-item" style="max-height: 65px;">
                 <form action="admin/redirectadm.php" method="post">
                     <img src="../images/contaP.png" class=" mx-auto d-block" style="padding: 10px;">
-                    <button type="submit" name="btnRedirect" style="color: #black; padding: 0; font-size: 14px; font-weight: bold; background-color: transparent; border: none;">Conta</button>
+                    <button type="submit" name="btnRedirect" style="color: #black; padding: 0; font-size: 14px; background-color: transparent; border: none;">Conta</button>
                 </form>
                 </li>
                     </ul>
