@@ -37,6 +37,16 @@ if (isset($_SESSION['id_usuario'])) {
 }
 
 $conn->close();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+// Verifica se o usuário é admin
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+    // Redireciona para a página de index
+    header("Location: ../PHP/index.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
