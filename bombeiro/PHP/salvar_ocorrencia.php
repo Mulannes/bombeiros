@@ -334,20 +334,20 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
 
 // Receber dados do formulário ficha_anamnese_gestacional
     $tempo_gestacao = $_POST["tempoGestacao"];
-    $pre_natal = $_POST["flexRadioDefault6"];
+    $pre_natal = isset($_POST['flexRadioDefault7']) ? $_POST['flexRadioDefault7'] : null;
     $nome_medico = $_POST["nomeMedico"];
-    $complicacoes = $_POST["flexRadioDefault7"];
-    $primeiro_filho = $_POST["flexRadioDefault8"];
+    $complicacoes = isset($_POST['flexRadioDefault7']) ? $_POST['flexRadioDefault7'] : null;
+    $primeiro_filho = isset($_POST['flexRadioDefault8']) ? $_POST['flexRadioDefault8'] : null;
     $num_filhos = $_POST["numFilhos"];
     $inicio_contracoes = $_POST["inicoContracoes"];
     $duracao_contracoes = $_POST["duracaoContrações"];
     $intervalo_contracoes = $_POST["intervaloContrações"];
-    $pressao_quadril = $_POST["flexRadioDefault9"];
-    $ruptura_bolsa = $_POST["flexRadioDefault10"];
-    $inspecao_visual = $_POST["flexRadioDefault11"];
-    $parto_realizado = $_POST["flexRadioDefault12"];
+    $pressao_quadril = isset($_POST['flexRadioDefault9']) ? $_POST['flexRadioDefault9'] : null;
+    $ruptura_bolsa = isset($_POST['flexRadioDefault10']) ? $_POST['flexRadioDefault10'] : null;
+    $inspecao_visual = isset($_POST['flexRadioDefault11']) ? $_POST['flexRadioDefault11'] : null;
+    $parto_realizado = isset($_POST['flexRadioDefault12']) ? $_POST['flexRadioDefault12'] : null;
     $hora_nascimento = $_POST["horaNascimento"];
-    $bebe_sexo = $_POST["bebeSexo"];
+    $bebe_sexo = isset($_POST['bebeSexo']) ? $_POST['bebeSexo'] : null;
     $bebe_nome = $_POST["bebeNome"];
 
     // Insere os dados no banco de dados
