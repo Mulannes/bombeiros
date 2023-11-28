@@ -1194,430 +1194,429 @@
         </div>
     </div>
     <!--                     -->
-    <!-- ✘ Sinais e Sintomas -->
-    <!--                     -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingEight">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseEight">
-                Sinais e sintomas
-            </button>
-        </h2>
-        <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse"
-            aria-labelledby="panelsStayOpen-headingEight">
-            <div class="accordion-body">
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault50">
-                    <label class="form-check-label" for="flexCheckDefault50"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Abdômen sensível ou rígido
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault51">
-                    <label class="form-check-label" for="flexCheckDefault51"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Afundamento de crânio
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault52">
-                    <label class="form-check-label" for="flexCheckDefault52"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Agitação
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault53">
-                    <label class="form-check-label" for="flexCheckDefault53"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Amnésia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault54">
-                    <label class="form-check-label" for="flexCheckDefault54"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Angna de peito
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault55">
-                    <label class="form-check-label" for="flexCheckDefault55"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Apinéia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault56">
-                    <label class="form-check-label" for="flexCheckDefault56"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Bradicardia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault57">
-                    <label class="form-check-label" for="flexCheckDefault57"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Bradipneia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault58">
-                    <label class="form-check-label" for="flexCheckDefault58"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Bronco aspirando
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault59">
-                    <label class="form-check-label" for="flexCheckDefault59"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Cefaleia
-                    </label>
-                </div>
-                <div class="row" style="display: flex; align-items: center;">
-                    <div class="col-6">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault60">
-                        <label class="form-check-label" for="flexCheckDefault60">
-                            Cianose
-                        </label>
-                    </div>
-                    <div class="col-6" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault61"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault61"
-                            style="position: absolute; top: 0;left: 32px;">
-                            Lábios
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault62"
-                            style="display: block;position: relative;">
-                        <label class="form-check-label" for="flexCheckDefault62"
-                            style="position: absolute; top: 20px;left: 32px;">
-                            Extremidade
-                        </label>
-                    </div>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault63">
-                    <label class="form-check-label" for="flexCheckDefault63"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Convulsão
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault64">
-                    <label class="form-check-label" for="flexCheckDefault64"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Decorticação
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault65">
-                    <label class="form-check-label" for="flexCheckDefault65"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Deformidade
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault66">
-                    <label class="form-check-label" for="flexCheckDefault66"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Descerebração
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault67">
-                    <label class="form-check-label" for="flexCheckDefault67"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Desmaio
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault68">
-                    <label class="form-check-label" for="flexCheckDefault68"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Desvio de traquéia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault69">
-                    <label class="form-check-label" for="flexCheckDefault69"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Despinéia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault70">
-                    <label class="form-check-label" for="flexCheckDefault70"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Dor local
-                    </label>
-                </div>
-                <div class="row" style="display: flex; align-items: center;">
-                    <div class="col-6">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault71">
-                        <label class="form-check-label" for="flexCheckDefault71">
-                            Edema
-                        </label>
-                    </div>
-                    <div class="col-6" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault72"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault72"
-                            style="position: absolute; top: 0;left: 32px;">
-                            Generalizado
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault73"
-                            style="display: block;position: relative;">
-                        <label class="form-check-label" for="flexCheckDefault73"
-                            style="position: absolute; top: 20px;left: 32px;">
-                            Localizado
-                        </label>
-                    </div>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault74">
-                    <label class="form-check-label" for="flexCheckDefault74"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Enfisema subcutâneo
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault75">
-                    <label class="form-check-label" for="flexCheckDefault75"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Êxtase de jugular
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault76">
-                    <label class="form-check-label" for="flexCheckDefault76"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Face pálida
-                    </label>
-                </div>
-                <div class="row" style="display: flex; align-items: center;">
-                    <div class="col-6">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault77">
-                        <label class="form-check-label" for="flexCheckDefault77">
-                            Hemorrágia
-                        </label>
-                    </div>
-                    <div class="col-6" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault78"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault78"
-                            style="position: absolute; top: 0;left: 32px;">
-                            Interna
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault79"
-                            style="display: block;position: relative;">
-                        <label class="form-check-label" for="flexCheckDefault79"
-                            style="position: absolute; top: 20px;left: 32px;">
-                            Externa
-                        </label>
-                    </div>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault80">
-                    <label class="form-check-label" for="flexCheckDefault80"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Hipertensão
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault81">
-                    <label class="form-check-label" for="flexCheckDefault81"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Hipotensão
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault82">
-                    <label class="form-check-label" for="flexCheckDefault82"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Náuseas e vômitos
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault83">
-                    <label class="form-check-label" for="flexCheckDefault83"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Nasoragia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault84">
-                    <label class="form-check-label" for="flexCheckDefault84"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Óbito
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault85">
-                    <label class="form-check-label" for="flexCheckDefault85"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Otorréia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault86">
-                    <label class="form-check-label" for="flexCheckDefault86"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Otorragia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault87">
-                    <label class="form-check-label" for="flexCheckDefault87"
-                        style="position: absolute; top: 0;left: 32px;">
-                        O.V.A.C.E
-                    </label>
-                </div>
-                <div class="row" style="display: flex; align-items: center;">
-                    <div class="col-6">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault88">
-                        <label class="form-check-label" for="flexCheckDefault88">
-                            Parada
-                        </label>
-                    </div>
-                    <div class="col-6" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
-                            style="position: absolute; top: 0;left: 32px;">
-                            Cardíaca
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault90"
-                            style="display: block;position: relative;">
-                        <label class="form-check-label" for="flexCheckDefault90"
-                            style="position: absolute; top: 20px;left: 32px;">
-                            Respiratória
-                        </label>
-                    </div>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault91">
-                    <label class="form-check-label" for="flexCheckDefault91"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Priaprismo
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault92">
-                    <label class="form-check-label" for="flexCheckDefault92"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Prurido na pele
-                    </label>
-                </div>
-                <div class="row" style="display: flex; align-items: center;">
-                    <div class="col-4">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault93">
-                        <label class="form-check-label" for="flexCheckDefault93">
-                            Pupilas
-                        </label>
-                    </div>
-                    <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault94"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault94"
-                            style="position: absolute; top: 0;left: 32px;">
-                            Anisocoria
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault95"
-                            style="display: block;position: relative;">
-                        <label class="form-check-label" for="flexCheckDefault95"
-                            style="position: absolute; top: 20px;left: 32px;">
-                            Isocoria
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault96"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault96"
-                            style="position: absolute; top: 40px;left: 32px;">
-                            Midriase
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault97"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault97"
-                            style="position: absolute; top: 60px;left: 32px;">
-                            Miose
-                        </label>
-                    </div>
-                    <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault98"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault98"
-                            style="position: absolute; top: 0;left: 32px;">
-                            Reagente
-                        </label>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault99"
-                            style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault99"
-                            style="position: absolute; top: 20px;left: 32px;">
-                            Ñ reagente
-                        </label>
-                    </div>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault100">
-                    <label class="form-check-label" for="flexCheckDefault100"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Sede
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault101">
-                    <label class="form-check-label" for="flexCheckDefault101"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Sinal de battle
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault102">
-                    <label class="form-check-label" for="flexCheckDefault102"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Sinal de guaxinim
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault103">
-                    <label class="form-check-label" for="flexCheckDefault103"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Sudorese
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault104">
-                    <label class="form-check-label" for="flexCheckDefault104"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Taquipnéia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault105">
-                    <label class="form-check-label" for="flexCheckDefault105"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Taquicardia
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault106">
-                    <label class="form-check-label" for="flexCheckDefault106"
-                        style="position: absolute; top: 0;left: 32px;">
-                        Tontura
-                    </label>
-                </div>
-                <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault107">
-                    <input type="text" class="form-control" name="" id=""
-                        style="position: absolute; top: 0;left: 32px; height: 35px; width: 200px;">
-                </div>
+            <!-- ✓ Sinais e Sintomas -->
+            <!--                     -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseEight">
+                        Sinais e sintomas
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingEight">
+                    <div class="accordion-body">
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault50" name="Abdomen_Sensivel_Rigido">
+                            <label class="form-check-label" for="flexCheckDefault50"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Abdômen sensível ou rígido
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault51" name="Afundamento_Cranio">
+                            <label class="form-check-label" for="flexCheckDefault51"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Afundamento de crânio
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault52" name="Agitacao">
+                            <label class="form-check-label" for="flexCheckDefault52"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Agitação
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault53" name="Amnesia">
+                            <label class="form-check-label" for="flexCheckDefault53"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Amnésia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault54" name="Angna_Peito">
+                            <label class="form-check-label" for="flexCheckDefault54"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Angna de peito
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault55" name="Apneia">
+                            <label class="form-check-label" for="flexCheckDefault55"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Apinéia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault56" name="bradicardia">
+                            <label class="form-check-label" for="flexCheckDefault56"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Bradicardia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault57" name="Bradipneia">
+                            <label class="form-check-label" for="flexCheckDefault57"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Bradipneia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault58" name="Bronco_Aspiracao">
+                            <label class="form-check-label" for="flexCheckDefault58"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Bronco aspirando
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault59" name="Cefaleia">
+                            <label class="form-check-label" for="flexCheckDefault59"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Cefaleia
+                            </label>
+                        </div>
+                        <div class="row" style="display: flex; align-items: center;">
+                            <div class="col-6">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault60" name="">
+                                <label class="form-check-label" for="flexCheckDefault60"> 
+                                    Cianose
+                                </label>
+                            </div>
+                            <div class="col-6" style="position: relative;">
+                                <input class="form-check-input" type="checkbox" value="Lábios" id="flexCheckDefault61" name="Cianose_Labios"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault61"
+                                    style="position: absolute; top: 0;left: 32px;">
+                                    Lábios
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="Extremidade" id="flexCheckDefault62" name="Cianose_Extremidade"
+                                    style="display: block;position: relative;">
+                                <label class="form-check-label" for="flexCheckDefault62"
+                                    style="position: absolute; top: 20px;left: 32px;">
+                                    Extremidade
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault63" name="Convulsao">
+                            <label class="form-check-label" for="flexCheckDefault63"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Convulsão
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault64" name="Decorticacao">
+                            <label class="form-check-label" for="flexCheckDefault64"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Decorticação
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault65" name="Deformidade">
+                            <label class="form-check-label" for="flexCheckDefault65"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Deformidade
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault66" name="Descerebracao">
+                            <label class="form-check-label" for="flexCheckDefault66"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Descerebração
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault67" name="Desmaio">
+                            <label class="form-check-label" for="flexCheckDefault67"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Desmaio
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault68" name="Desvio_Traqueia">
+                            <label class="form-check-label" for="flexCheckDefault68"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Desvio de traquéia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault69" name="Despineia">
+                            <label class="form-check-label" for="flexCheckDefault69"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Despinéia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault70" name="Dor_Local">
+                            <label class="form-check-label" for="flexCheckDefault70"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Dor local
+                            </label>
+                        </div>
+                        <div class="row" style="display: flex; align-items: center;">
+                            <div class="col-6">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault71" name="Edema">
+                                <label class="form-check-label" for="flexCheckDefault71">
+                                    Edema
+                                </label>
+                            </div>
+                            <div class="col-6" style="position: relative;">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault72" name="Edema_Generalizado"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault72"
+                                    style="position: absolute; top: 0;left: 32px;">
+                                    Generalizado
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault73" name="Edema_Localizado"
+                                    style="display: block;position: relative;">
+                                <label class="form-check-label" for="flexCheckDefault73"
+                                    style="position: absolute; top: 20px;left: 32px;">
+                                    Localizado
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault74" name="Enfisema_Subcutaneo">
+                            <label class="form-check-label" for="flexCheckDefault74"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Enfisema subcutâneo
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault75" name="Extase_Jugular">
+                            <label class="form-check-label" for="flexCheckDefault75"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Êxtase de jugular
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault76" name="Face_Palida">
+                            <label class="form-check-label" for="flexCheckDefault76"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Face pálida
+                            </label>
+                        </div>
+                        <div class="row" style="display: flex; align-items: center;">
+                            <div class="col-6">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault77" name="Hemorragia">
+                                <label class="form-check-label" for="flexCheckDefault77">
+                                    Hemorrágia
+                                </label>
+                            </div>
+                            <div class="col-6" style="position: relative;">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault78" name="Hemorragia_Interna"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault78"
+                                    style="position: absolute; top: 0;left: 32px;">
+                                    Interna
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault79" name="Hemorragia_Externa"
+                                    style="display: block;position: relative;">
+                                <label class="form-check-label" for="flexCheckDefault79"
+                                    style="position: absolute; top: 20px;left: 32px;">
+                                    Externa
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault80" name="Hipertensao">
+                            <label class="form-check-label" for="flexCheckDefault80"
+                                style="position: absolute; top: 0;left: 32px;">
+                                Hipertensão
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault81" name="Hipotensao">
+                            <label class="form-check-label" for="flexCheckDefault81" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Hipotensão
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault82" name="Nauseas_Vomitos">
+                            <label class="form-check-label" for="flexCheckDefault82" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Náuseas e vômitos
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault83" name="Nasoragia">
+                            <label class="form-check-label" for="flexCheckDefault83" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Nasoragia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault84" name="Obito">
+                            <label class="form-check-label" for="flexCheckDefault84" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Óbito
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault85" name="Otorreia">
+                            <label class="form-check-label" for="flexCheckDefault85" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Otorréia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault86" name="Otorragia">
+                            <label class="form-check-label" for="flexCheckDefault86" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Otorragia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault87" name="OVACE">
+                            <label class="form-check-label" for="flexCheckDefault87" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                O.V.A.C.E
+                            </label>
+                        </div>
+                        <div class="row" style="display: flex; align-items: center;">
+                            <div class="col-6">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault88" name="Parada">
+                                <label class="form-check-label" for="flexCheckDefault88" >
+                                    Parada
+                                </label>
+                            </div>
+                            <div class="col-6" style="position: relative;">
+                                <input class="form-check-input" type="checkbox" value="Cardíaca" id="flexCheckDefault89" name="Parada_Cardiaca"
+                                    style="display: block; " >
+                                <label class="form-check-label" for="flexCheckDefault89"
+                                    style="position: absolute; top: 0;left: 32px;">
+                                    Cardíaca
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="Respiratória" id="flexCheckDefault90" name="Parada_Respiratoria" 
+                                    style="display: block;position: relative;" >
+                                <label class="form-check-label" for="flexCheckDefault90"
+                                    style="position: absolute; top: 20px;left: 32px;">
+                                    Respiratória
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault91" name="Priaprismo">
+                            <label class="form-check-label" for="flexCheckDefault91" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Priaprismo
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault92" name="Prurido_Pele">
+                            <label class="form-check-label" for="flexCheckDefault92" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Prurido na pele
+                            </label>
+                        </div>
+                        <div class="row" style="display: flex; align-items: center;">
+                            <div class="col-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault93" name="Pupilas">
+                                <label class="form-check-label" for="flexCheckDefault93" >
+                                    Pupilas
+                                </label>
+                            </div>
+                            <div class="col-4" style="position: relative;">
+                                <input class="form-check-input" type="checkbox" value="Anisocoria" id="flexCheckDefault94"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault94"
+                                    style="position: absolute; top: 0;left: 32px;">
+                                    Anisocoria
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="Isocoria" id="flexCheckDefault95"
+                                    style="display: block;position: relative;">
+                                <label class="form-check-label" for="flexCheckDefault95"
+                                    style="position: absolute; top: 20px;left: 32px;">
+                                    Isocoria
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="Midriase" id="flexCheckDefault96"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault96"
+                                    style="position: absolute; top: 40px;left: 32px;">
+                                    Midriase
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="Miose" id="flexCheckDefault97"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault97"
+                                    style="position: absolute; top: 60px;left: 32px;">
+                                    Miose
+                                </label>
+                            </div>
+                            <div class="col-4" style="position: relative;">
+                                <input class="form-check-input" type="checkbox" value="Reagente" id="flexCheckDefault98"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault98"
+                                    style="position: absolute; top: 0;left: 32px;">
+                                    Reagente
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="Não Reagente" id="flexCheckDefault99"
+                                    style="display: block; ">
+                                <label class="form-check-label" for="flexCheckDefault99"
+                                    style="position: absolute; top: 20px;left: 32px;">
+                                    Ñ reagente
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault100" name="Sede">
+                            <label class="form-check-label" for="flexCheckDefault100" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Sede
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault101" name="Sinal_Battle">
+                            <label class="form-check-label" for="flexCheckDefault101" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Sinal de battle
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault102" name="Sinal_Guaxinim">
+                            <label class="form-check-label" for="flexCheckDefault102" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Sinal de guaxinim
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault103" name="Sudorese">
+                            <label class="form-check-label" for="flexCheckDefault103" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Sudorese
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault104" name="Taquipneia">
+                            <label class="form-check-label" for="flexCheckDefault104" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Taquipnéia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault105" name="Taquicardia">
+                            <label class="form-check-label" for="flexCheckDefault105" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Taquicardia
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault106" name="Tontura">
+                            <label class="form-check-label" for="flexCheckDefault106" 
+                                style="position: absolute; top: 0;left: 32px;">
+                                Tontura
+                            </label>
+                        </div>
+                        <div class="row" style="position: relative;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault107" name="Observacoes">
+                <input type="text" class="form-control" style="position: absolute; top: 0;left: 32px; height: 35px; width: 200px;">
+                        </div>
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
     <!--                     -->
     <!-- ✓ Forma de Condução -->
     <!--                     -->

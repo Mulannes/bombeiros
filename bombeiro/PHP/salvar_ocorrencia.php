@@ -241,6 +241,78 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Erro ao salvar dados: " . $conn->error;
     }
 
+    // Receber dados do formulário para ficha_sinais_sintomas
+$abdomen_sensivel_rigido = isset($_POST['Abdomen_Sensivel_Rigido']) ? 1 : 0;
+$afundamento_cranio = isset($_POST['Afundamento_Cranio']) ? 1 : 0;
+$agitacao = isset($_POST['Agitacao']) ? 1 : 0;
+$amnesia = isset($_POST['Amnesia']) ? 1 : 0;
+$angna_peito = isset($_POST['Angna_Peito']) ? 1 : 0;
+$apneia = isset($_POST['Apneia']) ? 1 : 0;
+$bradicardia = isset($_POST['Bradicardia']) ? 1 : 0;
+$bradipneia = isset($_POST['Bradipneia']) ? 1 : 0;
+$bronco_aspiracao = isset($_POST['Bronco_Aspiracao']) ? 1 : 0;
+$cefaleia = isset($_POST['Cefaleia']) ? 1 : 0;
+$cianose_labios = isset($_POST['Cianose_Labios']) ? 1 : 0;
+$cianose_extremidade = isset($_POST['Cianose_Extremidade']) ? 1 : 0;
+$convulsao = isset($_POST['Convulsao']) ? 1 : 0;
+$decorticacao = isset($_POST['Decorticacao']) ? 1 : 0;
+$deformidade = isset($_POST['Deformidade']) ? 1 : 0;
+$descerebracao = isset($_POST['Descerebracao']) ? 1 : 0;
+$desmaio = isset($_POST['Desmaio']) ? 1 : 0;
+$desvio_traqueia = isset($_POST['Desvio_Traqueia']) ? 1 : 0;
+$despineia = isset($_POST['Despineia']) ? 1 : 0;
+$dor_local = isset($_POST['Dor_Local']) ? 1 : 0;
+$edema_generalizado = isset($_POST['Edema_Generalizado']) ? 1 : 0;
+$edema_localizado = isset($_POST['Edema_Localizado']) ? 1 : 0;
+$enfisema_subcutaneo = isset($_POST['Enfisema_Subcutaneo']) ? 1 : 0;
+$extase_jugular = isset($_POST['Extase_Jugular']) ? 1 : 0;
+$face_palida = isset($_POST['Face_Palida']) ? 1 : 0;
+$hemorragia_interna = isset($_POST['Hemorragia_Interna']) ? 1 : 0;
+$hemorragia_externa = isset($_POST['Hemorragia_Externa']) ? 1 : 0;
+$hipertensao = isset($_POST['Hipertensao']) ? 1 : 0;
+$hipotensao = isset($_POST['Hipotensao']) ? 1 : 0;
+$nauseas_vomitos = isset($_POST['Nauseas_Vomitos']) ? 1 : 0;
+$nasoragia = isset($_POST['Nasoragia']) ? 1 : 0;
+$obito = isset($_POST['Obito']) ? 1 : 0;
+$otorreia = isset($_POST['Otorreia']) ? 1 : 0;
+$otorragia = isset($_POST['Otorragia']) ? 1 : 0;
+$ovace = isset($_POST['OVACE']) ? 1 : 0;
+$parada_cardiaca = isset($_POST['Parada_Cardiaca']) ? 1 : 0;
+$parada_respiratoria = isset($_POST['Parada_Respiratoria']) ? 1 : 0;
+$priaprismo = isset($_POST['Priaprismo']) ? 1 : 0;
+$prurido_pele = isset($_POST['Prurido_Pele']) ? 1 : 0;
+$pupilas_anisocoria = isset($_POST['Pupilas_Anisocoria']) ? 1 : 0;
+$pupilas_isocoria = isset($_POST['Pupilas_Isocoria']) ? 1 : 0;
+$pupilas_midriase = isset($_POST['Pupilas_Midriase']) ? 1 : 0;
+$pupilas_miose = isset($_POST['Pupilas_Miose']) ? 1 : 0;
+$pupilas_reagente = isset($_POST['Pupilas_Reagente']) ? 1 : 0;
+$pupilas_nao_reagente = isset($_POST['Pupilas_Nao_Reagente']) ? 1 : 0;
+$sede = isset($_POST['Sede']) ? 1 : 0;
+$sinal_battle = isset($_POST['Sinal_Battle']) ? 1 : 0;
+$sinal_guaxinim = isset($_POST['Sinal_Guaxinim']) ? 1 : 0;
+$sudorese = isset($_POST['Sudorese']) ? 1 : 0;
+$taquipneia = isset($_POST['Taquipneia']) ? 1 : 0;
+$taquicardia = isset($_POST['Taquicardia']) ? 1 : 0;
+$tontura = isset($_POST['Tontura']) ? 1 : 0;
+$observacoes = isset($_POST['Observacoes']) ? mysqli_real_escape_string($conn, $_POST['Observacoes']) : null;
+
+$sql_sinais_sintomas = "INSERT INTO ficha_sinais_e_sintomas (Abdomen_Sensivel_Rigido, Afundamento_Cranio, Agitacao, Amnesia, Angna_Peito, Apneia, Bradicardia, Bradipneia, Bronco_Aspiracao, 
+Cefaleia, Cianose_Labios, Cianose_Extremidade, Convulsao, Decorticacao, Deformidade, Descerebracao, Desmaio, Desvio_Traqueia, Despineia, Dor_Local, Edema_Generalizado, 
+Edema_Localizado, Enfisema_Subcutaneo, Extase_Jugular, Face_Palida, Hemorragia_Interna, Hemorragia_Externa, Hipertensao, Hipotensao, Nauseas_Vomitos, Nasoragia, Obito, 
+Otorreia, Otorragia, OVACE, Parada_Cardiaca, Parada_Respiratoria, Priaprismo, Prurido_Pele, Pupilas_Anisocoria, Pupilas_Isocoria, Pupilas_Midriase, Pupilas_Miose, 
+Pupilas_Reagente, Pupilas_Nao_Reagente, Sede, Sinal_Battle, Sinal_Guaxinim, Sudorese, Taquipneia, Taquicardia, Tontura, Observacoes) 
+VALUES ($abdomen_sensivel_rigido, $afundamento_cranio, $agitacao, $amnesia, $angna_peito, $apneia, $bradicardia, $bradipneia, $bronco_aspiracao, 
+$cefaleia, $cianose_labios, $cianose_extremidade, $convulsao, $decorticacao, $deformidade, $descerebracao, $desmaio, $desvio_traqueia, $despineia, 
+$dor_local, $edema_generalizado, $edema_localizado, $enfisema_subcutaneo, $extase_jugular, $face_palida, $hemorragia_interna, $hemorragia_externa, 
+$hipertensao, $hipotensao, $nauseas_vomitos, $nasoragia, $obito, $otorreia, $otorragia, $ovace, $parada_cardiaca, $parada_respiratoria, $priaprismo, 
+$prurido_pele, $pupilas_anisocoria, $pupilas_isocoria, $pupilas_midriase, $pupilas_miose, $pupilas_reagente, $pupilas_nao_reagente, $sede, $sinal_battle, 
+$sinal_guaxinim, $sudorese, $taquipneia, $taquicardia, $tontura, '$observacoes')";
+
+if ($conn->query($sql_sinais_sintomas) === TRUE) {
+} else {
+    echo "Erro ao salvar dados: " . $conn->error;
+}
+
     // Fecha a conexão com o banco de dados
     $conn->close();
 } else {
