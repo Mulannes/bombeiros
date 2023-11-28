@@ -637,7 +637,7 @@ include("admin/redirectadm.php");
                 </div>
             </div>
             <!--                         -->
-            <!-- ✘ Problemas Encontrados -->
+            <!-- ✓ Problemas Encontrados -->
             <!--                         -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFive">
