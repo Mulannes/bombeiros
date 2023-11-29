@@ -522,10 +522,22 @@ foreach ($procedimentos as $procedimento) {
     $lado4 = $_POST["4lado"];
     $face4 = $_POST["4face"];
     $tipo4 = $_POST["4tipo"];
+    $Cabeca_Value = $_POST["Cabeca_Value"];
+    $Pescoco_Value = $_POST["Pescoco_Value"];
+    $Tant_Value = $_POST["Tant_Value"];
+    $Tpos_Value = $_POST["Tpos_Value"];
+    $Genit_Value = $_POST["Genit_Value"];
+    $MID_Value = $_POST["MID_Value"];
+    $MIE_Value = $_POST["MIE_Value"];
+    $MSD_Value = $_POST["MSD_Value"];
+    $MSE_Value = $_POST["MSE_Value"];
 
     // Insere os dados na tabela ficha_localizacao_dos_traumas
-    $sql_localizacao_traumas = "INSERT INTO ficha_localizacao_dos_traumas () 
-    VALUES()";
+    $sql_localizacao_traumas = "INSERT INTO ficha_localizacao_dos_traumas  (local1, lado1, face1, tipo1, local2, lado2, face2, tipo2,  local3, lado3, face3,
+     tipo3, local4, lado4, face4, tipo4, cabeca, pescoco, t_ant, t_pos, genit, MID, MIE, MSD, MSE)
+    VALUES 
+    ('$local1', '$lado1', '$face1', '$tipo1', '$local2', '$lado2', '$face2', '$tipo2', '$local3', '$lado3', '$face3', '$tipo3', '$local4', '$lado4',
+     '$face4', '$tipo4', '$Cabeca_Value', '$Pescoco_Value', '$Tant_Value', '$Tpos_Value', '$Genit_Value', '$MID_Value', '$MIE_Value', '$MSD_Value', '$MSE_Value')";
 
     if($conn->query($sql_localizacao_traumas) === TRUE) {
     }else{

@@ -41,9 +41,9 @@ include("admin/redirectadm.php");
                     <a href="ocorrencia.php" class="display-1" style="color: black; text-decoration: none; font-weight: 600;">Ocorrência</a>
                 </div>
             </div>
-            <!--                     -->
-            <!-- ✓ Detalhes Paciente -->
-            <!--                     -->
+        <!--                     -->
+        <!-- ✓ Detalhes Paciente -->
+        <!--                     -->
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -117,9 +117,9 @@ include("admin/redirectadm.php");
                     </div>
                 </div>
             </div>
-            <!--                      -->
-            <!-- ✓ Tipo de Ocorrência -->
-            <!--                      -->
+        <!--                      -->
+        <!-- ✓ Tipo de Ocorrência -->
+        <!--                      -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -305,9 +305,9 @@ include("admin/redirectadm.php");
                     </div>
                 </div>
             </div>
-            <!--                     -->
-            <!-- ✓ Avaliação GLASGOW -->
-            <!--                     -->
+        <!--                     -->
+        <!-- ✓ Avaliação GLASGOW -->
+        <!--                     -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -562,9 +562,9 @@ include("admin/redirectadm.php");
                     </div3>
                 </div>
             </div>
-            <!--                     -->
-            <!--   ✓ Sinais Vitais   -->
-            <!--                     -->
+        <!--                     -->
+        <!--   ✓ Sinais Vitais   -->
+        <!--                     -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -636,9 +636,9 @@ include("admin/redirectadm.php");
                     </div>
                 </div>
             </div>
-            <!--                         -->
-            <!-- ✓ Problemas Encontrados -->
-            <!--                         -->
+        <!--                         -->
+        <!-- ✓ Problemas Encontrados -->
+        <!--                         -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -776,7 +776,7 @@ include("admin/redirectadm.php");
             </div>
     </div>
     <!--                           -->
-    <!-- ✘ Localização dos Traumas -->
+    <!-- ✓ Localização dos Traumas -->
     <!--                           -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingSix">
