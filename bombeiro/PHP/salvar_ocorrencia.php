@@ -505,6 +505,34 @@ foreach ($procedimentos as $procedimento) {
         echo "Erro ao inserir dados: " . $conn->error;
     }
 
+// Receber dados do formulário ficha_localizacao_dos_traumas 
+    $local1 = $_POST["1local"];
+    $lado1 = $_POST["1lado"];
+    $face1 = $_POST["1face"];
+    $tipo1 = $_POST["1tipo"];
+    $local2 = $_POST["2local"];
+    $lado2 = $_POST["2lado"];
+    $face2 = $_POST["2face"];
+    $tipo2 = $_POST["2tipo"];
+    $local3 = $_POST["3local"];
+    $lado3 = $_POST["3lado"];
+    $face3 = $_POST["3face"];
+    $tipo3 = $_POST["3tipo"];
+    $local4 = $_POST["4local"];
+    $lado4 = $_POST["4lado"];
+    $face4 = $_POST["4face"];
+    $tipo4 = $_POST["4tipo"];
+
+    // Insere os dados na tabela ficha_localizacao_dos_traumas
+    $sql_localizacao_traumas = "INSERT INTO ficha_localizacao_dos_traumas () 
+    VALUES()";
+
+    if($conn->query($sql_localizacao_traumas) === TRUE) {
+    }else{
+        echo "Erro ao inserir dados:". $conn->error;
+    }
+
+
     // Fecha a conexão com o banco de dados
     $conn->close();
 } else {
