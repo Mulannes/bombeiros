@@ -1827,7 +1827,7 @@ include("admin/redirectadm.php");
         </div>
     </div>
     <!--                           -->
-    <!-- ✘ Procedimentos Efetuados -->
+    <!-- ✓ Procedimentos Efetuados -->
     <!--                           -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingTwelve">
@@ -2196,39 +2196,27 @@ include("admin/redirectadm.php");
                 </div>
                 <div class="row" style="position: relative; height: 46px;display: flex; align-items: center;">
                     <input class="form-check-input" type="checkbox" name="Policia" id="Policia">
-                    <label class="form-check-label" for="Policia"
-                        style="position: absolute; top: 0;left: 32px;">
-                        <div class="btn-group dropend"
-                            style="display: flex; align-items: center; width: 100px;padding-top: 4px; padding-bottom: 4px">
-                            <button type="button" class="btn btn-secondary dropdown-toggle"
-                                style="display: flex; align-items: center; width: 100px;" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Polícia
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">Cívil</a></li>
-                                <li><a class="dropdown-item">Militar</a></li>
-                                <li><a class="dropdown-item">Pré</a></li>
-                                <li><a class="dropdown-item">PRF</a></li>
-                            </ul>
+                    <label class="form-check-label" for="Policia" style="position: absolute; top: 0;left: 32px;">
+                        <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px;padding-top: 4px; padding-bottom: 4px">
+                            <select class="btn btn-secondary" name="Policia_Value" id="Policia_Value">
+                                <option value=""></option>
+                                <option value="Civil">Cívil</option>
+                                <option value="Militar">Militar</option>
+                                <option value="PRE">PRE</option>
+                                <option value="PRF">PRF</option>
+                            </select>
                         </div>
                     </label>
                 </div>
                 <div class="row" style="position: relative; height: 46px;display: flex; align-items: center;">
                     <input class="form-check-input" type="checkbox" name="Samu" id="Samu">
-                    <label class="form-check-label" for="Samu"
-                        style="position: absolute; top: 0;left: 32px;">
-                        <div class="btn-group dropend"
-                            style="display: flex; align-items: center; width: 100px;padding-top: 4px; padding-bottom: 4px">
-                            <button type="button" class="btn btn-secondary dropdown-toggle"
-                                style="display: flex; align-items: center; width: 100px;" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Samu
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">USA</a></li>
-                                <li><a class="dropdown-item">USB</a></li>
-                            </ul>
+                    <label class="form-check-label" for="Samu" style="position: absolute; top: 0;left: 32px;">
+                        <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px;padding-top: 4px; padding-bottom: 4px">
+                            <select class="btn btn-secondary" name="Samu_Value" id="Samu_Value">
+                                <option value=""></option>
+                                <option value="USA">USA</option>
+                                <option value="USB">USB</option>
+                            </select>
                         </div>
                     </label>
                 </div>

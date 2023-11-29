@@ -428,18 +428,18 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
     }
 
 // Receber dados do formulário ficha_anamnese_emergência_médica 
-    $que_aconteceu = $_POST['OqueAconteceu'];
-    $vezes_aconteceu = $_POST['AconteceuOutrasVezes'];
-    $tempo_aconteceu = $_POST['QuandoAconteceu'];
-    $problema_saude = $_POST['ProblemaSaude'];
-    $qual_problema = $_POST['QuaisProblemas'];
-    $uso_medicacao = $_POST['UsoMedicacao'];
-    $horario_medicacao = $_POST['HorarioMedicacao'];
-    $qual_medicacao = $_POST['MedicacaoQuais'];
-    $alergico = $_POST['TemAlergia'];
-    $qual_alergia = $_POST['TemAlergiaQue'];
-    $ingeriu_alimentos = $_POST['IngeriuAlimento'];
-    $ingeriu_horas = $_POST['IngeriuAlimentoHoras'];
+    $que_aconteceu = isset($_POST['OqueAconteceu']) ? $_POST['OqueAconteceu'] : null;
+    $vezes_aconteceu = isset($_POST['AconteceuOutrasVezes']) ? $_POST['AconteceuOutrasVezes'] : null;
+    $tempo_aconteceu = isset($_POST['QuandoAconteceu']) ? $_POST['QuandoAconteceu'] : null;
+    $problema_saude = isset($_POST['ProblemaSaude']) ? $_POST['ProblemaSaude'] : null;
+    $qual_problema = isset($_POST['QuaisProblemas']) ? $_POST['QuaisProblemas'] : null;
+    $uso_medicacao = isset($_POST['UsoMedicacao']) ? $_POST['UsoMedicacao'] : null;
+    $horario_medicacao = isset($_POST['HorarioMedicacao']) ? $_POST['HorarioMedicacao'] : null;
+    $qual_medicacao = isset($_POST['MedicacaoQuais']) ? $_POST['MedicacaoQuais'] : null;
+    $alergico = isset($_POST['TemAlergia']) ? $_POST['TemAlergia'] : null;
+    $qual_alergia = isset($_POST['TemAlergiaQue']) ? $_POST['TemAlergiaQue'] : null;
+    $ingeriu_alimentos = isset($_POST['IngeriuAlimento']) ? $_POST['IngeriuAlimento'] : null;
+    $ingeriu_horas = isset($_POST['IngeriuAlimentoHoras']) ? $_POST['IngeriuAlimentoHoras'] : null;
 
     // Insere os dados na tabela ficha_anamnese_emergência_médica
     $sql_anm_medica = "INSERT INTO ficha_anamnese_emergência_médica (que_aconteceu, vezes_aconteceu, tempo_aconteceu, problema_saude, qual_problema, uso_medicacao, 
@@ -450,6 +450,59 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
     if($conn->query($sql_anm_medica) === TRUE) {
     }else{
         echo "Erro ao inserir dados:". $conn->error;
+    }
+
+// Receber dados do formulário ficha_procedimentos_efetuados
+ $procedimentos_efetuados = [];
+
+ $procedimentos = [
+    "Aspiracao", "Avalicao_Inicial", "Avaliacao_Dirigida", "Avaliacao_Continuada", "Chave_de_Rautek",
+    "Canula_de_Guedel", "Desobstrucao_de_VA", "Emprego_do_DEA", "Gerenciamento_de_Riscos",
+    "Limpeza_de_Ferimentos", "Curativos", "Compressivo", "Encravamento", "Ocular", "Queimadura",
+    "Simples", "3_Pontas", "Imobilacoes", "Membro_INF_dir", "Membro_INF_esq", "Membro_SUP_dir",
+    "Membro_SUP_esq", "Quadril", "Cervical", "Maca_Sobre_Rodas", "Maca_Rigida", "Ponte",
+    "Retirado_Capacete", "RCP", "Rolamento_90", "Rolamento_180", "Tomada_Decisao", "Tratado_Choque",
+    "Uso_de_Canula", "Uso_Colar", "tamColar", "Uso_KED", "Uso_TTF", "Ventilacao_Suporte", "Oxigenioterapia",
+    "Reanimador", "Reanimador_LPM", "Oxigenioterapia_LPM", "Meios_Auxiliares", "Celesc", "Def_Civil",
+    "IGP_PC", "Policia", "Policia_Value", "Samu", "Samu_Value", "CIT", "OutrosMeios"
+];
+    // Coleta os dados marcados
+foreach ($procedimentos as $procedimento) {
+    if (isset($_POST[$procedimento])) {
+        $procedimentos_efetuados[$procedimento] = 1;
+    } else {
+        $procedimentos_efetuados[$procedimento] = NULL;
+    }
+}
+
+    // Coleta os dados de texto
+    $procedimentos_efetuados['tamColar'] = isset($_POST['tamColar']) ? "'" . $conn->real_escape_string($_POST['tamColar']) . "'" : 'NULL';
+    $procedimentos_efetuados['Reanimador_LPM'] = isset($_POST['Reanimador_LPM']) ? "'" . $conn->real_escape_string($_POST['Reanimador_LPM']) . "'" : 'NULL';
+    $procedimentos_efetuados['Oxigenioterapia_LPM'] = isset($_POST['Oxigenioterapia_LPM']) ? "'" . $conn->real_escape_string($_POST['Oxigenioterapia_LPM']) . "'" : 'NULL';
+    $selectedPoliciaValue = isset($_POST['Policia_Value']) ? $conn->real_escape_string($_POST['Policia_Value']) : null;
+    $selectedPoliciaValue = !empty($selectedPoliciaValue) ? "'" . $selectedPoliciaValue . "'" : 'NULL';
+    $selectedSamuValue = isset($_POST['Samu_Value']) ? $conn->real_escape_string($_POST['Samu_Value']) : null;
+    $selectedSamuValue = !empty($selectedSamuValue) ? "'" . $selectedSamuValue . "'" : 'NULL';
+    $procedimentos_efetuados['OutrosMeios'] = isset($_POST['OutrosMeios']) ? "'" . $conn->real_escape_string($_POST['OutrosMeios']) . "'" : 'NULL';
+
+    $procedimentos_efetuados['Policia_Value'] = $selectedPoliciaValue;
+    $procedimentos_efetuados['Samu_Value'] = $selectedSamuValue;
+
+    // Prepara os valores para a string SQL
+    $columns = implode(", ", array_map(function ($column) {
+        return "`$column`";
+    }, array_keys($procedimentos_efetuados)));
+
+    $values = implode(", ", array_map(function ($value) use ($conn) {
+        return is_null($value) ? "NULL" : $value;
+    }, $procedimentos_efetuados));
+
+    // Insere os dados no banco de dados
+    $sql_procedimentos = "INSERT INTO ficha_procedimentos_efetuados ($columns) VALUES ($values)";
+
+    if ($conn->query($sql_procedimentos) === TRUE) {
+    } else {
+        echo "Erro ao inserir dados: " . $conn->error;
     }
 
     // Fecha a conexão com o banco de dados
