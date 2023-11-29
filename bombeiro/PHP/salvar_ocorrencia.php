@@ -505,6 +505,46 @@ foreach ($procedimentos as $procedimento) {
         echo "Erro ao inserir dados: " . $conn->error;
     }
 
+// Receber dados do formulário ficha_localizacao_dos_traumas 
+    $local1 = $_POST["1local"];
+    $lado1 = $_POST["1lado"];
+    $face1 = $_POST["1face"];
+    $tipo1 = $_POST["1tipo"];
+    $local2 = $_POST["2local"];
+    $lado2 = $_POST["2lado"];
+    $face2 = $_POST["2face"];
+    $tipo2 = $_POST["2tipo"];
+    $local3 = $_POST["3local"];
+    $lado3 = $_POST["3lado"];
+    $face3 = $_POST["3face"];
+    $tipo3 = $_POST["3tipo"];
+    $local4 = $_POST["4local"];
+    $lado4 = $_POST["4lado"];
+    $face4 = $_POST["4face"];
+    $tipo4 = $_POST["4tipo"];
+    $Cabeca_Value = $_POST["Cabeca_Value"];
+    $Pescoco_Value = $_POST["Pescoco_Value"];
+    $Tant_Value = $_POST["Tant_Value"];
+    $Tpos_Value = $_POST["Tpos_Value"];
+    $Genit_Value = $_POST["Genit_Value"];
+    $MID_Value = $_POST["MID_Value"];
+    $MIE_Value = $_POST["MIE_Value"];
+    $MSD_Value = $_POST["MSD_Value"];
+    $MSE_Value = $_POST["MSE_Value"];
+
+    // Insere os dados na tabela ficha_localizacao_dos_traumas
+    $sql_localizacao_traumas = "INSERT INTO ficha_localizacao_dos_traumas  (local1, lado1, face1, tipo1, local2, lado2, face2, tipo2,  local3, lado3, face3,
+     tipo3, local4, lado4, face4, tipo4, cabeca, pescoco, t_ant, t_pos, genit, MID, MIE, MSD, MSE)
+    VALUES 
+    ('$local1', '$lado1', '$face1', '$tipo1', '$local2', '$lado2', '$face2', '$tipo2', '$local3', '$lado3', '$face3', '$tipo3', '$local4', '$lado4',
+     '$face4', '$tipo4', '$Cabeca_Value', '$Pescoco_Value', '$Tant_Value', '$Tpos_Value', '$Genit_Value', '$MID_Value', '$MIE_Value', '$MSD_Value', '$MSE_Value')";
+
+    if($conn->query($sql_localizacao_traumas) === TRUE) {
+    }else{
+        echo "Erro ao inserir dados:". $conn->error;
+    }
+
+
     // Fecha a conexão com o banco de dados
     $conn->close();
 } else {
