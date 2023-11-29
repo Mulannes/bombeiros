@@ -427,6 +427,31 @@ if (mysqli_query($conn, $sql_detalhes_viagem)) {
         echo "Erro ao inserir dados:". $conn->error;
     }
 
+// Receber dados do formulário ficha_anamnese_emergência_médica 
+    $que_aconteceu = $_POST['OqueAconteceu'];
+    $vezes_aconteceu = $_POST['AconteceuOutrasVezes'];
+    $tempo_aconteceu = $_POST['QuandoAconteceu'];
+    $problema_saude = $_POST['ProblemaSaude'];
+    $qual_problema = $_POST['QuaisProblemas'];
+    $uso_medicacao = $_POST['UsoMedicacao'];
+    $horario_medicacao = $_POST['HorarioMedicacao'];
+    $qual_medicacao = $_POST['MedicacaoQuais'];
+    $alergico = $_POST['TemAlergia'];
+    $qual_alergia = $_POST['TemAlergiaQue'];
+    $ingeriu_alimentos = $_POST['IngeriuAlimento'];
+    $ingeriu_horas = $_POST['IngeriuAlimentoHoras'];
+
+    // Insere os dados na tabela ficha_anamnese_emergência_médica
+    $sql_anm_medica = "INSERT INTO ficha_anamnese_emergência_médica (que_aconteceu, vezes_aconteceu, tempo_aconteceu, problema_saude, qual_problema, uso_medicacao, 
+    horario_medicacao, qual_medicacao, alergico, qual_alergia, ingeriu_alimentos,ingeriu_horas) 
+    VALUES('$que_aconteceu','$vezes_aconteceu','$tempo_aconteceu','$problema_saude','$qual_problema','$uso_medicacao','$horario_medicacao','$qual_medicacao','$alergico',
+    '$qual_alergia','$ingeriu_alimentos', '$ingeriu_horas')";
+
+    if($conn->query($sql_anm_medica) === TRUE) {
+    }else{
+        echo "Erro ao inserir dados:". $conn->error;
+    }
+
     // Fecha a conexão com o banco de dados
     $conn->close();
 } else {

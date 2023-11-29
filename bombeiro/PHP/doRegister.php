@@ -2682,7 +2682,7 @@ include("admin/redirectadm.php");
         </div>
     </div>
     <!--                              -->
-    <!-- ✘ Anamnese Emergência Médica -->
+    <!-- ✓ Anamnese Emergência Médica -->
     <!--                              -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingSeventeen">
@@ -2698,15 +2698,15 @@ include("admin/redirectadm.php");
                 <div class="row">
                     <p class="text-center">O que aconteceu (Sinais e Sintomas)</p>
                 </div>
-                <div class="row"><input type="text" name="oqueAconteceu" class="form-control"></div>
+                <div class="row"><input type="text" name="OqueAconteceu" class="form-control"></div>
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Aconteceu Outras vezes?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefaultSim0">
+                        <input class="form-check-input" type="radio" name="AconteceuOutrasVezes" id="AconteceuOutrasVezesSim" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim0">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefaultNao0">
+                        <input class="form-check-input" type="radio" name="AconteceuOutrasVezes" id="AconteceuOutrasVezesNao" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao0">
                             Não
                         </label>
@@ -2717,17 +2717,17 @@ include("admin/redirectadm.php");
                         <p>A quanto tempo isto aconteceu:</p>
                     </div>
                     <div class="col-8">
-                        <input type="text" name="quandoAconteceu" class="form-control">
+                        <input type="text" name="QuandoAconteceu" class="form-control">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Tem algum problema de saúde?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefaultSim1">
+                        <input class="form-check-input" type="radio" name="ProblemaSaude" id="ProblemaSaudeSim" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim1">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefaultNao1">
+                        <input class="form-check-input" type="radio" name="ProblemaSaude" id="ProblemaSaudeNao" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao1">
                             Não
                         </label>
@@ -2738,17 +2738,17 @@ include("admin/redirectadm.php");
                         <p>Quais:</p>
                     </div>
                     <div class="col-8">
-                        <input type="text" name="quaisProblemas" class="form-control">
+                        <input type="text" name="QuaisProblemas" class="form-control">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Faz uso de medicação:</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefaultSim2">
+                        <input class="form-check-input" type="radio" name="UsoMedicacao" id="UsoMedicacaoSim" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim2">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefaultNao2">
+                        <input class="form-check-input" type="radio" name="UsoMedicacao" id="UsoMedicacaoNao" value="Não"> 
                         <label class="form-check-label" for="flexRadioDefaultNao2">
                             Não
                         </label>
@@ -2758,24 +2758,24 @@ include("admin/redirectadm.php");
                     <div class="col-8">
                         <p>Horario da ultima medicação:</p>
                     </div>
-                    <div class="col-4"><input type="text" name="quaisProblemas" class="form-control"></div>
+                    <div class="col-4"><input type="time" name="HorarioMedicacao" class="form-control"></div>
                 </div>
                 <div class="row">
                     <div class="col-4">
                         <p>Quais:</p>
                     </div>
                     <div class="col-8">
-                        <input type="text" name="quandoAconteceu" class="form-control">
+                        <input type="text" name="MedicacaoQuais" class="form-control">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
                     <div class="col-6">Alérgico a alguma coisa?</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefaultSim3">
+                        <input class="form-check-input" type="radio" name="TemAlergia" id="TemAlergiaSim" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim3">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefaultNao3">
+                        <input class="form-check-input" type="radio" name="TemAlergia" id="TemAlergiaNao" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao3">
                             Não
                         </label>
@@ -2786,17 +2786,17 @@ include("admin/redirectadm.php");
                         <p>Oque:</p>
                     </div>
                     <div class="col-8">
-                        <input type="text" name="quandoAconteceu" class="form-control">
+                        <input type="text" name="TemAlergiaQue" class="form-control">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">Ingeriu alimentos ou liquídos > 6 horas:</div>
                     <div class="col-auto">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefaultSim4">
+                        <input class="form-check-input" type="radio" name="IngeriuAlimento" id="IngeriuAlimentoSim" value="Sim">
                         <label class="form-check-label" for="flexRadioDefaultSim4">
                             Sim
                         </label>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefaultNao4">
+                        <input class="form-check-input" type="radio" name="IngeriuAlimento" id="IngeriuAlimentoNao" value="Não">
                         <label class="form-check-label" for="flexRadioDefaultNao4">
                             Não
                         </label>
@@ -2806,7 +2806,7 @@ include("admin/redirectadm.php");
                     <div class="col-8">
                         <p>Que horas:</p>
                     </div>
-                    <div class="col-4"><input type="text" name="quaisProblemas" class="form-control"></div>
+                    <div class="col-4"><input type="time" name="IngeriuAlimentoHoras" class="form-control"></div>
                 </div>
             </div>
         </div>

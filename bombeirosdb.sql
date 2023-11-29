@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Nov 29, 2023 at 01:01 AM
+-- Generation Time: Nov 29, 2023 at 03:14 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -44,7 +44,19 @@ CREATE TABLE `fichas` (
 --
 
 CREATE TABLE `ficha_anamnese_emergência_médica` (
-  `idAnamnese_Emergência_Médica` int(11) NOT NULL
+  `idAnamnese_Emergência_Médica` int(11) NOT NULL,
+  `que_aconteceu` text NOT NULL,
+  `vezes_aconteceu` varchar(3) NOT NULL,
+  `tempo_aconteceu` text NOT NULL,
+  `problema_saude` varchar(3) NOT NULL,
+  `qual_problema` text NOT NULL,
+  `uso_medicacao` varchar(3) NOT NULL,
+  `horario_medicacao` time NOT NULL,
+  `qual_medicacao` text NOT NULL,
+  `alergico` varchar(3) NOT NULL,
+  `qual_alergia` text NOT NULL,
+  `ingeriu_alimentos` varchar(3) NOT NULL,
+  `ingeriu_horas` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -621,7 +633,7 @@ ALTER TABLE `fichas`
 -- AUTO_INCREMENT for table `ficha_anamnese_emergência_médica`
 --
 ALTER TABLE `ficha_anamnese_emergência_médica`
-  MODIFY `idAnamnese_Emergência_Médica` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAnamnese_Emergência_Médica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ficha_anamnese_gestacional`
