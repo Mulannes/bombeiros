@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Nov 29, 2023 at 12:01 AM
+-- Generation Time: Nov 29, 2023 at 01:01 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -121,8 +121,20 @@ CREATE TABLE `ficha_localizacao_dos_traumas` (
 
 CREATE TABLE `ficha_materiais_utilizados_deixados` (
   `idMateriais_Utilizados_Deixados` int(11) NOT NULL,
-  `Materiais` varchar(45) NOT NULL,
-  `Quant.` varchar(45) DEFAULT NULL
+  `base` varchar(10) NOT NULL,
+  `colar1` varchar(10) NOT NULL,
+  `colar2` varchar(10) NOT NULL,
+  `coxins` varchar(10) NOT NULL,
+  `KED` varchar(10) NOT NULL,
+  `maca` varchar(10) NOT NULL,
+  `TTF` varchar(10) NOT NULL,
+  `tirante_aranha` varchar(10) NOT NULL,
+  `tirante_cabeca` varchar(10) NOT NULL,
+  `canula` varchar(10) NOT NULL,
+  `outro_campo1` varchar(99) NOT NULL,
+  `outro_valor1` varchar(10) NOT NULL,
+  `outro_campo2` varchar(99) NOT NULL,
+  `outro_valor2` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -133,8 +145,19 @@ CREATE TABLE `ficha_materiais_utilizados_deixados` (
 
 CREATE TABLE `ficha_materiais_utilizados_descartavel` (
   `idMateriais_Utilizados_Descartavel` int(11) NOT NULL,
-  `Materiais` varchar(45) NOT NULL,
-  `Quant.` varchar(5) DEFAULT NULL
+  `ataduras` varchar(10) NOT NULL,
+  `cateter` varchar(10) NOT NULL,
+  `compressa` varchar(10) NOT NULL,
+  `kit` varchar(10) NOT NULL,
+  `luvas` varchar(10) NOT NULL,
+  `mascara` varchar(10) NOT NULL,
+  `manta` varchar(10) NOT NULL,
+  `pas` varchar(10) NOT NULL,
+  `sonda` varchar(10) NOT NULL,
+  `soro` varchar(10) NOT NULL,
+  `talas` varchar(10) NOT NULL,
+  `outro_nome` varchar(99) NOT NULL,
+  `outro_valor` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -604,49 +627,49 @@ ALTER TABLE `ficha_anamnese_emergência_médica`
 -- AUTO_INCREMENT for table `ficha_anamnese_gestacional`
 --
 ALTER TABLE `ficha_anamnese_gestacional`
-  MODIFY `idAnamnese_Gestacional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idAnamnese_Gestacional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `ficha_avaliacao_cinematica`
 --
 ALTER TABLE `ficha_avaliacao_cinematica`
-  MODIFY `idAvaliacao_Cinematica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
+  MODIFY `idAvaliacao_Cinematica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 
 --
 -- AUTO_INCREMENT for table `ficha_avaliacao_glasgow`
 --
 ALTER TABLE `ficha_avaliacao_glasgow`
-  MODIFY `idFicha_Avaliacao_Glasgow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `idFicha_Avaliacao_Glasgow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT for table `ficha_materiais_utilizados_descartavel`
 --
 ALTER TABLE `ficha_materiais_utilizados_descartavel`
-  MODIFY `idMateriais_Utilizados_Descartavel` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idMateriais_Utilizados_Descartavel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ficha_objetos_recolhidos`
 --
 ALTER TABLE `ficha_objetos_recolhidos`
-  MODIFY `idObjetos_Recolhidos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+  MODIFY `idObjetos_Recolhidos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=206;
 
 --
 -- AUTO_INCREMENT for table `ficha_observacoes_importantes`
 --
 ALTER TABLE `ficha_observacoes_importantes`
-  MODIFY `idObservacoes_Importantes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=277;
+  MODIFY `idObservacoes_Importantes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
 
 --
 -- AUTO_INCREMENT for table `ficha_paciente`
 --
 ALTER TABLE `ficha_paciente`
-  MODIFY `idFicha_Paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=301;
+  MODIFY `idFicha_Paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=303;
 
 --
 -- AUTO_INCREMENT for table `ficha_problemas_encontrados`
 --
 ALTER TABLE `ficha_problemas_encontrados`
-  MODIFY `idProblemas_Encontrados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idProblemas_Encontrados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `ficha_procedimentos_efetuados`
@@ -658,19 +681,19 @@ ALTER TABLE `ficha_procedimentos_efetuados`
 -- AUTO_INCREMENT for table `ficha_sinais_e_sintomas`
 --
 ALTER TABLE `ficha_sinais_e_sintomas`
-  MODIFY `idSinais_e_Sintomas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
+  MODIFY `idSinais_e_Sintomas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 
 --
 -- AUTO_INCREMENT for table `ficha_sinais_vitais`
 --
 ALTER TABLE `ficha_sinais_vitais`
-  MODIFY `idFicha_Sinais_Vitais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
+  MODIFY `idFicha_Sinais_Vitais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=241;
 
 --
 -- AUTO_INCREMENT for table `ficha_tipo_de_ocorrencia`
 --
 ALTER TABLE `ficha_tipo_de_ocorrencia`
-  MODIFY `idTipo_de_Ocorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=308;
+  MODIFY `idTipo_de_Ocorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=310;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte`
@@ -682,25 +705,25 @@ ALTER TABLE `ficha_transporte`
 -- AUTO_INCREMENT for table `ficha_transporte_decisao_transporte`
 --
 ALTER TABLE `ficha_transporte_decisao_transporte`
-  MODIFY `idFicha_Decisao_Transporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+  MODIFY `idFicha_Decisao_Transporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte_detalhes_viagem`
 --
 ALTER TABLE `ficha_transporte_detalhes_viagem`
-  MODIFY `idDetalhes_Viagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `idDetalhes_Viagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte_forma_de_conducao`
 --
 ALTER TABLE `ficha_transporte_forma_de_conducao`
-  MODIFY `idFicha_Forma_de_Conducao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
+  MODIFY `idFicha_Forma_de_Conducao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=263;
 
 --
 -- AUTO_INCREMENT for table `ficha_transporte_vitima_era`
 --
 ALTER TABLE `ficha_transporte_vitima_era`
-  MODIFY `idFicha_Transporte_Vitima_Era` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
+  MODIFY `idFicha_Transporte_Vitima_Era` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- AUTO_INCREMENT for table `usuario`
