@@ -3,6 +3,13 @@ session_start();
 include("admin/redirectadm.php");
 include 'dbconnect.php';
 
+// Verifica se o usuário está logado
+if (!isset($_SESSION['loggedIn'])) {
+    // Se não estiver, redirecione para a página de login
+    header("Location: login.php");
+    exit();
+}
+
 // Verifica se a chave 'id_usuario' está definida na sessão
 if (isset($_SESSION['id_usuario'])) {
     $id_usuario = $_SESSION['id_usuario'];

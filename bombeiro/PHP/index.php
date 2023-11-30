@@ -2,7 +2,14 @@
 <html lang="pt-BR">
 <?php
 include("admin/redirectadm.php");
-    ?>
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['loggedIn'])) {
+    // Se não estiver, redirecione para a página de login
+    header("Location: login.php");
+    exit();
+}
+?>
 
 <head>
     <meta charset="UTF-8">
