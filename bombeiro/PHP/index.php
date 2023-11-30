@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <?php
 include("admin/redirectadm.php");
-    ?>
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -14,15 +14,15 @@ include("admin/redirectadm.php");
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <style>
-    .btn:hover {
-        transform: scale(1.05);
-        transition: .5s ease-in-out;
-        background: rgba(0, 0, 0, 0.50);
-    }
+        .btn:hover {
+            transform: scale(1.05);
+            transition: .5s ease-in-out;
+            background: rgba(0, 0, 0, 0.50);
+        }
 
-    .carousel-item {
-        transition: none;
-    }
+        .carousel-item {
+            transition: none;
+        }
     </style>
 </head>
 
@@ -178,16 +178,18 @@ include("admin/redirectadm.php");
                                 style="color: black; padding: 0; font-size: 14px">Registros</a>
                         </li>
                         <li class="nav-item" style="max-height: 65px;">
-                <form action="admin/redirectadm.php" method="post">
-                    <img src="../images/contaP.png" class=" mx-auto d-block" style="padding: 10px;">
-                    <button type="submit" name="btnRedirect" style="color: #black; padding: 0; font-size: 14px; background-color: transparent; border: none;">Conta</button>
-                </form>
-                </li>
+                            <form action="admin/redirectadm.php" method="post">
+                                <img src="../images/contaP.png" class=" mx-auto d-block" style="padding: 10px;">
+                                <button type="submit" name="btnRedirect"
+                                    style="color: #black; padding: 0; font-size: 14px; background-color: transparent; border: none;">Conta</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>
 
         </div>
+        <a href="gerar_pdf.php">Gerar relatorio</a>
 
         <footer class="text-center text-lg-start">
             <div class="text-center p-3">
@@ -197,7 +199,7 @@ include("admin/redirectadm.php");
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+            </script>
 
 </body>
 
