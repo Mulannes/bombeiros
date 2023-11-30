@@ -2402,7 +2402,7 @@ include("admin/redirectadm.php");
         </div>
     </div>
     <!--                   -->
-    <!-- ✘ Termo de recusa -->
+    <!-- ✓ Termo de recusa -->
     <!--                   -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingFifteen">

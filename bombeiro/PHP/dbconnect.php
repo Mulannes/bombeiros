@@ -1,9 +1,9 @@
 <?php
 
     $host = "localhost";
-    $port = "3307";
+    $port = "3306";
     $username = "root";
-    $password = "root";
+    $password = "";
     $database = "bombeirosdb";
 
     // cria a conexão
