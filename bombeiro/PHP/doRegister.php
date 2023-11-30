@@ -2415,36 +2415,12 @@ include("admin/redirectadm.php");
         <div id="panelsStayOpen-collapseFifteen" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingFifteen">
             <div class="accordion-body">
-                <div class="row" style="position: relative;height: 40px">Eu: <input type="text" name=""
-                        class="form-control" id="" style="width: 250px; position: absolute; right: 5px;">
+                <div class="row" style="position: relative;height: 40px">Nome: <input type="text" name="Nome_PacienteT"
+                        class="form-control" id="Nome_PacienteT" style="width: 250px; position: absolute; right: 5px;">
                 </div>
-                <div class="row" style="position: relative;height: 40px">Portador da carteira de identidade
-                    RG Nº <input type="text" name="" class="form-control" id=""
-                        style="width: 80px; position: absolute; right: 5px;">
+                <div class="row" style="position: relative;height: 40px">RG Nº: <input type="text" name="RG_PacienteT" class="form-control" id="RG_PacienteT"
+                        style="width: 250px; position: absolute; right: 5px;">
                 </div>
-                <div class="row" style="position: relative;height: 40px">Incrito no CPF sob nº <input type="text"
-                        name="" class="form-control" style="width: 100px; position: absolute; right: 5px;" id=""></div>
-                <div class="row" style="height:260px;">Na qualidade de vítima/Paciente, Usando dos direitos
-                    que a lei me
-                    garante, me recuso neste ato o atendimento e/ou transporte oferecido pelos bombeiros
-                    voluntários de
-                    Guaramirim/SC, e assumo, individualmente a responsibilidade pelas consequências que
-                    possam ocorrer por
-                    razão da minha recusa. Declaro que fui devidamente informado sobre o procedimento pelo
-                    qual eu deveria
-                    me submeter e alertado sobre os riscos à saúde da sua não realização.</div>
-                <div class="row" style="position: relative; height: 40px;">Ass: </div>
-                <div class="row" style="position: relative;height: 40px">Testemunha: <input type="text" name=""
-                        class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
-                <div class="row" style="position: relative;height: 40px">Doc: <input type="text" name=""
-                        class="form-control" style="width: 125px; position: absolute; right: 5px;" id="">
-                </div>
-                <div class="row" style="position: relative;height: 40px">Testemunha: <input type="text" name=""
-                        class="form-control" style="width: 125px; position: absolute; right: 5px;" id=""></div>
-                <div class="row" style="position: relative;height: 40px">Doc: <input type="text" name=""
-                        class="form-control" style="width: 125px; position: absolute; right: 5px;" id="">
-                </div>
-
             </div>
         </div>
     </div>

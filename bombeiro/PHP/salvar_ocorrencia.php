@@ -543,7 +543,18 @@ foreach ($procedimentos as $procedimento) {
     }else{
         echo "Erro ao inserir dados:". $conn->error;
     }
+ // Receber dados do formulário para ficha_termo_recusa
+    $Nome_PacienteT = isset($_POST['Nome_PacienteT']) ? mysqli_real_escape_string($conn, $_POST['Nome_PacienteT']) : '';
+    $RG_PacienteT = isset($_POST['RG_PacienteT']) ? mysqli_real_escape_string($conn, $_POST['RG_PacienteT']) : '';
 
+    // Inserir no banco de dados para ficha_termo_recusa
+    $sql_termo = "INSERT INTO ficha_termo_recusa (Nome_T, RG_T) VALUES ('$Nome_PacienteT', '$RG_PacienteT')";
+
+    // Executar a query para ficha_termo_recusa
+    if ($conn->query($sql_termo) === TRUE) {
+    } else {
+        echo "Erro ao salvar Termo de Recusa: " . $conn->error;
+ }
 
     // Fecha a conexão com o banco de dados
     $conn->close();
