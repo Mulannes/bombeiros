@@ -881,7 +881,7 @@ Encravamento,
 Ocular	,
 Queimadura	,
 Simples	,
-3_Pontas	,
+tres_Pontas	,
 Imobilacoes	,
 Membro_INF_dir	,
 Membro_INF_esq	,
@@ -918,8 +918,8 @@ Samu	,
 Samu_Value	,
 CIT	,
 OutrosMeios
-FROM ficha_transporte_decisao_transporte 
-ORDER BY idFicha_Decisao_Transporte DESC 
+FROM ficha_procedimentos_efetuados 
+ORDER BY idProcedimentos_Efetuados DESC 
 LIMIT 1";
 
 // Prepara a QUERY
@@ -985,7 +985,7 @@ $result_ProcedEfe->bind_result(
     $OutrosMeios
 );
 
-$html .= "<h2>Decisão Transporte</h2>";
+$html .= "<h2>Procedimentos Efetuados</h2>";
 
 // Utilizar um loop para obter os resultados (se houver)
 while ($result_ProcedEfe->fetch()) {
