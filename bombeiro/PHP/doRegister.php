@@ -1757,8 +1757,8 @@ if (!isset($_SESSION['loggedIn'])) {
                     </label>
                 </div>
                 <div class="row" style="position: relative;">
-                    <input class="form-check-input" type="checkbox" name="3_Pontas" id="3_Pontas">
-                    <label class="form-check-label" for="3_Pontas"
+                    <input class="form-check-input" type="checkbox" name="tres_Pontas" id="tres_Pontas">
+                    <label class="form-check-label" for="tres_Pontas"
                         style="position: absolute; top: 0;left: 32px;">
                         3 pontas
                     </label>

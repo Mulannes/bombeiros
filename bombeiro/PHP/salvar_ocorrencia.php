@@ -505,7 +505,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "Aspiracao", "Avalicao_Inicial", "Avaliacao_Dirigida", "Avaliacao_Continuada", "Chave_de_Rautek",
         "Canula_de_Guedel", "Desobstrucao_de_VA", "Emprego_do_DEA", "Gerenciamento_de_Riscos",
         "Limpeza_de_Ferimentos", "Curativos", "Compressivo", "Encravamento", "Ocular", "Queimadura",
-        "Simples", "3_Pontas", "Imobilacoes", "Membro_INF_dir", "Membro_INF_esq", "Membro_SUP_dir",
+        "Simples", "tres_Pontas", "Imobilacoes", "Membro_INF_dir", "Membro_INF_esq", "Membro_SUP_dir",
         "Membro_SUP_esq", "Quadril", "Cervical", "Maca_Sobre_Rodas", "Maca_Rigida", "Ponte",
         "Retirado_Capacete", "RCP", "Rolamento_90", "Rolamento_180", "Tomada_Decisao", "Tratado_Choque",
         "Uso_de_Canula", "Uso_Colar", "tamColar", "Uso_KED", "Uso_TTF", "Ventilacao_Suporte", "Oxigenioterapia",
