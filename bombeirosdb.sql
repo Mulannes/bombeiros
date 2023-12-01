@@ -279,7 +279,7 @@ CREATE TABLE `ficha_procedimentos_efetuados` (
   `Ocular` int(11) DEFAULT NULL,
   `Queimadura` int(11) DEFAULT NULL,
   `Simples` int(11) DEFAULT NULL,
-  `3_Pontas` int(11) DEFAULT NULL,
+  `tres_Pontas` int(11) DEFAULT NULL,
   `Imobilacoes` int(11) DEFAULT NULL,
   `Membro_INF_dir` int(11) DEFAULT NULL,
   `Membro_INF_esq` int(11) DEFAULT NULL,
