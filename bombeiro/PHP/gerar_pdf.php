@@ -929,62 +929,63 @@ $result_ProcedEfe->execute();
 
 // Ler os registros retornados do BD (ficha_avaliacao_glasgow)
 $result_ProcedEfe->bind_result(
-    $idProcedimentos_Efetuados	,
-    $Aspiracao,	
-    $Avalicao_Inicial,	
-    $Avaliacao_Dirigida,	
-    $Avaliacao_Continuada,	
-    $Chave_de_Rautek	,
-    $Canula_de_Guedel	,
-    $Desobstrucao_de_VA	,
-    $Emprego_do_DEA	,
-    $Gerenciamento_de_Riscos	,
-    $Limpeza_de_Ferimentos	,
-    $Curativos	,
-    $Compressivo	,
-    $Encravamento,	
-    $Ocular	,
-    $Queimadura	,
-    $Simples	,
-    $tres_Pontas	,
-    $Imobilacoes	,
-    $Membro_INF_dir	,
-    $Membro_INF_esq	,
-    $Membro_SUP_dir	,
-    $Membro_SUP_esq	,
-    $Quadril	,
-    $Cervical	,
-    $Maca_Sobre_Rodas	,
-    $Maca_Rigida	,
-    $Ponte	,
-    $Retirado_Capacete	,
-    $RCP	,
-    $Rolamento_90	,
-    $Rolamento_180	,
-    $Tomada_Decisao	,
-    $Tratado_Choque	,
-    $Uso_de_Canula	,
-    $Uso_Colar	,
-    $tamColar	,
-    $Uso_KED	,
-    $Uso_TTF	,
-    $Ventilacao_Suporte	,
-    $Oxigenioterapia	,
-    $Oxigenioterapia_LPM	,
-    $Reanimador	,
-    $Reanimador_LPM	,
-    $Meios_Auxiliares	,
-    $Celesc	,
-    $Def_Civil	,
-    $IGP_PC	,
-    $Policia	,
-    $Policia_Value	,
-    $Samu	,
-    $Samu_Value	,
-    $CIT	,
+    $idProcedimentos_Efetuados,
+    $Aspiracao,
+    $Avalicao_Inicial,
+    $Avaliacao_Dirigida,
+    $Avaliacao_Continuada,
+    $Chave_de_Rautek,
+    $Canula_de_Guedel,
+    $Desobstrucao_de_VA,
+    $Emprego_do_DEA,
+    $Gerenciamento_de_Riscos,
+    $Limpeza_de_Ferimentos,
+    $Curativos,
+    $Compressivo,
+    $Encravamento,
+    $Ocular,
+    $Queimadura,
+    $Simples,
+    $tres_Pontas,
+    $Imobilacoes,
+    $Membro_INF_dir,
+    $Membro_INF_esq,
+    $Membro_SUP_dir,
+    $Membro_SUP_esq,
+    $Quadril,
+    $Cervical,
+    $Maca_Sobre_Rodas,
+    $Maca_Rigida,
+    $Ponte,
+    $Retirado_Capacete,
+    $RCP,
+    $Rolamento_90,
+    $Rolamento_180,
+    $Tomada_Decisao,
+    $Tratado_Choque,
+    $Uso_de_Canula,
+    $Uso_Colar,
+    $tamColar,
+    $Uso_KED,
+    $Uso_TTF,
+    $Ventilacao_Suporte,
+    $Oxigenioterapia,
+    $Oxigenioterapia_LPM,
+    $Reanimador,
+    $Reanimador_LPM,
+    $Meios_Auxiliares,
+    $Celesc,
+    $Def_Civil,
+    $IGP_PC,
+    $Policia,
+    $Policia_Value,
+    $Samu,
+    $Samu_Value,
+    $CIT,
     $OutrosMeios
+);
 
-$html .= "<h2>Vitima era</h2>";
+$html .= "<h2>Decisão Transporte</h2>";
 
 // Utilizar um loop para obter os resultados (se houver)
 while ($result_ProcedEfe->fetch()) {
@@ -992,88 +993,162 @@ while ($result_ProcedEfe->fetch()) {
     $html .= "<p>idProcedimentos_Efetuados: {$idProcedimentos_Efetuados}</p>";
     if ($Aspiracao !== null) {
         $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Avalicao_Inicial !== null) {
+    }
+    if ($Avalicao_Inicial !== null) {
         $nonNullFields[] = "Avalicao_Inicial: {$Avalicao_Inicial}";
-    }if ($Avaliacao_Dirigida !== null) {
+    }
+    if ($Avaliacao_Dirigida !== null) {
         $nonNullFields[] = "Avaliacao_Dirigida: {$Avaliacao_Dirigida}";
-    }if ($Avaliacao_Continuada !== null) {
+    }
+    if ($Avaliacao_Continuada !== null) {
         $nonNullFields[] = "Avaliacao_Continuada: {$Avaliacao_Continuada}";
-    }if ($Chave_de_Rautek !== null) {
+    }
+    if ($Chave_de_Rautek !== null) {
         $nonNullFields[] = "Chave_de_Rautek: {$Chave_de_Rautek}";
-    }if ($Canula_de_Guedel !== null) {
+    }
+    if ($Canula_de_Guedel !== null) {
         $nonNullFields[] = "Canula_de_Guedel: {$Canula_de_Guedel}";
-    }if ($Desobstrucao_de_VA !== null) {
+    }
+    if ($Desobstrucao_de_VA !== null) {
         $nonNullFields[] = "Desobstrucao_de_VA: {$Desobstrucao_de_VA}";
-    }if ($Emprego_do_DEA !== null) {
+    }
+    if ($Emprego_do_DEA !== null) {
         $nonNullFields[] = "Emprego_do_DEA: {$Emprego_do_DEA}";
-    }if ($Gerenciamento_de_Riscos !== null) {
+    }
+    if ($Gerenciamento_de_Riscos !== null) {
         $nonNullFields[] = "Gerenciamento_de_Riscos: {$Gerenciamento_de_Riscos}";
-    }if ($Limpeza_de_Ferimentos !== null) {
+    }
+    if ($Limpeza_de_Ferimentos !== null) {
         $nonNullFields[] = "Limpeza_de_Ferimentos: {$Limpeza_de_Ferimentos}";
-    }if ($Curativos !== null) {
+    }
+    if ($Curativos !== null) {
         $nonNullFields[] = "Curativos: {$Curativos}";
-    }if ($Compressivo !== null) {
+    }
+    if ($Compressivo !== null) {
         $nonNullFields[] = "Compressivo: {$Compressivo}";
-    }if ($Encravamento !== null) {
+    }
+    if ($Encravamento !== null) {
         $nonNullFields[] = "Encravamento: {$Encravamento}";
-    }if ($Ocular !== null) {
+    }
+    if ($Ocular !== null) {
         $nonNullFields[] = "Ocular: {$Ocular}";
-    }if ($Queimadura !== null) {
+    }
+    if ($Queimadura !== null) {
         $nonNullFields[] = "Queimadura: {$Queimadura}";
-    }if ($Simples !== null) {
+    }
+    if ($Simples !== null) {
         $nonNullFields[] = "Simples: {$Simples}";
-    }if ($tres_Pontas !== null) {
+    }
+    if ($tres_Pontas !== null) {
         $nonNullFields[] = "tres_Pontas: {$tres_Pontas}";
-    }if ($Imobilacoes !== null) {
+    }
+    if ($Imobilacoes !== null) {
         $nonNullFields[] = "Imobilacoes: {$Imobilacoes}";
-    }if ($Membro_INF_dir !== null) {
+    }
+    if ($Membro_INF_dir !== null) {
         $nonNullFields[] = "Membro_INF_dir: {$Membro_INF_dir}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
-    }if ($Aspiracao !== null) {
-        $nonNullFields[] = "Aspiracao: {$Aspiracao}";
+    }
+    if ($Membro_INF_esq !== null) {
+        $nonNullFields[] = "Membro_INF_esq: {$Membro_INF_esq}";
+    }
+    if ($Membro_SUP_dir !== null) {
+        $nonNullFields[] = "Membro_SUP_dir: {$Membro_SUP_dir}";
+    }
+    if ($Aspiracao !== null) {
+        $nonNullFields[] = "Membro_SUP_esq: {$Membro_SUP_esq}";
+    }
+    if ($Quadril !== null) {
+        $nonNullFields[] = "Quadril: {$Quadril}";
+    }
+    if ($Cervical !== null) {
+        $nonNullFields[] = "Cervical: {$Cervical}";
+    }
+    if ($Maca_Sobre_Rodas !== null) {
+        $nonNullFields[] = "Maca_Sobre_Rodas: {$Maca_Sobre_Rodas}";
+    }
+    if ($Maca_Rigida !== null) {
+        $nonNullFields[] = "Maca_Rigida: {$Maca_Rigida}";
+    }
+    if ($Ponte !== null) {
+        $nonNullFields[] = "Ponte: {$Ponte}";
+    }
+    if ($Retirado_Capacete !== null) {
+        $nonNullFields[] = "Retirado_Capacete: {$Retirado_Capacete}";
+    }
+    if ($RCP !== null) {
+        $nonNullFields[] = "RCP: {$RCP}";
+    }
+    if ($Rolamento_90 !== null) {
+        $nonNullFields[] = "Rolamento_90: {$Rolamento_90}";
+    }
+    if ($Rolamento_180 !== null) {
+        $nonNullFields[] = "Rolamento_180: {$Rolamento_180}";
+    }
+    if ($Tomada_Decisao !== null) {
+        $nonNullFields[] = "Tomada_Decisao: {$Tomada_Decisao}";
+    }
+    if ($Tratado_Choque !== null) {
+        $nonNullFields[] = "Tratado_Choque: {$Tratado_Choque}";
+    }
+    if ($Uso_de_Canula !== null) {
+        $nonNullFields[] = "Uso_de_Canula: {$Uso_de_Canula}";
+    }
+    if ($Uso_Colar !== null) {
+        $nonNullFields[] = "Uso_Colar: {$Uso_Colar}";
+    }
+    if ($tamColar !== null) {
+        $nonNullFields[] = "tamColar: {$tamColar}";
+    }
+    if ($Uso_KED !== null) {
+        $nonNullFields[] = "Uso_KED: {$Uso_KED}";
+    }
+    if ($Uso_TTF !== null) {
+        $nonNullFields[] = "Uso_TTF: {$Uso_TTF}";
+    }
+    if ($Ventilacao_Suporte !== null) {
+        $nonNullFields[] = "Ventilacao_Suporte: {$Ventilacao_Suporte}";
+    }
+    if ($Oxigenioterapia !== null) {
+        $nonNullFields[] = "Oxigenioterapia: {$Oxigenioterapia}";
+    }
+    if ($Oxigenioterapia_LPM !== null) {
+        $nonNullFields[] = "Oxigenioterapia_LPM: {$Oxigenioterapia_LPM}";
+    }
+    if ($Reanimador !== null) {
+        $nonNullFields[] = "Reanimador: {$Reanimador}";
+    }
+    if ($Reanimador_LPM !== null) {
+        $nonNullFields[] = "Reanimador_LPM: {$Reanimador_LPM}";
+    }
+    if ($Meios_Auxiliares !== null) {
+        $nonNullFields[] = "Meios_Auxiliares: {$Meios_Auxiliares}";
+    }
+    if ($Celesc !== null) {
+        $nonNullFields[] = "Celesc: {$Celesc}";
+    }
+    if ($Def_Civil !== null) {
+        $nonNullFields[] = "Def_Civil: {$Def_Civil}";
+    }
+    if ($IGP_PC !== null) {
+        $nonNullFields[] = "IGP_PC: {$IGP_PC}";
+    }
+    if ($Policia !== null) {
+        $nonNullFields[] = "Policia: {$Policia}";
+    }
+    if ($Policia_Value !== null) {
+        $nonNullFields[] = "Policia_Value: {$Policia_Value}";
+    }
+    if ($Samu !== null) {
+        $nonNullFields[] = "Samu: {$Samu}";
+    }
+    if ($Samu_Value !== null) {
+        $nonNullFields[] = "Samu_Value: {$Samu_Value}";
+    }
+    if ($CIT !== null) {
+        $nonNullFields[] = "CIT: {$CIT}";
+    }
+    if ($OutrosMeios !== null) {
+        $nonNullFields[] = "OutrosMeios: {$OutrosMeios}";
     }
     $html .= implode('<br>', $nonNullFields);
 }
