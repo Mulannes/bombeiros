@@ -1,7 +1,14 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Incluir o arquivo de conexão com o banco de dados
     include('dbconnect.php');
+
+//Pegar o id do usuário que está preenchendo a tabela
+    if (isset($_SESSION['id_usuario'])) {
+        $user_id = $_SESSION['id_usuario'];
+    }
 
 // <!--                     -->
 // <!-- ✓ Detalhes Paciente -->
@@ -24,10 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Inserir no banco de dados para ficha_paciente
     $sql_paciente = "INSERT INTO ficha_paciente (data_ocorrencia, genero_paciente, nome_hospital, nome_paciente, idade_paciente, CPF_paciente, telefone_paciente, nome_acompanhante, idade_acompanhante, local_da_ocorrencia) 
                     VALUES ('$data_ocorrencia', '$genero_paciente', '$nome_hospital', '$nome_paciente', '$idade_paciente', '$CPF_paciente', '$telefone_paciente', '$nome_acompanhante', '$idade_acompanhante', '$local_da_ocorrencia')";
-
+    }
     // Executar a query para ficha_paciente
     if ($conn->query($sql_paciente) === TRUE) {
-
+        $last_paciente_id = $conn->insert_id;
+    }
 // <!--                      -->
 // <!-- ✓ Tipo de Ocorrência -->
 // <!--                      -->
@@ -87,41 +95,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_tipo_de_ocorrencia
     if ($conn->query($sql_tipo_ocorrencia) === TRUE) {
+        $last_tipo_ocorrencia_id = $conn->insert_id;
+    } else {
+        echo "Erro ao inserir dados: " . $conn->error;
+    }
 
 // <!--                     -->
 // <!-- ✓ Forma de Condução -->
 // <!--                     -->
-    $forma_conducao = isset($_POST['forma_conducao']) ? $_POST['forma_conducao'] : null;
+    $forma_conducao = isset($_POST['forma_conducao']) ? $_POST['forma_conducao'] : '';
 
-    // Verificar se a checkbox da forma de condução foi marcada
-    if ($forma_conducao !== null) {
-        // Inserir no banco de dados para ficha_transporte_forma_de_conducao
+      // Inserir no banco de dados para ficha_transporte_forma_de_conducao
         $sql_forma_conducao = "INSERT INTO ficha_transporte_forma_de_conducao (forma_conducao) VALUES ('$forma_conducao')";
 
-        // Executar a query para ficha_transporte_forma_de_conducao
-        if ($conn->query($sql_forma_conducao) === TRUE) {
-            echo "Registro salvo com sucesso!";
-        } else {
-            echo "Erro ao salvar registro para forma_conducao: " . $conn->error;
-        }
-        } else {
-            // Nenhuma opção de forma de condução selecionada, inserir NULL
-            $sql_forma_conducao = "INSERT INTO ficha_transporte_forma_de_conducao (forma_conducao) VALUES (NULL)";
-
-            // Executar a query para forma_conducao
-            if ($conn->query($sql_forma_conducao) === TRUE) {
-                echo "Registro salvo com sucesso!";
-            } else {
-                echo "Erro ao salvar registro para forma_conducao: " . $conn->error;
-            }
-        }
-        } else {
-            echo "Nenhuma opção de forma de condução selecionada.";
-        }
+    if ($conn->query($sql_forma_conducao) === TRUE) {
+        $last_forma_conducao_id = $conn->insert_id;
     } else {
-        echo "Erro ao salvar registro para ficha_tipo_de_ocorrencia: " . $conn->error;
+        echo "Erro ao inserir dados: " . $conn->error;
     }
-}
 
 // <!--                           -->
 // <!-- ✓ Observações Importantes -->
@@ -133,6 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_observacoes_importantes
     if ($conn->query($sql_observacoes) === TRUE) {
+        $last_observacoes_id = $conn->insert_id;
     } else {
         echo "Erro ao salvar observações importantes: " . $conn->error;
     }
@@ -164,6 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
+        $last_sinais_vitais_id = $conn->insert_id;
     } else {
         echo "Erro ao salvar dados: " . $stmt->error;
     }
@@ -178,6 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_objetos_recolhidos
     if ($conn->query($sql_objetos) === TRUE) {
+        $last_objetos_id = $conn->insert_id;
     } else {
         echo "Erro ao salvar objetos recolhidos: " . $conn->error;
     }
@@ -192,6 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_transporte_vitima_era
     if ($conn->query($sql_vitima) === TRUE) {
+        $last_vitima_id = $conn->insert_id;
     } else {
         echo "Erro ao salvar vitima era: " . $conn->error;
     }
@@ -222,6 +217,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_avaliacao_cinematica
     if ($conn->query($sql_cinematica) === TRUE) {
+        $last_cinematica_id = $conn->insert_id;
     } else {
         echo "Erro ao inserir dados: " . $conn->error;
     }
@@ -243,6 +239,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_transporte_decisao_transporte
     if ($conn->query($sql_decisao_transporte) === TRUE) {
+        $last_decisao_transporte_id = $conn->insert_id;
     } else {
         echo "Erro ao inserir dados: " . $conn->error;
     }
@@ -260,6 +257,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_avaliacao_glasgow
     if ($conn->query($sql_glasgow) === TRUE) {
+        $last_glasgow_id = $conn->insert_id;
     } else {
     echo "Erro ao salvar dados: " . $conn->error;
     }
@@ -336,6 +334,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_sinais_e_sintomas
     if ($conn->query($sql_sinais_sintomas) === TRUE) {
+        $last_sinais_sintomas_id = $conn->insert_id;
     } else {
         echo "Erro ao salvar dados: " . $conn->error;
     }
@@ -358,6 +357,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_sinais_e_sintomas
     if (mysqli_query($conn, $sql_detalhes_viagem)) {
+        $last_detalhes_viagem_id = $conn->insert_id;
     } else {
         echo "Erro ao salvar dados: " . mysqli_error($conn);
     }
@@ -390,6 +390,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_anamnese_gestacional
     if ($conn->query($sql_gestacional) === TRUE) {
+        $last_gestacional_id = $conn->insert_id;
     } else {
         echo "Erro ao inserir dados: " . $conn->error;
     }
@@ -410,6 +411,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_problemas_encontrados
     if($conn->query($sql_problemas) === TRUE) {
+        $last_problemas_id = $conn->insert_id;
     }else{
         echo "Erro ao inserir dados:". $conn->error;
     }
@@ -437,6 +439,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_materiais_utilizados_descartavel
     if($conn->query($sql_matdesc) === TRUE) {
+        $last_matdesc_id = $conn->insert_id;
     }else{
         echo "Erro ao inserir dados:". $conn->error;
     }
@@ -465,6 +468,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_materiais_utilizados_deixados
     if($conn->query($sql_matdeix) === TRUE) {
+        $last_matdeix_id = $conn->insert_id;
     }else{
         echo "Erro ao inserir dados:". $conn->error;
     }
@@ -493,6 +497,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_anamnese_emergencia_medica
     if($conn->query($sql_anm_medica) === TRUE) {
+        $last_anm_medica_id = $conn->insert_id;
     }else{
         echo "Erro ao inserir dados:". $conn->error;
     }
@@ -548,6 +553,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_procedimentos_efetuados
     if ($conn->query($sql_procedimentos) === TRUE) {
+        $last_procedimentos_id = $conn->insert_id;
     } else {
         echo "Erro ao inserir dados: " . $conn->error;
     }
@@ -589,6 +595,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_localizacao_dos_traumas
     if($conn->query($sql_localizacao_traumas) === TRUE) {
+        $last_localizacao_traumas_id = $conn->insert_id;
     }else{
         echo "Erro ao inserir dados:". $conn->error;
     }
@@ -604,9 +611,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executar a query para ficha_termo_recusa
     if ($conn->query($sql_termo) === TRUE) {
+        $last_termo_id = $conn->insert_id;
     } else {
         echo "Erro ao salvar Termo de Recusa: " . $conn->error;
  }
+
+  // Certifique-se de que a variável $user_id esteja definida antes de usá-la
+  if (!isset($user_id)) {
+    // Defina $user_id conforme necessário ou redirecione para a página de login
+    header("Location: login.php");
+    exit();
+}
+
+    // Inserir todos os dados na tabela fichas
+    $sql_fichas = "INSERT INTO fichas (data_ficha, idAnamnese_Emergencia_Medica, idAnamnese_Gestacional, idAvaliacao_Cinematica, idFicha_Avaliacao_Glasgow, 
+    idFicha_Localizacao_dos_Traumas, idMateriais_Utilizados_Deixados, idMateriais_Utilizados_Descartavel, idObjetos_Recolhidos, idObservacoes_Importantes, 
+    idFicha_Paciente, idProblemas_Encontrados, idProcedimentos_Efetuados, idSinais_e_Sintomas, idFicha_Sinais_Vitais, idTermoRecusa, idTipo_de_Ocorrencia, 
+    idFicha_Decisao_Transporte, idDetalhes_Viagem, idFicha_Forma_de_Conducao, idFicha_Transporte_Vitima_Era, id_usuario) 
+    VALUES ('$data_ocorrencia', '$last_anm_medica_id', '$last_gestacional_id', '$last_cinematica_id', '$last_glasgow_id', '$last_localizacao_traumas_id', 
+    '$last_matdeix_id', '$last_matdesc_id', '$last_objetos_id', '$last_observacoes_id', '$last_paciente_id', '$last_problemas_id', '$last_procedimentos_id', 
+    '$last_sinais_sintomas_id', '$last_sinais_vitais_id', '$last_termo_id', '$last_tipo_ocorrencia_id', '$last_decisao_transporte_id', '$last_detalhes_viagem_id', 
+    '$last_forma_conducao_id', '$last_vitima_id', '$user_id' )";
+
+    // Executar a query para fichas
+    if ($conn->query($sql_fichas) === TRUE) {
+        echo "Registro Salvo com Sucesso";
+    } else {
+        echo "Erro ao inserir na tabela fichas: " . $conn->error;
+    }
 
     // Fecha a conexão com o banco de dados
     $conn->close();
@@ -615,4 +647,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: index.php");
     exit();
 }
+
 ?>

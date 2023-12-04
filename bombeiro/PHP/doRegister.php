@@ -67,7 +67,7 @@ if (!isset($_SESSION['loggedIn'])) {
                                 <div class="col-1">
                                     <input id="date" type="date" name="date" min="yyyy-mm-dd" />
                                 </div>
-                                <div class="col-4"></div>
+                                <div class="col-4 invisible"></div>
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" name="genero_DP"
                                         id="flexRadioDefaultM_DP" value="Masculino">
