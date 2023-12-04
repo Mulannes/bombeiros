@@ -10,7 +10,7 @@ if ($isAdmin) {
     // redireciona para a página de admin
     header("Location: index_admin.php");
     exit();
-} elseif (isset($_POST['btnRedirect'])) {
+} elseif (isset($_Sess['btnRedirect'])) {
     // Se não for admin e o botão foi pressionado, redireciona para a página do usuário
     header("Location: index.php");
     exit();

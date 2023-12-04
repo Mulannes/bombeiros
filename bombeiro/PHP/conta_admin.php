@@ -143,14 +143,9 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
     </div>
         <div class="container d-flex w-20 h-20" style="gap: 8px;">
             <div class="container d-flex flex-column align-items-center justify-content-center"
-                style="height:80px; width:50%; background-color: var(--dedada2); border-radius: 15px;">
+                style="height:80px; width:100%; background-color: var(--dedada2); border-radius: 15px;">
                 <p class="d-flex align-items-center justify-content-around" style="font-size: 24px; font-weight: 800; margin: 0;">9</p>
-                <p class="d-flex justify-content-around text-muted" style="font-size: 15px; width: 90%;margin: 0;">Registros Realizados</p>
-            </div>
-            <div class="container d-flex flex-column align-items-center justify-content-center"
-                style="height:80px; width:50%; background-color:  var(--dedada2); border-radius: 15px">
-                <p class="d-flex justify-content-around" style="font-size: 24px; font-weight: 800; margin: 0">2</p>
-                <p class="d-flex justify-content-around text-muted" style="font-size: 15px; width: 90%; margin: 0;">Em andamento</p>
+                <p class="d-flex justify-content-around text-muted" style="font-size: 15px; width: 90%;margin: 0;">Registros Totais Realizados</p>
             </div>
         </div>
 

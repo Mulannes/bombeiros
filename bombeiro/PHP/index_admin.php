@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <?php
 include("admin/redirectadm.php");
+include("admin/contaadminredirect.php");
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['loggedIn'])) {
