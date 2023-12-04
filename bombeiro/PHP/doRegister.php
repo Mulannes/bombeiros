@@ -96,8 +96,8 @@ if (!isset($_SESSION['loggedIn'])) {
                                         id="idadePaciente_DP">
                                 </div>
                                 <div class="col-8">
-                                    <input type="number" name="cpf_paciente_DP" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
-                                        placeholder="CPF paciente:" class="form-control">
+                                    <input type="text" name="cpf_paciente_DP" pattern="\d{11}" maxlength="11"
+                                    placeholder="CPF paciente:" class="form-control">
                                 </div>
                                 <div class="col-4">
                                     <input type="number" name="telefone_paciente_DP" placeholder="Fone:"

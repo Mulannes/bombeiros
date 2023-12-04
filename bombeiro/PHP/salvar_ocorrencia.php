@@ -643,11 +643,11 @@ $stmt->close();
 }
 
     // Inserir todos os dados na tabela fichas
-    $sql_fichas = "INSERT INTO fichas (data_ficha, idAnamnese_Emergencia_Medica, idAnamnese_Gestacional, idAvaliacao_Cinematica, idFicha_Avaliacao_Glasgow, 
+    $sql_fichas = "INSERT INTO fichas (data_ficha, nome_paciente, idAnamnese_Emergencia_Medica, idAnamnese_Gestacional, idAvaliacao_Cinematica, idFicha_Avaliacao_Glasgow, 
     idFicha_Localizacao_dos_Traumas, idMateriais_Utilizados_Deixados, idMateriais_Utilizados_Descartavel, idObjetos_Recolhidos, idObservacoes_Importantes, 
     idFicha_Paciente, idProblemas_Encontrados, idProcedimentos_Efetuados, idSinais_e_Sintomas, idFicha_Sinais_Vitais, idTermoRecusa, idTipo_de_Ocorrencia, 
     idFicha_Decisao_Transporte, idDetalhes_Viagem, idFicha_Forma_de_Conducao, idFicha_Transporte_Vitima_Era, id_usuario) 
-    VALUES ('$data_ocorrencia', '$last_anm_medica_id', '$last_gestacional_id', '$last_cinematica_id', '$last_glasgow_id', '$last_localizacao_traumas_id', 
+    VALUES ('$data_ocorrencia', '$nome_paciente', '$last_anm_medica_id', '$last_gestacional_id', '$last_cinematica_id', '$last_glasgow_id', '$last_localizacao_traumas_id', 
     '$last_matdeix_id', '$last_matdesc_id', '$last_objetos_id', '$last_observacoes_id', '$last_paciente_id', '$last_problemas_id', '$last_procedimentos_id', 
     '$last_sinais_sintomas_id', '$last_sinais_vitais_id', '$last_termo_id', '$last_tipo_ocorrencia_id', '$last_decisao_transporte_id', '$last_detalhes_viagem_id', 
     '$last_forma_conducao_id', '$last_vitima_id', '$user_id')";

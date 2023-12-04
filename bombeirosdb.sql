@@ -24,6 +24,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `fichas` (
   `id_fichas` int(11) NOT NULL,
   `data_ficha` date NOT NULL,
+  `nome_paciente` varchar(255) NOT NULL,
   `idAnamnese_Emergencia_Medica` int(11) NOT NULL,
   `idAnamnese_Gestacional` int(11) NOT NULL,
   `idAvaliacao_Cinematica` int(11) NOT NULL,

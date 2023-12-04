@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <?php
+include("dbconnect.php");
 include("admin/redirectadm.php");
 
 // Verifica se o usuário está logado
@@ -102,95 +103,79 @@ if (!isset($_SESSION['loggedIn'])) {
                         Nome
                     </div>
                     <div class="col text-center">
-                        Status
-                    </div>
-                    <div class="col text-center">
                         Ação
                     </div>
                 </div>
             </div>
         </div>
-        <div class="borda" style="width: 95%; border-radius: 10px;height: 50px;display: flex; align-items: center;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col text-center">
-                        <p class="h6"style="margin: 0;">#1558</p>
-                    </div>
-                    <div class="col text-center">
-                        <p class="h6"style="margin: 0;">Kauã Costa</p>
-                    </div>
-                    <div class="col text-center">
-                        <p class="h6 text-success"style="margin: 0;">Completo</p>
-                    </div>
-                    <div class="col text-center" style="align-items: center;">
-                        <div class="btn-group" role="group" style="margin-bottom: 0;">
-                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
-                                data-bs-toggle="dropdown" style="color: #000; background-color: #FFF; border: none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50); display: flex; align-items: center;justify-content: center; transition: .5s ease-in-out; ">
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <li><a class="dropdown-item" href="#">Editar</a></li>
-                                <li><a class="dropdown-item" href="#">Abrir</a></li>
-                                <li><a class="dropdown-item text-danger" href="#">Excluir</a></li>
-                            </ul>
-                        </div>
+        <?php
+// Suponha que você tenha a informação se o usuário é um administrador em $isAdmin
+$id_usuario = $_SESSION['id_usuario'];
+$isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
+
+if ($isAdmin) {
+    // Se o usuário for um administrador, consulta sem a condição WHERE
+    $sql = "SELECT * FROM fichas";
+    $stmt = $conn->prepare($sql);
+} else {
+    // Se não for um administrador, consulta com a condição WHERE
+    $sql = "SELECT * FROM fichas WHERE id_usuario = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id_usuario);
+}
+
+if ($stmt->execute()) {
+    $result = $stmt->get_result();
+
+    // Defina uma variável para controlar o número máximo de registros a serem exibidos
+    $maxRegistros = 3;
+    $contadorRegistros = 0;
+
+    while ($row = $result->fetch_assoc()) {
+        $id = $row['id_fichas'];
+        $nome = $row['nome_paciente'];
+
+        // Imprima o HTML formatado com os dados do banco de dados
+        echo '<div class="borda" style="width: 95%; border-radius: 10px; height: 50px; display: flex; align-items: center;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <p class="h6"style="margin: 0;">#' . $id . '</p>
+                </div>
+                <div class="col text-center">
+                    <p class="h6"style="margin: 0;">' . $nome . '</p>
+                </div>
+                <div class="col text-center" style="align-items: center;">
+                    <div class="btn-group" role="group" style="margin-bottom: 0;">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                            data-bs-toggle="dropdown" style="color: #000; background-color: #FFF; border: none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50); display: flex; align-items: center;justify-content: center; transition: .5s ease-in-out; ">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="index.php">Relatório</a></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="excluirFicha(' . $id . ')">Excluir</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="borda" style="width: 95%; border-radius: 10px;height: 50px;display: flex; align-items: center;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col text-center">
-                        <p class="h6"style="margin: 0;">#1557</p>
-                    </div>
-                    <div class="col text-center">
-                        <p class="h6"style="margin: 0;">João Carlos</p>
-                    </div>
-                    <div class="col text-center">
-                        <p class="h6 text-primary"style="margin: 0;">Em Andamento</p>
-                    </div>
-                    <div class="col text-center" style="align-items: center;">
-                        <div class="btn-group" role="group" style="margin-bottom: 0;">
-                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
-                                data-bs-toggle="dropdown" style="color: #000; background-color: #FFF; border: none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50); display: flex; align-items: center;justify-content: center;">
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <li><a class="dropdown-item" href="#">Editar</a></li>
-                                <li><a class="dropdown-item" href="#">Abrir</a></li>
-                                <li><a class="dropdown-item text-danger" href="#">Excluir</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="borda" style="width: 95%; border-radius: 10px;height: 50px;display: flex; align-items: center; margin-bottom: 50px;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col text-center">
-                        <p class="h6" style="margin: 0;">#1556</p>
-                    </div>
-                    <div class="col text-center">
-                        <p class="h6"style="margin: 0;">Juliana Ferreira</p>
-                    </div>
-                    <div class="col text-center">
-                        <p class="h6 text-success"style="margin: 0;">Completo</p>
-                    </div>
-                    <div class="col text-center" style="align-items: center;">
-                        <div class="btn-group" role="group" style="margin-bottom: 0;"> 
-                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
-                                data-bs-toggle="dropdown" style="color: #000; background-color: #FFF; border: none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50); display: flex; align-items: center;justify-content: center;">
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <li><a class="dropdown-item" href="#">Editar</a></li>
-                                <li><a class="dropdown-item" href="#">Abrir</a></li>
-                                <li><a class="dropdown-item text-danger" href="#">Excluir</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>';
+
+        // Incrementa o contador de registros
+        $contadorRegistros++;
+
+        // Verifica se atingiu o número máximo de registros
+        if ($contadorRegistros >= $maxRegistros) {
+            break;
+        }
+    }
+} else {
+    echo "Erro na execução da consulta: " . $stmt->error;
+}
+
+$stmt->close();
+$conn->close();
+?>
+
         <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
             <div class="nav-pills-style" style="width: 95%; height: 75px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
                 <ul class="nav nav-pills nav-justified">
@@ -229,3 +214,23 @@ if (!isset($_SESSION['loggedIn'])) {
 </body>
 
 </html>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    function excluirFicha(id) {
+        if (confirm('Tem certeza que deseja excluir esta ficha?')) {
+            $.ajax({
+                type: 'POST',
+                url: 'excluir_ficha.php', // Substitua pelo script que processa a exclusão
+                data: { id: id },
+                success: function(response) {
+                    // Lide com a resposta, talvez recarregando a página ou atualizando a lista de fichas
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        }
+    }
+</script>
