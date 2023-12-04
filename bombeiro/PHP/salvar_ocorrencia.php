@@ -603,33 +603,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // <!--                   -->
 // <!-- ✓ Termo de recusa -->
 // <!--                   -->
-    if(isset($_FILES['imagem_recusa'])){
-        $imagem_recusa = $_FILES['imagem_recusa'];
+$nome_imagem = null;
+$caminho_imagem = null;
 
-        if($imagem_recusa['error'])
-        die("Falha ao enviar o arquivo.");
+if(isset($_FILES['imagem_recusa']) && $_FILES['imagem_recusa']['error'] == UPLOAD_ERR_OK) {
+    $imagem_recusa = $_FILES['imagem_recusa'];
 
-        if($imagem_recusa['size'] > 2097152)
-        die("Arquivo muito grande! Máx: 2MB");
+    $pasta = "../TermoRecusa/";
+    $nomeDoArquivo = $imagem_recusa['name'];
+    $novoNomeArquivo = uniqid();
+    $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
 
-        $pasta = "../TermoRecusa/";
-        $nomeDoArquivo = $imagem_recusa['name'];
-        $novoNomeArquivo = uniqid();
-        $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-
-        if($extensao != "jpg" && $extensao != "png")
+    if($extensao != "jpg" && $extensao != "png") {
         die("Tipo de arquivo inválido!");
-
-        $path = $pasta . $novoNomeArquivo . "." . $extensao;
-
-        $next = move_uploaded_file($imagem_recusa["tmp_name"], $path);
-        if($next){
-            $conn->query("INSERT INTO ficha_termo_recusa(nome_imagem, caminho_imagem) VALUES('$nomeDoArquivo', '$path')");
-        $last_termo_id = $conn->insert_id;
-        }else{
-        echo "Falha ao enviar o arquivo";
-        }
     }
+
+    $path = $pasta . $novoNomeArquivo . "." . $extensao;
+
+    if(move_uploaded_file($imagem_recusa["tmp_name"], $path)) {
+        $nome_imagem = $nomeDoArquivo;
+        $caminho_imagem = $path;
+    } else {
+        die("Falha ao enviar o arquivo");
+    }
+}
+
+// Use prepared statements para evitar injeção de SQL
+$stmt = $conn->prepare("INSERT INTO ficha_termo_recusa (nome_imagem, caminho_imagem) VALUES (?, ?)");
+$stmt->bind_param("ss", $nome_imagem, $caminho_imagem);
+$stmt->execute();
+$last_termo_id = $conn->insert_id;
+$stmt->close();
 
   // Certifique-se de que a variável $user_id esteja definida antes de usá-la
   if (!isset($user_id)) {
@@ -651,6 +655,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Executar a query para fichas
     if ($conn->query($sql_fichas) === TRUE) {
         echo "Registro Salvo com Sucesso";
+        header("Location: index.php");
     } else {
         echo "Erro ao inserir na tabela fichas: " . $conn->error;
     }

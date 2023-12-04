@@ -9,7 +9,6 @@ if (!isset($_SESSION['loggedIn'])) {
     header("Location: login.php");
     exit();
 }
-
 // Verifica se a chave 'id_usuario' está definida na sessão
 if (isset($_SESSION['id_usuario'])) {
     $id_usuario = $_SESSION['id_usuario'];
@@ -30,6 +29,34 @@ if (isset($_SESSION['id_usuario'])) {
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
                 $nome_usuario = $row['nome_usuario'];
+
+                // Consulta SQL para contar o número de ocorrências do usuário
+                $sql_contagem = "SELECT COUNT(*) AS quantidade FROM fichas WHERE id_usuario = ?";
+                $stmt_contagem = $conn->prepare($sql_contagem);
+
+                // Verifica se a preparação da consulta foi bem-sucedida
+                if ($stmt_contagem) {
+                    $stmt_contagem->bind_param('i', $id_usuario);
+
+                    // Executa a consulta de contagem
+                    if ($stmt_contagem->execute()) {
+                        $result_contagem = $stmt_contagem->get_result();
+
+                        // Verifica se há algum resultado
+                        if ($result_contagem->num_rows > 0) {
+                            $row_contagem = $result_contagem->fetch_assoc();
+                            $quantidade_ocorrencias = $row_contagem['quantidade'];
+                        } else {
+                            echo "Nenhuma contagem encontrada para o usuário com ID $id_usuario";
+                        }
+                    } else {
+                        echo "Erro na consulta de contagem: " . $stmt_contagem->error;
+                    }
+
+                    $stmt_contagem->close();
+                } else {
+                    echo "Erro na preparação da consulta de contagem: " . $conn->error;
+                }
             } else {
                 echo "Nenhum usuário encontrado com ID $id_usuario";
             }
@@ -43,9 +70,7 @@ if (isset($_SESSION['id_usuario'])) {
     }
 }
 
-$conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -141,7 +166,7 @@ $conn->close();
         <div class="container d-flex w-20 h-20" style="gap: 8px;">
             <div class="container d-flex flex-column align-items-center justify-content-center"
                 style="height:80px; width:100%; background-color: var(--dedada2); border-radius: 15px;">
-                <p class="d-flex align-items-center justify-content-around" style="font-size: 24px; font-weight: 800; margin: 0;">9</p>
+                <p class="d-flex align-items-center justify-content-around" style="font-size: 24px; font-weight: 800; margin: 0;"><?php echo $quantidade_ocorrencias; ?></p>
                 <p class="d-flex justify-content-around text-muted" style="font-size: 15px; width: 90%;margin: 0;">Registros Realizados</p>
             </div>
         </div>
