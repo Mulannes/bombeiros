@@ -417,6 +417,7 @@ CREATE TABLE `ficha_sinais_vitais` (
 
 CREATE TABLE `ficha_termo_recusa` (
   `idTermoRecusa` int(11) NOT NULL,
+  `nome_imagem` varchar(255) NOT NULL,
   `caminho_imagem` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

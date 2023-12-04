@@ -42,7 +42,7 @@ if (!isset($_SESSION['loggedIn'])) {
 
 <body>
     <div class="container-fluid">
-        <form action="salvar_ocorrencia.php" method="post">
+        <form enctype="multipart/form-data" action="salvar_ocorrencia.php" method="post">
             <div class="row text">
                 <div class="col-lg">
                     <a href="ocorrencia.php" class="display-1" style="color: black; text-decoration: none; font-weight: 600;">Ocorrência</a>
@@ -2422,12 +2422,9 @@ if (!isset($_SESSION['loggedIn'])) {
         <div id="panelsStayOpen-collapseFifteen" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingFifteen">
             <div class="accordion-body">
-                <div class="row" style="position: relative;height: 40px">Nome: <input type="text" name="Nome_PacienteT"
-                        class="form-control" id="Nome_PacienteT" style="width: 250px; position: absolute; right: 5px;">
-                </div>
-                <div class="row" style="position: relative;height: 40px">RG Nº: <input type="text" name="RG_PacienteT" class="form-control" id="RG_PacienteT"
-                        style="width: 250px; position: absolute; right: 5px;">
-                </div>
+                <label for="imagem_recusa">Termo de Recusa:</label>
+                <br>
+                <input type="file" name="imagem_recusa" accept="image/*">
             </div>
         </div>
     </div>

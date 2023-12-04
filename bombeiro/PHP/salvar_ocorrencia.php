@@ -603,18 +603,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // <!--                   -->
 // <!-- ✓ Termo de recusa -->
 // <!--                   -->
-    $Nome_PacienteT = isset($_POST['Nome_PacienteT']) ? mysqli_real_escape_string($conn, $_POST['Nome_PacienteT']) : '';
-    $RG_PacienteT = isset($_POST['RG_PacienteT']) ? mysqli_real_escape_string($conn, $_POST['RG_PacienteT']) : '';
+    if(isset($_FILES['imagem_recusa'])){
+        $imagem_recusa = $_FILES['imagem_recusa'];
 
-    // Inserir no banco de dados para ficha_termo_recusa
-    $sql_termo = "INSERT INTO ficha_termo_recusa (Nome_T, RG_T) VALUES ('$Nome_PacienteT', '$RG_PacienteT')";
+        if($imagem_recusa['error'])
+        die("Falha ao enviar o arquivo.");
 
-    // Executar a query para ficha_termo_recusa
-    if ($conn->query($sql_termo) === TRUE) {
+        if($imagem_recusa['size'] > 2097152)
+        die("Arquivo muito grande! Máx: 2MB");
+
+        $pasta = "../TermoRecusa/";
+        $nomeDoArquivo = $imagem_recusa['name'];
+        $novoNomeArquivo = uniqid();
+        $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+
+        if($extensao != "jpg" && $extensao != "png")
+        die("Tipo de arquivo inválido!");
+
+        $path = $pasta . $novoNomeArquivo . "." . $extensao;
+
+        $next = move_uploaded_file($imagem_recusa["tmp_name"], $path);
+        if($next){
+            $conn->query("INSERT INTO ficha_termo_recusa(nome_imagem, caminho_imagem) VALUES('$nomeDoArquivo', '$path')");
         $last_termo_id = $conn->insert_id;
-    } else {
-        echo "Erro ao salvar Termo de Recusa: " . $conn->error;
- }
+        }else{
+        echo "Falha ao enviar o arquivo";
+        }
+    }
 
   // Certifique-se de que a variável $user_id esteja definida antes de usá-la
   if (!isset($user_id)) {
@@ -631,7 +646,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     VALUES ('$data_ocorrencia', '$last_anm_medica_id', '$last_gestacional_id', '$last_cinematica_id', '$last_glasgow_id', '$last_localizacao_traumas_id', 
     '$last_matdeix_id', '$last_matdesc_id', '$last_objetos_id', '$last_observacoes_id', '$last_paciente_id', '$last_problemas_id', '$last_procedimentos_id', 
     '$last_sinais_sintomas_id', '$last_sinais_vitais_id', '$last_termo_id', '$last_tipo_ocorrencia_id', '$last_decisao_transporte_id', '$last_detalhes_viagem_id', 
-    '$last_forma_conducao_id', '$last_vitima_id', '$user_id' )";
+    '$last_forma_conducao_id', '$last_vitima_id', '$user_id')";
 
     // Executar a query para fichas
     if ($conn->query($sql_fichas) === TRUE) {
