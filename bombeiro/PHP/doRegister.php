@@ -307,7 +307,18 @@ if (!isset($_SESSION['loggedIn'])) {
                                 </label>
                                 <textarea class="form-control" name="Outro_Campo_Text" aria-label="Área de texto"
                                     placeholder="Descreva aqui..."></textarea>
-                            </div>
+                                    <script>
+                                    // Obtém referências para o checkbox e textarea
+                                    var checkbox = document.getElementById('flexCheckDefault19');
+                                    var textarea = document.querySelector('textarea[name="Outro_Campo_Text"]');
+
+                                    // Adiciona um ouvinte de eventos para o evento de entrada no textarea
+                                    textarea.addEventListener('input', function () {
+                                        // Marca o checkbox se o textarea não estiver vazio, caso contrário, desmarca
+                                        checkbox.checked = textarea.value.trim() !== '';
+                                    });
+                                </script>
+</div>
                         </div>
                     </div>
                 </div>
@@ -1408,6 +1419,19 @@ if (!isset($_SESSION['loggedIn'])) {
                         <div class="row" style="position: relative;">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault107">
                 <input type="text" name="Observacoes" class="form-control" style="position: absolute; top: 0;left: 32px; height: 35px; width: 200px;">
+                                <script>
+                                    (function () {
+                                    // Obtém referências
+                                    var checkbox = document.getElementById('flexCheckDefault107');
+                                    var text = document.querySelector('input[name="Observacoes"]');
+
+                                    // Adiciona um ouvinte de eventos para o evento de entrada no text
+                                    text.addEventListener('input', function () {
+                                        // Marca o checkbox se o text não estiver vazio, caso contrário, desmarca
+                                        checkbox.checked = text.value.trim() !== '';
+                                    });
+                                    })();
+                                </script>
                         </div>
 
                     </div>
@@ -2046,6 +2070,19 @@ if (!isset($_SESSION['loggedIn'])) {
                 <div class="row" style="position: relative; display: flex; align-items: center;height: 46px;">
                     <input class="form-check-input" type="checkbox" name="outrosMeios" id="outrosMeios">
                     <input type="text" name="OutrosMeios" class="form-control" style="width: 200px; margin-left: 25px;">
+                    <script>
+                    (function () {
+                    // Obtém referências para o checkbox e text
+                    var checkbox = document.getElementById('outrosMeios');
+                    var text = document.querySelector('input[name="OutrosMeios"]');
+
+                    // Adiciona um ouvinte de eventos para o evento de entrada no textarea
+                    text.addEventListener('input', function () {
+                        // Marca o checkbox se o textarea não estiver vazio, caso contrário, desmarca
+                        checkbox.checked = text.value.trim() !== '';
+                    });
+                    })();
+                    </script>
                 </div>
             </div>
         </div>
@@ -2229,6 +2266,34 @@ if (!isset($_SESSION['loggedIn'])) {
             </div>
         </div>
     </div>
+    <script>
+    (function () {
+        function setupCheckboxAndText(checkboxId, textInputName) {
+            var checkbox = document.getElementById(checkboxId);
+            var text = document.querySelector('input[name="' + textInputName + '"]');
+
+            // Adiciona um ouvinte de eventos para o evento de entrada no campo de texto
+            text.addEventListener('input', function () {
+                // Marca o checkbox se o campo de texto não estiver vazio, caso contrário, desmarca
+                checkbox.checked = text.value.trim() !== '';
+            });
+        }
+
+        // Chame a função para cada par de checkbox e campo de texto
+        setupCheckboxAndText('flexCheckDefault156', 'quantAtaduras');
+        setupCheckboxAndText('flexCheckDefault157', 'quantManta');
+        setupCheckboxAndText('flexCheckDefault158', 'quantCateter');
+        setupCheckboxAndText('flexCheckDefault159', 'quantPas');
+        setupCheckboxAndText('flexCheckDefault160', 'quantCompressa');
+        setupCheckboxAndText('flexCheckDefault161', 'quantSonda');
+        setupCheckboxAndText('flexCheckDefault162', 'quantKits');
+        setupCheckboxAndText('flexCheckDefault163', 'quantSoro');
+        setupCheckboxAndText('flexCheckDefault164', 'quantLuvas');
+        setupCheckboxAndText('flexCheckDefault165', 'quantTalas');
+        setupCheckboxAndText('flexCheckDefault166', 'quantMascara');
+        setupCheckboxAndText('flexCheckDefault167', 'quantOutro');
+        })();
+    </script>
     <!--                                 -->
     <!-- ✓ Materiais Utilizados N. Desc. -->
     <!--                                 -->
@@ -2251,9 +2316,9 @@ if (!isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault801"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault801"
                             style="position: absolute; top: -8px;left: 32px;">
                             Base do estabiliza.
                         </label>
@@ -2263,9 +2328,9 @@ if (!isset($_SESSION['loggedIn'])) {
                         <input type="text" name="quantBase" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault802"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault802"
                             style="position: absolute; top: 0;left: 32px;">
                             T.T.F.
                         </label>
@@ -2277,9 +2342,9 @@ if (!isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault803"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault803"
                             style="position: absolute; top: 0;left: 32px;">
                             Colar
                         </label>
@@ -2289,9 +2354,9 @@ if (!isset($_SESSION['loggedIn'])) {
                         <input type="text" name="QuantColar1" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault804"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault804"
                             style="position: absolute; top: -8px;left: 32px;">
                             Tirante Aranha
                         </label>
@@ -2303,9 +2368,9 @@ if (!isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault805"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault805"
                             style="position: absolute; top: 0;left: 32px;">
                             Colar
                         </label>
@@ -2315,9 +2380,9 @@ if (!isset($_SESSION['loggedIn'])) {
                         <input type="text" name="quantColar2" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault806"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault806"
                             style="position: absolute; top: -8px;left: 32px;">
                             Tirante de cabeça
                         </label>
@@ -2329,9 +2394,9 @@ if (!isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault807"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault807"
                             style="position: absolute; top: -8px;left: 32px;">
                             Coxins Estabiliza
                         </label>
@@ -2341,9 +2406,9 @@ if (!isset($_SESSION['loggedIn'])) {
                         <input type="text" name="quantCoxins" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault808"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault808"
                             style="position: absolute; top: 0;left: 32px;">
                             Cânula
                         </label>
@@ -2355,9 +2420,9 @@ if (!isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault809"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault809"
                             style="position: absolute; top: 0;left: 32px;">
                             KED
                         </label>
@@ -2367,9 +2432,9 @@ if (!isset($_SESSION['loggedIn'])) {
                         <input type="text" name="quantKED" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault810"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault810"
                             style="position: absolute; top: -8px;left: 32px;">
                             <input type="text" class="form-control" name="Outro_Mat1" id="Outro_Mat1">
                         </label>
@@ -2381,9 +2446,9 @@ if (!isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="row" style="padding-top: 4px; padding-bottom: 4px; display: flex; align-items: center;">
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault811"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault811"
                             style="position: absolute; top: 0;left: 32px;">
                             Maca rígida
                         </label>
@@ -2393,9 +2458,9 @@ if (!isset($_SESSION['loggedIn'])) {
                         <input type="text" name="quantMaca" class="form-control" style="width: 80%;padding: 5px;">
                     </div>
                     <div class="col-4" style="position: relative;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault89"
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault812"
                             style="display: block; ">
-                        <label class="form-check-label" for="flexCheckDefault89"
+                        <label class="form-check-label" for="flexCheckDefault812"
                             style="position: absolute; top: -8px;left: 32px;">
                             <input type="text" class="form-control" name="Outro_Mat2" id="Outro_Mat2">
                         </label>
@@ -2408,6 +2473,34 @@ if (!isset($_SESSION['loggedIn'])) {
             </div>
         </div>
     </div>
+    <script>
+    (function () {
+        function setupCheckboxAndText(checkboxId, textInputName) {
+            var checkbox = document.getElementById(checkboxId);
+            var text = document.querySelector('input[name="' + textInputName + '"]');
+
+            // Adiciona um ouvinte de eventos para o evento de entrada no campo de texto
+            text.addEventListener('input', function () {
+                // Marca o checkbox se o campo de texto não estiver vazio, caso contrário, desmarca
+                checkbox.checked = text.value.trim() !== '';
+            });
+        }
+
+        // Chame a função para cada par de checkbox e campo de texto
+        setupCheckboxAndText('flexCheckDefault801', 'quantBase');
+        setupCheckboxAndText('flexCheckDefault802', 'quantTTF');
+        setupCheckboxAndText('flexCheckDefault803', 'QuantColar1');
+        setupCheckboxAndText('flexCheckDefault804', 'quantTiranteA');
+        setupCheckboxAndText('flexCheckDefault805', 'quantColar2');
+        setupCheckboxAndText('flexCheckDefault806', 'quantTiranteC');
+        setupCheckboxAndText('flexCheckDefault807', 'quantCoxins');
+        setupCheckboxAndText('flexCheckDefault808', 'quantCanula');
+        setupCheckboxAndText('flexCheckDefault809', 'quantKED');
+        setupCheckboxAndText('flexCheckDefault810', 'quantOutro1');
+        setupCheckboxAndText('flexCheckDefault811', 'quantMaca');
+        setupCheckboxAndText('flexCheckDefault812', 'quantOutro2');
+        })();
+    </script>
     <!--                   -->
     <!-- ✓ Termo de recusa -->
     <!--                   -->
