@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2023 at 07:10 PM
+-- Generation Time: Dec 04, 2023 at 11:32 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -418,8 +418,8 @@ CREATE TABLE `ficha_sinais_vitais` (
 
 CREATE TABLE `ficha_termo_recusa` (
   `idTermoRecusa` int(11) NOT NULL,
-  `nome_imagem` varchar(255) NOT NULL,
-  `caminho_imagem` varchar(255) NOT NULL
+  `nome_imagem` varchar(255) DEFAULT NULL,
+  `caminho_imagem` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
