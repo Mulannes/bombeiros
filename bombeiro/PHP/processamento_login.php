@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_PO
 
             // Redireciona para a página adm ou user
             if ($_SESSION['admin']) {
-                header('Location: admin/cadastro.php');
+                header('Location: index_admin.php');
             } else {
                 header('Location: index.php');
             }

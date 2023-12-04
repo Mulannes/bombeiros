@@ -485,13 +485,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ingeriu_alimentos = isset($_POST['IngeriuAlimento']) ? $_POST['IngeriuAlimento'] : null;
     $ingeriu_horas = isset($_POST['IngeriuAlimentoHoras']) ? $_POST['IngeriuAlimentoHoras'] : null;
 
-    // Insere os dados na tabela ficha_anamnese_emergência_médica
-    $sql_anm_medica = "INSERT INTO ficha_anamnese_emergência_médica (que_aconteceu, vezes_aconteceu, tempo_aconteceu, problema_saude, qual_problema, uso_medicacao, 
+    // Insere os dados na tabela ficha_anamnese_emergencia_medica
+    $sql_anm_medica = "INSERT INTO ficha_anamnese_emergencia_medica (que_aconteceu, vezes_aconteceu, tempo_aconteceu, problema_saude, qual_problema, uso_medicacao, 
     horario_medicacao, qual_medicacao, alergico, qual_alergia, ingeriu_alimentos,ingeriu_horas) 
     VALUES('$que_aconteceu','$vezes_aconteceu','$tempo_aconteceu','$problema_saude','$qual_problema','$uso_medicacao','$horario_medicacao','$qual_medicacao','$alergico',
     '$qual_alergia','$ingeriu_alimentos', '$ingeriu_horas')";
 
-    // Executar a query para ficha_anamnese_emergência_médica
+    // Executar a query para ficha_anamnese_emergencia_medica
     if($conn->query($sql_anm_medica) === TRUE) {
     }else{
         echo "Erro ao inserir dados:". $conn->error;

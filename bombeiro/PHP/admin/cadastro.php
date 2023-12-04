@@ -34,7 +34,7 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
                 <div class="col-lg-3 d-flex align-items-center justify-content-center w-100 p-3 h-75">
                     <div class="login-container w-75 h-75 bg-white rounded-4">
                         <!-- Adicione um botão de voltar no canto superior esquerdo -->
-                        <a href="../../PHP/index.php" class="btn btn-light fixed-top m-1">Voltar</a>
+                        <a href="../../PHP/index_admin.php" class="btn btn-light fixed-top m-1">Voltar</a>
 
                         <form class="w-100 h-100 d-flex flex-column justify-content-around p-4"
                             action="../../PHP/processamento_cadastro.php" method="post">

@@ -104,7 +104,7 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="PHP/index.php">Menu</a>
+                                <a class="nav-link" href="index.php">Menu</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="ocorrencia.php">Fazer Registro</a>

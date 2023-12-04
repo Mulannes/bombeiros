@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <?php
 include("admin/redirectadm.php");
-include("admin/redirectindex.php");
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['loggedIn'])) {
@@ -72,6 +71,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <li class="nav-item">
                                 <a class="nav-link" href="registro.php">Registro</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin/cadastro.php">Cadastrar Usuário</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -124,6 +126,14 @@ if (!isset($_SESSION['loggedIn'])) {
                         style="color: #000;text-align: center;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal; margin:0;">
                         Ver Registro</p>
                 </label>
+
+                <label class="btn btn-outline-danger" for="btnradio4" data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="3" aria-label="Slide 4" style="border-radius: 10px;border: 1px solid rgba(0, 0, 0, 0.10);background: #FFF;
+">
+                    <p
+                        style="color: #000;text-align: center;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal; margin:0;">
+                        Cadastrar Usuário</p>
+                </label>
             </div>
 
             <div id="carouselExampleDark" class="carousel carousel-dark slide">
@@ -133,6 +143,8 @@ if (!isset($_SESSION['loggedIn'])) {
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner" data-bs-ride="carousel">
@@ -158,6 +170,13 @@ if (!isset($_SESSION['loggedIn'])) {
                             <h5>Ver Registro</h5>
                             <p>Veja todos os registros<br>
                                 já feitos.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" onclick="window.location.href='admin/cadastro.php'">
+                        <img src="../images/blue.png" class="d-block w-100">
+                        <div class="carousel-caption text-light">
+                            <h5>Cadastrar Usuário</h5>
+                            <p>Cadastre um novo usuário.</p>
                         </div>
                     </div>
                 </div>

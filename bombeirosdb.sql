@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2023 at 02:55 AM
+-- Generation Time: Dec 04, 2023 at 05:08 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -50,11 +50,11 @@ CREATE TABLE `fichas` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ficha_anamnese_emergência_médica`
+-- Table structure for table `ficha_anamnese_emergencia_medica`
 --
 
-CREATE TABLE `ficha_anamnese_emergência_médica` (
-  `idAnamnese_Emergência_Médica` int(11) NOT NULL,
+CREATE TABLE `ficha_anamnese_emergencia_medica` (
+  `idAnamnese_Emergencia_Medica` int(11) NOT NULL,
   `que_aconteceu` text NOT NULL,
   `vezes_aconteceu` varchar(3) NOT NULL,
   `tempo_aconteceu` text NOT NULL,
@@ -70,10 +70,10 @@ CREATE TABLE `ficha_anamnese_emergência_médica` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `ficha_anamnese_emergência_médica`
+-- Dumping data for table `ficha_anamnese_emergencia_medica`
 --
 
-INSERT INTO `ficha_anamnese_emergência_médica` (`idAnamnese_Emergência_Médica`, `que_aconteceu`, `vezes_aconteceu`, `tempo_aconteceu`, `problema_saude`, `qual_problema`, `uso_medicacao`, `horario_medicacao`, `qual_medicacao`, `alergico`, `qual_alergia`, `ingeriu_alimentos`, `ingeriu_horas`) VALUES
+INSERT INTO `ficha_anamnese_emergencia_medica` (`idAnamnese_Emergencia_Medica`, `que_aconteceu`, `vezes_aconteceu`, `tempo_aconteceu`, `problema_saude`, `qual_problema`, `uso_medicacao`, `horario_medicacao`, `qual_medicacao`, `alergico`, `qual_alergia`, `ingeriu_alimentos`, `ingeriu_horas`) VALUES
 (1, '', '', '', '', '', '', '00:00:00', '', '', '', '', '00:00:00');
 
 -- --------------------------------------------------------
@@ -707,11 +707,11 @@ ALTER TABLE `fichas`
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
--- Indexes for table `ficha_anamnese_emergência_médica`
+-- Indexes for table `ficha_anamnese_emergencia_medica`
 --
-ALTER TABLE `ficha_anamnese_emergência_médica`
-  ADD PRIMARY KEY (`idAnamnese_Emergência_Médica`),
-  ADD UNIQUE KEY `idAnamnese_Emergência_Médica_UNIQUE` (`idAnamnese_Emergência_Médica`);
+ALTER TABLE `ficha_anamnese_emergencia_medica`
+  ADD PRIMARY KEY (`idAnamnese_Emergencia_Medica`),
+  ADD UNIQUE KEY `idAnamnese_Emergência_Médica_UNIQUE` (`idAnamnese_Emergencia_Medica`);
 
 --
 -- Indexes for table `ficha_anamnese_gestacional`
@@ -867,10 +867,10 @@ ALTER TABLE `fichas`
   MODIFY `id_fichas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `ficha_anamnese_emergência_médica`
+-- AUTO_INCREMENT for table `ficha_anamnese_emergencia_medica`
 --
-ALTER TABLE `ficha_anamnese_emergência_médica`
-  MODIFY `idAnamnese_Emergência_Médica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `ficha_anamnese_emergencia_medica`
+  MODIFY `idAnamnese_Emergencia_Medica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ficha_anamnese_gestacional`
@@ -1000,7 +1000,7 @@ ALTER TABLE `usuario`
 -- Constraints for table `fichas`
 --
 ALTER TABLE `fichas`
-  ADD CONSTRAINT `idAnamnese_Emergencia_Medica` FOREIGN KEY (`idAnamnese_Emergencia_Medica`) REFERENCES `ficha_anamnese_emergência_médica` (`idAnamnese_Emergência_Médica`),
+  ADD CONSTRAINT `idAnamnese_Emergencia_Medica` FOREIGN KEY (`idAnamnese_Emergencia_Medica`) REFERENCES `ficha_anamnese_emergencia_medica` (`idAnamnese_Emergencia_Medica`),
   ADD CONSTRAINT `idAnamnese_Gestacional` FOREIGN KEY (`idAnamnese_Gestacional`) REFERENCES `ficha_anamnese_gestacional` (`idAnamnese_Gestacional`),
   ADD CONSTRAINT `idAvaliacao_Cinematica` FOREIGN KEY (`idAvaliacao_Cinematica`) REFERENCES `ficha_avaliacao_cinematica` (`idAvaliacao_Cinematica`),
   ADD CONSTRAINT `idDetalhes_Viagem` FOREIGN KEY (`idDetalhes_Viagem`) REFERENCES `ficha_transporte_detalhes_viagem` (`idDetalhes_Viagem`),
