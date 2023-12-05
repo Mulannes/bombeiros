@@ -151,8 +151,8 @@ if ($stmt->execute()) {
                             data-bs-toggle="dropdown" style="color: #000; background-color: #FFF; border: none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50); display: flex; align-items: center;justify-content: center; transition: .5s ease-in-out; ">
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <li><a class="dropdown-item" href="index.php">Relatório</a></li>
-                            <li><a class="dropdown-item text-danger" href="#" onclick="excluirFicha(' . $id . ')">Excluir</a></li>
+                        <li><a class="dropdown-item" href="relatorio.php?id=' . $id . '">Relatório</a></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="excluirFicha(' . $id . ')">Excluir</a></li>
                         </ul>
                     </div>
                 </div>
