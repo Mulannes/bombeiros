@@ -277,17 +277,64 @@ if (isset($_GET['id'])) {
             echo '<hr>';
             echo '<h3>Anamnese de Emergência Médica</h3>'; 
 
+            echo '<p>O que aconteceu: ' . $ficha['que_aconteceu'] . '</p>';
+            echo '<p>Aconteceu mais vezes que aconteceu: ' . $ficha['vezes_aconteceu'] . '</p>';
+            echo '<p>Tempo que aconteceu: ' . $ficha['tempo_aconteceu'] . '</p>';
+            echo '<p>Problema de saúde: ' . ($ficha['problema_saude']) . '</p>';
+            echo '<p>Qual problema de saúde: ' . $ficha['qual_problema'] . '</p>';
+            echo '<p>Uso de medicação: ' . ($ficha['uso_medicacao']) . '</p>';
+            echo '<p>Horário de medicação: ' . date('H:i', strtotime($ficha['horario_medicacao'])) . '</p>';
+            echo '<p>Qual medicação: ' . $ficha['qual_medicacao'] . '</p>';
+            echo '<p>Alergia: ' . ($ficha['alergico']) . '</p>';
+            echo '<p>Qual alergia: ' . $ficha['qual_alergia'] . '</p>';
+            echo '<p>Ingeriu alimentos: ' . ($ficha['ingeriu_alimentos']) . '</p>';
+            echo '<p>Ingeriu há quantas horas: ' . date('H:i', strtotime($ficha['ingeriu_horas'])) . '</p>';
+
 // Anamnese Gestacional
             echo '<hr>';
             echo '<h3>Anamnese Gestacional</h3>'; 
+
+            echo '<p>Tempo de gestação: ' . $ficha['tempoGestacao'] . '</p>';
+            echo '<p>Fez pré-natal: ' . ($ficha['fezPreNatal']) . '</p>';
+            echo '<p>Nome do médico: ' . $ficha['nomeMedico'] . '</p>';
+            echo '<p>Complicações: ' . ($ficha['complicacoes']) . '</p>';
+            echo '<p>Primeiro filho: ' . ($ficha['primeiroFilho']) . '</p>';
+            echo '<p>Número de filhos: ' . $ficha['numFilhos'] . '</p>';
+            echo '<p>Início das contrações: ' . $ficha['inicioContracoes'] . '</p>';
+            echo '<p>Duração das contrações: ' . $ficha['duracaoContracoes'] . '</p>';
+            echo '<p>Intervalo entre contrações: ' . $ficha['intervaloContracoes'] . '</p>';
+            echo '<p>Pressão no quadril: ' . ($ficha['pressaoQuadril']) . '</p>';
+            echo '<p>Ruptura da bolsa: ' . ($ficha['rupturaBolsa']) . '</p>';
+            echo '<p>Inspeção visual: ' . ($ficha['inspecaoVisual']) . '</p>';
+            echo '<p>Parto realizado: ' . ($ficha['partoRealizado']) . '</p>';
+            echo '<p>Hora do nascimento: ' . date('H:i', strtotime($ficha['horaNascimento'])) . '</p>';
+            echo '<p>Sexo do bebê: ' . $ficha['bebeSexo'] . '</p>';
+            echo '<p>Nome do bebê: ' . $ficha['bebeNome'] . '</p>';
 
 // Avaliação da Cinemática
             echo '<hr>';
             echo '<h3>Avaliação da Cinemática</h3>'; 
 
+            echo '<p>Distúrbio de comportamento: ' . ($ficha['disturbio_comportamento']) . '</p>';
+            echo '<p>Encontrou capacete: ' . ($ficha['encontra_capacete']) . '</p>';
+            echo '<p>Encontrou cinto: ' . ($ficha['encontrado_cinto']) . '</p>';
+            echo '<p>Para-brisa avariado: ' . ($ficha['para_brisa_avariado']) . '</p>';
+            echo '<p>Caminhando na cena: ' . ($ficha['caminhando_na_cena']) . '</p>';
+            echo '<p>Painel avariado: ' . ($ficha['painel_avariado']) . '</p>';
+            echo '<p>Volante torcido: ' . ($ficha['volante_torcido']) . '</p>';
+
 // Detalhes Viagem
             echo '<hr>';
             echo '<h3>Detalhes Viagem</h3>'; 
+
+            echo '<p>Número USB: ' . $ficha['NumeroUSB'] . '</p>';
+            echo '<p>Código IR: ' . $ficha['CodigoIR'] . '</p>';
+            echo '<p>Número de Ocorrência: ' . $ficha['NumeroOcorrencia'] . '</p>';
+            echo '<p>Código PS: ' . $ficha['CodigoPS'] . '</p>';
+            echo '<p>Desp: ' . $ficha['Desp'] . '</p>';
+            echo '<p>HCH: ' . $ficha['HCH'] . '</p>';
+            echo '<p>KM Final: ' . $ficha['KMFinal'] . '</p>';
+            echo '<p>Código SIASUS: ' . $ficha['CodigoSIASUS'] . '</p>';
         }
         } else {
             echo 'Ficha não encontrada.';

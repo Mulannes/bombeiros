@@ -2751,7 +2751,7 @@ if (!isset($_SESSION['loggedIn'])) {
                         <p>Que horas iniciaram as contrações?</p>
                     </div>
                     <div class="col-8">
-                        <input type="text" name="inicoContracoes" class="form-control">
+                        <input type="time" name="inicoContracoes" class="form-control">
                     </div>
                 </div>
                 <p>Tempo das contrações</p>
