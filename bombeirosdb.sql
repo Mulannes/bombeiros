@@ -83,7 +83,7 @@ CREATE TABLE `ficha_anamnese_gestacional` (
   `nomeMedico` varchar(255) DEFAULT NULL,
   `complicacoes` varchar(3) DEFAULT NULL,
   `primeiroFilho` varchar(3) DEFAULT NULL,
-  `numFilhos` int(11) DEFAULT NULL,
+  `numFilhos` varchar(11) DEFAULT NULL,
   `inicioContracoes` varchar(255) DEFAULT NULL,
   `duracaoContracoes` varchar(255) DEFAULT NULL,
   `intervaloContracoes` varchar(255) DEFAULT NULL,
