@@ -73,6 +73,14 @@ if (isset($_GET['id'])) {
             echo '<p>Data da Ficha: ' . $ficha['data_ficha'] . '</p>';
             echo '<p>Usuário Responsável: ' . $ficha['nome_responsavel'] . '</p>';
 
+// Termo de Recusa
+            // Mostra apenas se for preenchido
+            if (!empty($ficha['caminho_imagem'])) {
+                echo '<hr>';
+                echo '<h3>Termo de Recusa</h3>'; 
+                echo '<img src="' . $ficha['caminho_imagem'] . '" alt="Imagem do Termo de Recusa">';
+            }else{
+
 // Ficha_Paciente
             echo '<hr>';
             echo '<h3>Detalhes Paciente</h3>';
@@ -90,7 +98,6 @@ if (isset($_GET['id'])) {
             echo '<hr>';
             echo '<h3>Tipo de Ocorrência</h3>';
 
-            // Definir as colunas da tabela ficha_tipo_de_ocorrencia
             $colunasTipoOcorrencia = [
                 'Causado_Por_Animais', 'Com_Meio_De_Transporte', 'Desmoronamento_Deslizamento',
                 'Emergencia_Medica', 'Queda_De_Altura_2M', 'Tentativa_De_Suicidio',
@@ -152,41 +159,119 @@ if (isset($_GET['id'])) {
             echo '<hr>';
             echo '<h3>Objetos Recolhidos</h3>'; 
 
+            echo '<p>Objetos Recolhidos: ' . $ficha['objetos_recolhidos'] . '</p>';
+
 // Sinais e Sintomas
             echo '<hr>';
             echo '<h3>Sinais e Sintomas</h3>'; 
+
+            $colunasSinaisSintomas = [
+                'abdomen_sensivel_rigido', 'afundamento_cranio', 'agitacao', 'amnesia', 'angna_peito',
+                'apneia', 'bradicardia', 'bradipneia', 'bronco_aspiracao', 'cefaleia', 'cianose_labios',
+                'cianose_extremidade', 'convulsao', 'decorticacao', 'deformidade', 'descerebracao',
+                'desmaio', 'desvio_traqueia', 'despineia', 'dor_local', 'edema_generalizado', 
+                'edema_localizado', 'enfisema_subcutaneo', 'extase_jugular', 'face_palida', 'hemorragia_interna',
+                'hemorragia_externa', 'hipertensao', 'hipotensao', 'nauseas_vomitos', 'nasoragia', 'obito',
+                'otorreia', 'otorragia', 'ovace', 'parada_cardiaca', 'parada_respiratoria', 'priaprismo',
+                'prurido_pele', 'pupilas_anisocoria', 'pupilas_isocoria', 'pupilas_midriase', 'pupilas_miose',
+                'pupilas_reagente', 'pupilas_nao_reagente', 'sede', 'sinal_battle', 'sinal_guaxinim',
+                'sudorese', 'taquipneia', 'taquicardia', 'tontura', 'observacoes'
+            ];            
+            
+            // Mostrar apenas as colunas com valores não nulos
+            foreach ($colunasSinaisSintomas as $colunaSS) {
+                if ($colunaSS === 'observacoes' && $ficha[$colunaSS] !== 0) {
+                    echo '<p>' . $colunaSS . ': ' . $ficha[$colunaSS] . '</p>';
+                } elseif ($ficha[$colunaSS] !== 0) {
+                    echo '<p>' . $colunaSS . '</p>';
+                }
+            }
 
 // Forma de Condução
             echo '<hr>';
             echo '<h3>Forma de Condução</h3>'; 
 
+            echo '<p>Forma de Condução: ' . $ficha['forma_conducao'] . '</p>';
+
 // Vítima Era
             echo '<hr>';
             echo '<h3>Vítima Era</h3>'; 
+
+            echo '<p>Vítima Era: ' . $ficha['vitima_era'] . '</p>';
 
 // Decisão Transporte
             echo '<hr>';
             echo '<h3>Decisão Transporte</h3>'; 
 
+            echo '<p>Situação: ' . $ficha['decisao_transporte'] . '</p>';
+            echo '<p>M: ' . $ficha['M'] . '</p>';
+            echo '<p>S1: ' . $ficha['S1'] . '</p>';
+            echo '<p>S2: ' . $ficha['S2'] . '</p>';
+            echo '<p>S3: ' . $ficha['S3'] . '</p>';
+            echo '<p>Demandante: ' . $ficha['Demandante'] . '</p>';
+            echo '<p>Equipe: ' . $ficha['Equipe'] . '</p>';
+
 // Procedimentos Efetuados
             echo '<hr>';
             echo '<h3>Procedimentos Efetuados</h3>'; 
-            
+
+            $colunasProcedimentosEfetuados = [
+                'Aspiracao', 'Avaliacao_Inicial', 'Avaliacao_Dirigida', 'Avaliacao_Continuada', 'Chave_de_Rautek',
+                'Canula_de_Guedel', 'Desobstrucao_de_VA', 'Emprego_do_DEA', 'Gerenciamento_de_Riscos', 'Limpeza_de_Ferimentos',
+                'Curativos', 'Compressivo', 'Encravamento', 'Ocular', 'Queimadura', 'Simples', 'tres_Pontas',
+                'Imobilacoes', 'Membro_INF_dir', 'Membro_INF_esq', 'Membro_SUP_dir', 'Membro_SUP_esq', 'Quadril',
+                'Cervical', 'Maca_Sobre_Rodas', 'Maca_Rigida', 'Ponte', 'Retirado_Capacete', 'RCP', 'Rolamento_90',
+                'Rolamento_180', 'Tomada_Decisao', 'Tratado_Choque', 'Uso_de_Canula', 'Uso_Colar', 'Uso_KED', 'Uso_TTF',
+                'Ventilacao_Suporte', 'Oxigenioterapia', 'Reanimador', 'Meios_Auxiliares', 'Celesc', 'Def_Civil',
+                'IGP_PC', 'Policia', 'Policia_Value', 'Samu', 'Samu_Value', 'CIT', 'OutrosMeios'
+            ];
+
+            // Mostrar apenas as colunas com valores não nulos
+            foreach ($colunasProcedimentosEfetuados as $colunaProcedimento) {
+                if ($colunaProcedimento !== 'tamColar' && $colunaProcedimento !== 'Oxigenioterapia_LPM' && $colunaProcedimento !== 'Reanimador_LPM') {
+                    if ($colunaProcedimento === 'OutrosMeios' && $ficha[$colunaProcedimento] !== null) {
+                        echo '<p>' . $colunaProcedimento . ': ' . $ficha[$colunaProcedimento] . '</p>';
+                    } elseif ($ficha[$colunaProcedimento] !== null) {
+                        echo '<p>' . $colunaProcedimento . '</p>';
+                    }
+                }
+            }
+
 // Materiais Utilizados Descartável
             echo '<hr>';
             echo '<h3>Materiais Utilizados Descartável</h3>'; 
+
+            $colunasMateriaisDescartaveis = [
+                'ataduras', 'cateter', 'compressa', 'kit', 'luvas', 'mascara', 'manta', 'pas', 'sonda', 'soro', 'talas', 'outro_nome', 'outro_valor'
+            ];
+
+            foreach ($colunasMateriaisDescartaveis as $coluna) {
+                $valor = $ficha[$coluna];
+                if (!empty($valor)) {
+                    echo '<p>' . $coluna . ': ' . $valor . '</p>';
+                }
+            }
             
  // Materiais Utilizados Deixados
             echo '<hr>';
             echo '<h3>Materiais Utilizados Deixados</h3>'; 
 
-// Termo de Recusa
-             echo '<hr>';
-             echo '<h3>Termo de Recusa</h3>'; 
+            $colunasMateriaisDeixados = [
+                'base', 'colar1', 'colar2', 'coxins', 'KED', 'maca', 'TTF', 'tirante_aranha', 'tirante_cabeca', 'canula', 'outro_campo1', 'outro_valor1', 'outro_campo2', 'outro_valor2'
+            ];
+
+            foreach ($colunasMateriaisDeixados as $coluna) {
+                $valor = $ficha[$coluna];
+                if (!empty($valor)) {
+                    echo '<p>' . $coluna . ': ' . $valor . '</p>';
+                }
+            }
  
 // Observações Importantes
             echo '<hr>';
             echo '<h3>Observações Importantes</h3>'; 
+
+            echo '<p>Observações Importantes: ' . $ficha['observacoes_importantes'] . '</p>';
 
 // Anamnese de Emergência Médica
             echo '<hr>';
@@ -203,7 +288,7 @@ if (isset($_GET['id'])) {
 // Detalhes Viagem
             echo '<hr>';
             echo '<h3>Detalhes Viagem</h3>'; 
-
+        }
         } else {
             echo 'Ficha não encontrada.';
         }

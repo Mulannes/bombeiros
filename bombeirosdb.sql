@@ -275,7 +275,7 @@ CREATE TABLE `ficha_problemas_encontrados` (
 CREATE TABLE `ficha_procedimentos_efetuados` (
   `idProcedimentos_Efetuados` int(11) NOT NULL,
   `Aspiracao` int(11) DEFAULT NULL,
-  `Avalicao_Inicial` int(11) DEFAULT NULL,
+  `Avaliacao_Inicial` int(11) DEFAULT NULL,
   `Avaliacao_Dirigida` int(11) DEFAULT NULL,
   `Avaliacao_Continuada` int(11) DEFAULT NULL,
   `Chave_de_Rautek` int(11) DEFAULT NULL,

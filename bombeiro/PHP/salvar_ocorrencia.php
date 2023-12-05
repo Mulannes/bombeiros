@@ -325,15 +325,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $taquipneia = isset($_POST['Taquipneia']) ? 1 : 0;
     $taquicardia = isset($_POST['Taquicardia']) ? 1 : 0;
     $tontura = isset($_POST['Tontura']) ? 1 : 0;
-    $observacoes = isset($_POST['Observacoes']) ? $_POST['Observacoes'] : '';
+    $observacoes = isset($_POST['Observacoes']) && $_POST['Observacoes'] !== '' ? $_POST['Observacoes'] : null;
+
 
     // Inserir dados no banco de dados para ficha_sinais_e_sintomas
-    $sql_sinais_sintomas = "INSERT INTO ficha_sinais_e_sintomas (Abdomen_Sensivel_Rigido, Afundamento_Cranio, Agitacao, Amnesia, Angna_Peito, Apneia, Bradicardia, Bradipneia, Bronco_Aspiracao, 
-    Cefaleia, Cianose_Labios, Cianose_Extremidade, Convulsao, Decorticacao, Deformidade, Descerebracao, Desmaio, Desvio_Traqueia, Despineia, Dor_Local, Edema_Generalizado, 
-    Edema_Localizado, Enfisema_Subcutaneo, Extase_Jugular, Face_Palida, Hemorragia_Interna, Hemorragia_Externa, Hipertensao, Hipotensao, Nauseas_Vomitos, Nasoragia, Obito, 
-    Otorreia, Otorragia, OVACE, Parada_Cardiaca, Parada_Respiratoria, Priaprismo, Prurido_Pele, Pupilas_Anisocoria, Pupilas_Isocoria, Pupilas_Midriase, Pupilas_Miose, 
-    Pupilas_Reagente, Pupilas_Nao_Reagente, Sede, Sinal_Battle, Sinal_Guaxinim, Sudorese, Taquipneia, Taquicardia, Tontura, Observacoes) 
-    VALUES ($abdomen_sensivel_rigido, $afundamento_cranio, $agitacao, $amnesia, $angna_peito, $apneia, $bradicardia, $bradipneia, $bronco_aspiracao, 
+    $sql_sinais_sintomas = "INSERT INTO ficha_sinais_e_sintomas 
+    (abdomen_sensivel_rigido, afundamento_cranio, agitacao, amnesia, angna_peito, apneia, bradicardia, bradipneia, bronco_aspiracao, 
+    cefaleia, cianose_labios, cianose_extremidade, convulsao, decorticacao, deformidade, descerebracao, desmaio, desvio_traqueia, despineia, 
+    dor_local, edema_generalizado, edema_localizado, enfisema_subcutaneo, extase_jugular, face_palida, hemorragia_interna, hemorragia_externa, 
+    hipertensao, hipotensao, nauseas_vomitos, nasoragia, obito, otorreia, otorragia, ovace, parada_cardiaca, parada_respiratoria, priaprismo, 
+    prurido_pele, pupilas_anisocoria, pupilas_isocoria, pupilas_midriase, pupilas_miose, pupilas_reagente, pupilas_nao_reagente, sede, sinal_battle, 
+    sinal_guaxinim, sudorese, taquipneia, taquicardia, tontura, observacoes) 
+    VALUES 
+    ($abdomen_sensivel_rigido, $afundamento_cranio, $agitacao, $amnesia, $angna_peito, $apneia, $bradicardia, $bradipneia, $bronco_aspiracao, 
     $cefaleia, $cianose_labios, $cianose_extremidade, $convulsao, $decorticacao, $deformidade, $descerebracao, $desmaio, $desvio_traqueia, $despineia, 
     $dor_local, $edema_generalizado, $edema_localizado, $enfisema_subcutaneo, $extase_jugular, $face_palida, $hemorragia_interna, $hemorragia_externa, 
     $hipertensao, $hipotensao, $nauseas_vomitos, $nasoragia, $obito, $otorreia, $otorragia, $ovace, $parada_cardiaca, $parada_respiratoria, $priaprismo, 
@@ -515,7 +519,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // <!--                           -->
     $procedimentos_efetuados = [];
     $procedimentos = [
-        "Aspiracao", "Avalicao_Inicial", "Avaliacao_Dirigida", "Avaliacao_Continuada", "Chave_de_Rautek",
+        "Aspiracao", "Avaliacao_Inicial", "Avaliacao_Dirigida", "Avaliacao_Continuada", "Chave_de_Rautek",
         "Canula_de_Guedel", "Desobstrucao_de_VA", "Emprego_do_DEA", "Gerenciamento_de_Riscos",
         "Limpeza_de_Ferimentos", "Curativos", "Compressivo", "Encravamento", "Ocular", "Queimadura",
         "Simples", "tres_Pontas", "Imobilacoes", "Membro_INF_dir", "Membro_INF_esq", "Membro_SUP_dir",
@@ -535,25 +539,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Coleta os dados de texto
-    $procedimentos_efetuados['tamColar'] = isset($_POST['tamColar']) ? "'" . $conn->real_escape_string($_POST['tamColar']) . "'" : 'NULL';
-    $procedimentos_efetuados['Reanimador_LPM'] = isset($_POST['Reanimador_LPM']) ? "'" . $conn->real_escape_string($_POST['Reanimador_LPM']) . "'" : 'NULL';
-    $procedimentos_efetuados['Oxigenioterapia_LPM'] = isset($_POST['Oxigenioterapia_LPM']) ? "'" . $conn->real_escape_string($_POST['Oxigenioterapia_LPM']) . "'" : 'NULL';
+    $procedimentos_efetuados['tamColar'] = isset($_POST['tamColar']) ? $conn->real_escape_string($_POST['tamColar']) : null;
+    $procedimentos_efetuados['Reanimador_LPM'] = isset($_POST['Reanimador_LPM']) ? $conn->real_escape_string($_POST['Reanimador_LPM']) : null;
+    $procedimentos_efetuados['Oxigenioterapia_LPM'] = isset($_POST['Oxigenioterapia_LPM']) ? $conn->real_escape_string($_POST['Oxigenioterapia_LPM']) : null;
     $selectedPoliciaValue = isset($_POST['Policia_Value']) ? $conn->real_escape_string($_POST['Policia_Value']) : null;
-    $selectedPoliciaValue = !empty($selectedPoliciaValue) ? "'" . $selectedPoliciaValue . "'" : 'NULL';
+    $selectedPoliciaValue = !empty($selectedPoliciaValue) ? "" . $selectedPoliciaValue . "" : NULL;
     $selectedSamuValue = isset($_POST['Samu_Value']) ? $conn->real_escape_string($_POST['Samu_Value']) : null;
-    $selectedSamuValue = !empty($selectedSamuValue) ? "'" . $selectedSamuValue . "'" : 'NULL';
-    $procedimentos_efetuados['OutrosMeios'] = isset($_POST['OutrosMeios']) ? "'" . $conn->real_escape_string($_POST['OutrosMeios']) . "'" : 'NULL';
+    $selectedSamuValue = !empty($selectedSamuValue) ? "" . $selectedSamuValue . "" : NULL;
+    $procedimentos_efetuados['OutrosMeios'] = isset($_POST['OutrosMeios']) ? $conn->real_escape_string($_POST['OutrosMeios']) : NULL;
 
     $procedimentos_efetuados['Policia_Value'] = $selectedPoliciaValue;
     $procedimentos_efetuados['Samu_Value'] = $selectedSamuValue;
 
-    // Prepara os valores para a string SQL
+        // Prepara os valores para a string SQL
     $columns = implode(", ", array_map(function ($column) {
         return "`$column`";
     }, array_keys($procedimentos_efetuados)));
 
     $values = implode(", ", array_map(function ($value) use ($conn) {
-        return is_null($value) ? "NULL" : $value;
+        return is_null($value) ? "NULL" : "'" . $conn->real_escape_string($value) . "'";
     }, $procedimentos_efetuados));
 
     // Insere os dados na tabela ficha_procedimentos_efetuados
@@ -565,6 +569,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Erro ao inserir dados: " . $conn->error;
     }
+
 
 // <!--                           -->
 // <!-- ✓ Localização dos Traumas -->
