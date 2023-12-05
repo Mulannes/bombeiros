@@ -130,6 +130,12 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
                             <li class="nav-item">
                                 <a class="nav-link" href="registro.php">Registro</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin/cadastro.php">Cadastrar Usuário</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="usuarios.php">Ver Usuários</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -191,6 +197,15 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
                 <img src="../images/cadastro2.png" alt="">
                 <div class="container" style="height: 50px; width: 100%;"><b
                         class="h-100 d-flex align-items-center"style="font-size: 16px;padding-left: 25px;">Fazer Cadastro</b></div>
+            </div>
+        </a>
+
+        <a href="usuarios.php" class="text-decoration-none text-dark">
+            <div class="container  d-flex align-items-center mt-3"
+                style="background-color:  var(--bg-itens); width: 95%; height: 50px; border-radius: 15px; padding-left: 30px">
+                <img src="../images/cadastro2.png" alt="">
+                <div class="container" style="height: 50px; width: 100%;"><b
+                        class="h-100 d-flex align-items-center"style="font-size: 16px;padding-left: 25px;">Ver Usuários</b></div>
             </div>
         </a>
 

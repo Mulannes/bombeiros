@@ -74,7 +74,7 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
 
                             <div class="form-group">
                                 <label for="cpf">CPF:</label>
-                                <input type="text" class="form-control" name="CPF" placeholder="CPF" required>
+                                <input type="text" class="form-control" name="CPF" placeholder="CPF" pattern="\d{11}" maxlength="11" required>
                             </div>
 
                             <div class="form-group">
