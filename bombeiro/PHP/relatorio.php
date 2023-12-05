@@ -78,7 +78,7 @@ if (isset($_GET['id'])) {
             if (!empty($ficha['caminho_imagem'])) {
                 echo '<hr>';
                 echo '<h3>Termo de Recusa</h3>'; 
-                echo '<img src="' . $ficha['caminho_imagem'] . '" alt="Imagem do Termo de Recusa">';
+                echo '<img src="' . $ficha['caminho_imagem'] . '" alt="Imagem do Termo de Recusa" style="max-width: 100%; height: auto;">';
             }else{
 
 // Ficha_Paciente
