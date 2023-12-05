@@ -137,9 +137,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return isset($_POST[$key]) ? $_POST[$key] : $default;
     }
     // Obter valor do campo 'perfusao'
-    $perfusao_option = isset($_POST['perfusão']) ? $_POST['perfusão'] : null;
+    $perfusao_option = isset($_POST['perfusao']) ? $_POST['perfusao'] : null;
     // Definir $perfusao diretamente ou como NULL
-    $perfusao = ($perfusao_option === 'perfusão2maior' || $perfusao_option === 'perfusão2menor') ? $perfusao_option : null;
+    $perfusao = ($perfusao_option === 'perfusao2maior' || $perfusao_option === 'perfusao2menor') ? $perfusao_option : null;
 
     // Inserir dados no banco de dados para ficha_sinais_vitais
     $stmt = $conn->prepare("INSERT INTO ficha_sinais_vitais (pressao_arterial0, pressao_arterial1, pulso, respiracao, saturacao, hgt, temperatura, perfusao) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
@@ -403,17 +403,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $respiratorio = isset($_POST['Respiratorio']) ? $_POST['Respiratorio'] : null;
     $diabetes = isset($_POST['Diabetes']) ? $_POST['Diabetes'] : null;
     $transporte = isset($_POST['Transporte']) ? $_POST['Transporte'] : null;
-    $outros = isset($_POST['Outros']) ? $_POST['Outros'] : null;
+    $outros = isset($_POST['Outros']) && $_POST['Outros'] !== '' ? $_POST['Outros'] : null;
 
     // Insere os dados na tabela ficha_problemas_encontrados
-    $sql_problemas = "INSERT INTO ficha_problemas_encontrados (psiquiatrico, obstetrico, respiratorio, diabetes, transporte, outros) 
-    VALUES('$psiquiatrico', '$obstetrico', '$respiratorio','$diabetes','$transporte','$outros')";
+    $sql_problemas = $conn->prepare("INSERT INTO ficha_problemas_encontrados (psiquiatrico, obstetrico, respiratorio, diabetes, transporte, outros) VALUES (?, ?, ?, ?, ?, ?)");
 
-    // Executar a query para ficha_problemas_encontrados
-    if($conn->query($sql_problemas) === TRUE) {
+    $sql_problemas->bind_param("isssss", $psiquiatrico, $obstetrico, $respiratorio, $diabetes, $transporte, $outros);
+
+    if ($sql_problemas->execute()) {
         $last_problemas_id = $conn->insert_id;
-    }else{
-        echo "Erro ao inserir dados:". $conn->error;
+    } else {
+        echo "Erro ao inserir dados: " . $sql_problemas->error;
     }
 
 // <!--                              -->

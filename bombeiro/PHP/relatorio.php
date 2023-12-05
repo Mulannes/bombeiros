@@ -113,13 +113,36 @@ if (isset($_GET['id'])) {
             echo '<hr>';
             echo '<h3>Avaliação Glasgow</h3>';
 
+            echo '<p>Abertura Ocular: ' . $ficha['Abertura_Ocular'] . '</p>';
+            echo '<p>Resposta Verbal: ' . $ficha['Resposta_Verbal'] . '</p>';
+            echo '<p>Resposta Motora: ' . $ficha['Resposta_Motora'] . '</p>';
+
 // Sinais Vitais
             echo '<hr>';
             echo '<h3>Sinais Vitais</h3>';
 
+            echo '<p>Pressão Arterial: ' . $ficha['pressao_arterial0'] . ' x ' . $ficha['pressao_arterial1'];
+            echo '<p>Pulso: ' . $ficha['pulso'] . '</p>';
+            echo '<p>Respiração: ' . $ficha['respiracao'] . '</p>';
+            echo '<p>Saturação: ' . $ficha['saturacao'] . '</p>';
+            echo '<p>Temperatura: ' . $ficha['temperatura'] . '</p>';
+            echo '<p>Perfusão: ' . $ficha['perfusao'] . '</p>';
+            echo '<p>HGT: ' . $ficha['HGT'] . '</p>';
+
 // Problemas Encontrados
             echo '<hr>';
             echo '<h3>Problemas Encontrados</h3>'; 
+
+            if ($ficha['psiquiatrico'] == 1) {
+                echo '<p>Psiquiátrico</p>';
+            }            echo '<p>Obstétrico: ' . $ficha['obstetrico'] . '</p>';
+            echo '<p>Respiratório: ' . $ficha['respiratorio'] . '</p>';
+            echo '<p>Diabetes: ' . $ficha['diabetes'] . '</p>';
+            echo '<p>Transporte: ' . $ficha['transporte'] . '</p>';
+            if ($ficha['outros'] !== null) {
+                echo '<p>' . 'Outros: ' . $ficha['outros'] . '</p>';
+            }
+        
 
 // Localização dos Traumas
             echo '<hr>';

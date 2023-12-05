@@ -635,14 +635,14 @@ if (!isset($_SESSION['loggedIn'])) {
                         <div class="row">
                             <div class="col-4" style="display: flex; align-self: center;">Perfusão:</div>
                             <div class="col-4">
-                                <input class="form-check-input" type="radio" name="perfusão" value="perfusão"
-                                    id="perfusão2maior">
-                                <label class="form-check-label" for="perfusão2maior">
+                                <input class="form-check-input" type="radio" name="perfusao" value="perfusao"
+                                    id="perfusao2maior">
+                                <label class="form-check-label" for="perfusao2maior">
                                     > 2seg
                                 </label>
-                                <input class="form-check-input" type="radio" name="perfusão" value="perfusão"
-                                    id="perfusão2menor">
-                                <label class="form-check-label" for="perfusão2menor">
+                                <input class="form-check-input" type="radio" name="perfusao" value="perfusao"
+                                    id="perfusao2menor">
+                                <label class="form-check-label" for="perfusao2menor">
                                     < 2 seg </label>
                             </div>
                             <div class="col-4" style="padding: 0; display: flex; align-items: center;"><input
