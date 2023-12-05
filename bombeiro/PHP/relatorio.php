@@ -68,7 +68,7 @@ if (isset($_GET['id'])) {
             // echo '</pre>';
 
 // Infos Gerais da Ficha
-            echo '<h1>Detalhes da Ficha #' . $ficha['id_fichas'] . '</h1>';
+            echo '<a href="index.php?id=' . $ficha['id_fichas'] . '"><h1>Detalhes da Ficha #' . $ficha['id_fichas'] . '</h1></a>';
             echo '<p>Nome do Paciente: ' . $ficha['nome_paciente'] . '</p>';
             echo '<p>Data da Ficha: ' . $ficha['data_ficha'] . '</p>';
             echo '<p>Usuário Responsável: ' . $ficha['nome_responsavel'] . '</p>';
@@ -112,6 +112,74 @@ if (isset($_GET['id'])) {
 // Avaliação Glasgow
             echo '<hr>';
             echo '<h3>Avaliação Glasgow</h3>';
+
+// Sinais Vitais
+            echo '<hr>';
+            echo '<h3>Sinais Vitais</h3>';
+
+// Problemas Encontrados
+            echo '<hr>';
+            echo '<h3>Problemas Encontrados</h3>'; 
+
+// Localização dos Traumas
+            echo '<hr>';
+            echo '<h3>Localização dos Traumas</h3>'; 
+
+// Objetos Recolhidos
+            echo '<hr>';
+            echo '<h3>Objetos Recolhidos</h3>'; 
+
+// Sinais e Sintomas
+            echo '<hr>';
+            echo '<h3>Sinais e Sintomas</h3>'; 
+
+// Forma de Condução
+            echo '<hr>';
+            echo '<h3>Forma de Condução</h3>'; 
+
+// Vítima Era
+            echo '<hr>';
+            echo '<h3>Vítima Era</h3>'; 
+
+// Decisão Transporte
+            echo '<hr>';
+            echo '<h3>Decisão Transporte</h3>'; 
+
+// Procedimentos Efetuados
+            echo '<hr>';
+            echo '<h3>Procedimentos Efetuados</h3>'; 
+            
+// Materiais Utilizados Descartável
+            echo '<hr>';
+            echo '<h3>Materiais Utilizados Descartável</h3>'; 
+            
+ // Materiais Utilizados Deixados
+            echo '<hr>';
+            echo '<h3>Materiais Utilizados Deixados</h3>'; 
+
+// Termo de Recusa
+             echo '<hr>';
+             echo '<h3>Termo de Recusa</h3>'; 
+ 
+// Observações Importantes
+            echo '<hr>';
+            echo '<h3>Observações Importantes</h3>'; 
+
+// Anamnese de Emergência Médica
+            echo '<hr>';
+            echo '<h3>Anamnese de Emergência Médica</h3>'; 
+
+// Anamnese Gestacional
+            echo '<hr>';
+            echo '<h3>Anamnese Gestacional</h3>'; 
+
+// Avaliação da Cinemática
+            echo '<hr>';
+            echo '<h3>Avaliação da Cinemática</h3>'; 
+
+// Detalhes Viagem
+            echo '<hr>';
+            echo '<h3>Detalhes Viagem</h3>'; 
 
         } else {
             echo 'Ficha não encontrada.';
