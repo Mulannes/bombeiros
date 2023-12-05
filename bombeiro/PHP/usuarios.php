@@ -179,32 +179,27 @@ if (!isset($_SESSION['loggedIn'])) {
                 <div class="nav-pills-style"
                     style="width: 95%; height: 75px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
                     <ul class="nav nav-pills nav-justified">
-                        <li class="nav-item" style=" max-height: 65px;">
-                            <img src="../images/home.png" class=" mx-auto d-block" style="padding: 10px;">
-                            <a class="nav-link" href="index.php"
-                                style="color: black; padding: 0; font-size: 14px">Menu</a>
-                        </li>
-                        <li class="nav-item" style="max-height: 65px;">
-                            <img src="../images/fazerregistro.png" class=" mx-auto d-block"
-                                style="padding: 10px 10px 5px 10px;">
-                            <a class="nav-link" href="ocorrencia.php"
-                                style="color: black; padding: 0; font-size: 14px; height: 28px; line-height: 13px;">Fazer<br>Registro</a>
-                        </li>
-                        <li class="nav-item" style="max-height: 65px;">
-                            <img src="../images/registroR.png" class=" mx-auto d-block" style="padding: 10px;">
-                            <a class="nav-link" href="registro.php"
-                                style="color: #C21219; padding: 0; font-size: 14px;font-weight: bold;">Registros</a>
-                        </li>
-                        <li class="nav-item" style="max-height: 65px;">
-                            <form action="admin/redirectadm.php" method="post">
-                                <img src="../images/contaP.png" class=" mx-auto d-block" style="padding: 10px;">
-                                <button type="submit" name="btnRedirect"
-                                    style="color: #black; padding: 0; font-size: 14px; background-color: transparent; border: none;">Conta</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                    <li class="nav-item" style=" max-height: 65px;">
+                    <img src="../images/home.png" class=" mx-auto d-block" style="padding: 10px;">
+                    <a class="nav-link" href="index.php" style="color: black; padding: 0; font-size: 14px">Menu</a>
+                </li>
+                <li class="nav-item" style="max-height: 65px;">
+                    <img src="../images/fazerregistro.png" class=" mx-auto d-block" style="padding: 10px 10px 5px 10px;"> 
+                    <a class="nav-link" href="ocorrencia.php" style="color: black; padding: 0; font-size: 14px; height: 28px; line-height: 13px;">Fazer<br>Registro</a>
+                </li>
+                <li class="nav-item" style="max-height: 65px;">
+                    <img src="../images/registro.png" class=" mx-auto d-block" style="padding: 10px;">
+                    <a class="nav-link" href="registro.php" style="color: black; padding: 0; font-size: 14px">Registros</a>
+                </li>
+                <li class="nav-item" style="max-height: 65px;">
+                <form action="admin/redirectadm.php" method="post">
+                    <img src="../images/contaR.png" class=" mx-auto d-block" style="padding: 10px;">
+                    <button type="submit" name="btnRedirect" style="color: #C21219; padding: 0; font-size: 14px; font-weight: bold; background-color: transparent; border: none;">Conta</button>
+                </form>
+                </li>
+            </ul>
+        </div>
+    </div>
         </div>
 
         <footer class="text-center text-lg-start">
