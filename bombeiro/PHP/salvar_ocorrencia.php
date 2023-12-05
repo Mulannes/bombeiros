@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             " . ($queda_nivel_2m ?? 'NULL') . ",
                             " . ($trabalho ?? 'NULL') . ",
                             " . ($transferencia ?? 'NULL') . ",
-                                " . ($outro_campo !== '' ? "'$outro_campo'" : 'NULL') . "
+                                " . ($outro_campo_text !== '' ? "'$outro_campo_text'" : 'NULL') . "
                             )";
 
     // Executar a query para ficha_tipo_de_ocorrencia

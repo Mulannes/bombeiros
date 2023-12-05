@@ -22,6 +22,7 @@ if (!isset($_SESSION['loggedIn'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="/bombeiro/components/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
         .dropdown-toggle::after {
             margin: 0;
@@ -209,22 +210,32 @@ if (!isset($_SESSION['loggedIn'])) {
 
 </html>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
     function excluirFicha(id) {
         if (confirm('Tem certeza que deseja excluir esta ficha?')) {
             $.ajax({
                 type: 'POST',
-                url: 'excluir_ficha.php', // Substitua pelo script que processa a exclusão
+                url: 'excluir_ficha.php', 
                 data: {
                     id: id
                 },
+                dataType: 'json', // Adicionado para indicar que a resposta esperada é JSON
                 success: function (response) {
-                    // Lide com a resposta, talvez recarregando a página ou atualizando a lista de fichas
-                    console.log(response);
+                    if (response['success']) {
+                        console.log('Ficha excluída com sucesso.');
+
+                        // Redirecionar para 'registro.php' após meio segundo
+                        setTimeout(function () {
+                            window.location.href = 'registro.php';
+                        }, 200);
+                    } else {
+                        console.error('Erro ao excluir a ficha:', response['error']);
+                        alert('Erro ao excluir a ficha: ' + response['error']);
+                    }
                 },
                 error: function (error) {
-                    console.error(error);
+                    console.error('Erro na requisição:', error);
+                    alert('Erro ao excluir a ficha. Consulte o console para obter detalhes.');
                 }
             });
         }

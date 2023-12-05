@@ -18,9 +18,9 @@ if (isset($_POST['id'])) {
     $stmt->bind_param('i', $id_ficha);
 
     if ($stmt->execute()) {
-        echo "Ficha excluída com sucesso!";
+        echo json_encode(['success' => true]);
     } else {
-        echo "Erro ao excluir a ficha: " . $stmt->error;
+        echo json_encode(['success' => false, 'error' => 'Erro ao excluir o usuário: ' . $stmt->error]);
     }
 
     // Fecha a declaração e a conexão

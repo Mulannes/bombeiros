@@ -1,12 +1,11 @@
 <?php
 include("dbconnect.php");
-// Relatório.php
 
-// Verifique se o ID está presente na URL
+// Verificar se o ID está presente na URL
 if (isset($_GET['id'])) {
     $id_ficha = $_GET['id'];
 
-    // Consulta para obter os detalhes da ficha com base no ID
+    // Consulta para obter os detalhes da ficha
     $sql = "SELECT fichas.*, 
                ficha_anamnese_emergencia_medica.*,
                ficha_anamnese_gestacional.*,
@@ -27,7 +26,8 @@ if (isset($_GET['id'])) {
                ficha_procedimentos_efetuados.*,
                ficha_sinais_e_sintomas.*,
                ficha_termo_recusa.*,
-               ficha_tipo_de_ocorrencia.*
+               ficha_tipo_de_ocorrencia.*,
+               usuario.nome_usuario AS nome_responsavel
         FROM fichas
         LEFT JOIN ficha_anamnese_emergencia_medica ON fichas.idAnamnese_Emergencia_Medica = ficha_anamnese_emergencia_medica.idAnamnese_Emergencia_Medica
         LEFT JOIN ficha_anamnese_gestacional ON fichas.idAnamnese_Gestacional = ficha_anamnese_gestacional.idAnamnese_Gestacional
@@ -49,6 +49,7 @@ if (isset($_GET['id'])) {
         LEFT JOIN ficha_sinais_e_sintomas ON fichas.idSinais_e_Sintomas = ficha_sinais_e_sintomas.idSinais_e_Sintomas
         LEFT JOIN ficha_termo_recusa ON fichas.idTermoRecusa = ficha_termo_recusa.idTermoRecusa
         LEFT JOIN ficha_tipo_de_ocorrencia ON fichas.idTipo_de_Ocorrencia = ficha_tipo_de_ocorrencia.idTipo_de_Ocorrencia
+        LEFT JOIN usuario ON fichas.id_usuario = usuario.id_usuario
 
         WHERE fichas.id_fichas = ?";
     $stmt = $conn->prepare($sql);
@@ -57,7 +58,7 @@ if (isset($_GET['id'])) {
     if ($stmt->execute()) {
         $result = $stmt->get_result();
 
-        // Verifique se a ficha existe
+        // Verificar se a ficha existe
         if ($result->num_rows > 0) {
             $ficha = $result->fetch_assoc();
 
@@ -66,10 +67,51 @@ if (isset($_GET['id'])) {
             // print_r($ficha);
             // echo '</pre>';
 
-            // Agora você pode exibir os detalhes da ficha como necessário
+// Infos Gerais da Ficha
             echo '<h1>Detalhes da Ficha #' . $ficha['id_fichas'] . '</h1>';
             echo '<p>Nome do Paciente: ' . $ficha['nome_paciente'] . '</p>';
-            // Adicione mais campos conforme necessário
+            echo '<p>Data da Ficha: ' . $ficha['data_ficha'] . '</p>';
+            echo '<p>Usuário Responsável: ' . $ficha['nome_responsavel'] . '</p>';
+
+// Ficha_Paciente
+            echo '<hr>';
+            echo '<h3>Detalhes Paciente</h3>';
+            echo '<p>Nome do Hospital: ' . $ficha['nome_hospital'] . '</p>';
+            echo '<p>Nome do Paciente: ' . $ficha['nome_paciente'] . '</p>';
+            echo '<p>Idade do Paciente: ' . $ficha['idade_paciente'] . '</p>';
+            echo '<p>Sexo do Paciente: ' . $ficha['genero_paciente'] . '</p>';
+            echo '<p>CPF do Paciente: ' . $ficha['CPF_paciente'] . '</p>';
+            echo '<p>Telefone do Paciente: ' . $ficha['telefone_paciente'] . '</p>';
+            echo '<p>Nome do Acompanhante: ' . $ficha['nome_acompanhante'] . '</p>';
+            echo '<p>Idade do Acompanhante: ' . $ficha['idade_acompanhante'] . '</p>';
+            echo '<p>Local da Ocorrência: ' . $ficha['local_da_ocorrencia'] . '</p>';
+
+// Tipo de Ocorrência
+            echo '<hr>';
+            echo '<h3>Tipo de Ocorrência</h3>';
+
+            // Definir as colunas da tabela ficha_tipo_de_ocorrencia
+            $colunasTipoOcorrencia = [
+                'Causado_Por_Animais', 'Com_Meio_De_Transporte', 'Desmoronamento_Deslizamento',
+                'Emergencia_Medica', 'Queda_De_Altura_2M', 'Tentativa_De_Suicidio',
+                'Queda_Propria_Altura', 'Afogamento', 'Agressao', 'Atropelamento',
+                'Choque_Eletrico', 'Desabamento', 'Domestico', 'Esportivo', 'Intoxicacao',
+                'Queda_Bicicleta', 'Queda_Moto', 'Queda_Nivel_2M', 'Trabalho',
+                'Transferencia', 'Outro_Campo'
+            ];
+
+            // Mostrar apenas as colunas com valores não nulos
+            foreach ($colunasTipoOcorrencia as $coluna) {
+                if ($coluna === 'Outro_Campo' && $ficha[$coluna] !== null) {
+                    echo '<p>' . $coluna . ': ' . $ficha[$coluna] . '</p>';
+                } elseif ($ficha[$coluna] !== null) {
+                    echo '<p>' . $coluna . '</p>';
+                }
+            }
+    
+// Avaliação Glasgow
+            echo '<hr>';
+            echo '<h3>Avaliação Glasgow</h3>';
 
         } else {
             echo 'Ficha não encontrada.';
