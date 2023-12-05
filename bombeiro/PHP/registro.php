@@ -36,7 +36,7 @@ if (!isset($_SESSION['loggedIn'])) {
 </head>
 
 <body>
-    <header>
+<header>
         <div class="d-lg-none">
 
             <nav class="navbar">
@@ -86,7 +86,7 @@ if (!isset($_SESSION['loggedIn'])) {
                 </div>
             </div>
         </div>
-        <div class="container-align" style="display: flex; flex-direction: column; align-items: center;gap: 6px;">
+        <div class="container-align" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
             <div class="borda"
                 style="width: 95%; border-radius: 10px; height: 35px; display: flex; align-items: center; color: #000;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;">
                 <div class="container">
@@ -103,66 +103,63 @@ if (!isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>
             </div>
+            <div class="registros-container" style="width: 95%; max-height: 500px; overflow-y: auto;">
             <?php
-            // Suponha que você tenha a informação se o usuário é um administrador em $isAdmin
-            $id_usuario = $_SESSION['id_usuario'];
-            $isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
+                $id_usuario = $_SESSION['id_usuario'];
+                $isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
 
-            if ($isAdmin) {
-                // Se o usuário for um administrador, consulta sem a condição WHERE
-                $sql = "SELECT * FROM fichas";
-                $stmt = $conn->prepare($sql);
-            } else {
-                // Se não for um administrador, consulta com a condição WHERE
-                $sql = "SELECT * FROM fichas WHERE id_usuario = ?";
-                $stmt = $conn->prepare($sql);
-                $stmt->bind_param('i', $id_usuario);
-            }
+                if ($isAdmin) {
+                    $sql = "SELECT * FROM fichas";
+                    $stmt = $conn->prepare($sql);
+                } else {
+                    $sql = "SELECT * FROM fichas WHERE id_usuario = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param('i', $id_usuario);
+                }
 
-            if ($stmt) {
-                if ($stmt->execute()) {
-                    $result = $stmt->get_result();
+                if ($stmt) {
+                    if ($stmt->execute()) {
+                        $result = $stmt->get_result();
 
-                    while ($row = $result->fetch_assoc()) {
-                        $id = $row['id_fichas'];
-                        $nome = $row['nome_paciente'];
+                        while ($row = $result->fetch_assoc()) {
+                            $id = $row['id_fichas'];
+                            $nome = $row['nome_paciente'];
 
-                        // Imprima o HTML formatado com os dados do banco de dados
-                        echo '<div class="borda" style="width: 95%; border-radius: 10px; height: 50px; display: flex; align-items: center;">
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col text-center">
-                                    <p class="h6" style="margin: 0;">#' . $id . '</p>
-                                </div>
-                                <div class="col text-center">
-                                    <p class="h6" style="margin: 0;">' . $nome . '</p>
-                                </div>
-                                <div class="col text-center" style="align-items: center;">
-                                    <div class="btn-group" role="group" style="margin-bottom: 0;">
-                                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
-                                            data-bs-toggle="dropdown" style="color: #000; background-color: #FFF; border: none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50); display: flex; align-items: center;justify-content: center; transition: .5s ease-in-out; ">
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                        <li><a class="dropdown-item" href="relatorio.php?id=' . $id . '">Relatório</a></li>
-                                        <li><a class="dropdown-item text-danger" href="#" onclick="excluirFicha(' . $id . ')">Excluir</a></li>
-                                        </ul>
+                            echo '<div class="borda" style="width: 100%; border-radius: 10px; height: 50px; display: flex; align-items: center;">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col text-center">
+                                        <p class="h6" style="margin: 0;">#' . $id . '</p>
+                                    </div>
+                                    <div class="col text-center">
+                                        <p class="h6" style="margin: 0;">' . $nome . '</p>
+                                    </div>
+                                    <div class="col text-center" style="align-items: center;">
+                                        <div class="btn-group" role="group" style="margin-bottom: 0;">
+                                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                                                data-bs-toggle="dropdown" style="color: #000; background-color: #FFF; border: none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50); display: flex; align-items: center;justify-content: center; transition: .5s ease-in-out; ">
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                            <li><a class="dropdown-item" href="relatorio.php?id=' . $id . '">Relatório</a></li>
+                                            <li><a class="dropdown-item text-danger" href="#" onclick="excluirFicha(' . $id . ')">Excluir</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>';
+                        </div>';
+                        }
+                    } else {
+                        echo "Erro na consulta: " . $stmt->error;
                     }
+
+                    $stmt->close();
                 } else {
-                    echo "Erro na consulta: " . $stmt->error;
+                    echo "Erro na preparação da consulta: " . $conn->error;
                 }
 
-                $stmt->close();
-            } else {
-                echo "Erro na preparação da consulta: " . $conn->error;
-            }
-
-            $conn->close();
-            ?>
+                $conn->close();
+                ?>
 
             <br>
             <div style="width: 100%; display: flex; justify-content: center; bottom: 60px; position:absolute;">
@@ -198,7 +195,7 @@ if (!isset($_SESSION['loggedIn'])) {
         </div>
 
         <footer class="text-center text-lg-start">
-            <div class="text-center p-3" style="bottom: 10px; position:absolute;">
+            <div class="text-center p-3" style="bottom: -100px; position:relative;">
                 &copy; 2023 Noar. Todos os direitos reservados.
             </div>
         </footer>
