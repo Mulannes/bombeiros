@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $database = "bombeirosdb";
 
 // cria a conexão
