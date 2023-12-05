@@ -258,12 +258,12 @@ CREATE TABLE `ficha_paciente` (
 
 CREATE TABLE `ficha_problemas_encontrados` (
   `idProblemas_Encontrados` int(11) NOT NULL,
-  `psiquiatrico` int(11) NOT NULL,
-  `obstetrico` varchar(99) NOT NULL,
-  `respiratorio` varchar(99) NOT NULL,
-  `diabetes` varchar(99) NOT NULL,
-  `transporte` varchar(99) NOT NULL,
-  `outros` text NOT NULL
+  `psiquiatrico` int(11) DEFAULT NULL,
+  `obstetrico` varchar(99) DEFAULT NULL,
+  `respiratorio` varchar(99) DEFAULT NULL,
+  `diabetes` varchar(99) DEFAULT NULL,
+  `transporte` varchar(99) DEFAULT NULL,
+  `outros` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------

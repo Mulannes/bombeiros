@@ -164,17 +164,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // <!--                      -->
 // <!-- ✓ Objetos Recolhidos -->
 // <!--                      -->
-    $objetos_recolhidos = isset($_POST['objRec']) ? mysqli_real_escape_string($conn, $_POST['objRec']) : '';
+        // Verifica se 'objRec' está definido e não é vazio
+    $objetos_recolhidos = isset($_POST['objRec']) && $_POST['objRec'] !== '' ? $_POST['objRec'] : null;
 
-    // Inserir no banco de dados para ficha_objetos_recolhidos
-    $sql_objetos = "INSERT INTO ficha_objetos_recolhidos (objetos_recolhidos) VALUES ('$objetos_recolhidos')";
+    // Inserir no banco de dados para ficha_objetos_recolhidos usando Prepared Statement
+    $sql_objetos = "INSERT INTO ficha_objetos_recolhidos (objetos_recolhidos) VALUES (?)";
+
+    // Preparar a declaração
+    $stmt_objetos = $conn->prepare($sql_objetos);
+
+    // Vincular o parâmetro
+    $stmt_objetos->bind_param("s", $objetos_recolhidos);
 
     // Executar a query para ficha_objetos_recolhidos
-    if ($conn->query($sql_objetos) === TRUE) {
-        $last_objetos_id = $conn->insert_id;
+    if ($stmt_objetos->execute()) {
+        $last_objetos_id = $stmt_objetos->insert_id;
     } else {
-        echo "Erro ao salvar objetos recolhidos: " . $conn->error;
+        echo "Erro ao salvar objetos recolhidos: " . $stmt_objetos->error;
     }
+
 
 // <!--              -->
 // <!-- ✓ Vítima Era -->
