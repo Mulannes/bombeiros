@@ -70,12 +70,12 @@ if (!isset($_SESSION['loggedIn'])) {
                                 <div class="col-4 invisible"></div>
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" name="genero_DP"
-                                        id="flexRadioDefaultM_DP" value="Masculino">
-                                    <label class="form-check-label" for="flexRadioDefaultM_DP">Masculino
+                                        id="flexRadioDefaultM_DP" value="Masculino" onclick="gestacaoM('')">
+                                    <label class="form-check-label" for="flexRadioDefaultM_DP" onclick="gestacaoM('')">Masculino
                                     </label>
                                     <input class="form-check-input" type="radio" name="genero_DP"
-                                        id="flexRadioDefaultF_DP" value="Feminino">
-                                    <label class="form-check-label" for="flexRadioDefaultF_DP">Feminino
+                                        id="flexRadioDefaultF_DP" value="Feminino" onclick="gestacaoF('')">
+                                    <label class="form-check-label" for="flexRadioDefaultF_DP" onclick="gestacaoF('')">Feminino
                                     </label>
                                 </div>
                             </div>
@@ -342,7 +342,7 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="col-2 w-10"
                                 style="rotate: 90deg; font-size: 16px; font-family: 'Courier New', Courier, monospace; padding-bottom: 20px; height: 50px;">
                                 Abertura ocular</div>
-                            <div1 class="col-5" id="maior5">Maiores de 5 anos <br>
+                            <div1 class="col-5" id="maior5" style="display: none;">Maiores de 5 anos <br>
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" value="Espontânea"
                                         id="flexCheckDefault20" name="Abertura">
@@ -372,7 +372,7 @@ if (!isset($_SESSION['loggedIn'])) {
                                     </label>
                                 </div>
                             </div1>
-                            <div1 class="col-5 none" id="menor5">Menores de 5 anos <br>
+                            <div1 class="col-5 none" id="menor5" style="display: none;">Menores de 5 anos <br>
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" value="Espontânea"
                                         id="flexCheckDefault24" name="Abertura">
@@ -408,7 +408,7 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="col-2 w-10"
                                 style="rotate: 90deg; font-size: 16px; font-family: 'Courier New', Courier, monospace; padding-bottom: 20px; height: 50px;">
                                 Resposta verbal</div>
-                            <div1 class="col-5" id="maior7">
+                            <div1 class="col-5" id="maior7" style="display: none;">
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" value="Orientado"
                                         id="flexCheckDefault28" name="RespostaVerbal">
@@ -445,7 +445,7 @@ if (!isset($_SESSION['loggedIn'])) {
                                     </label>
                                 </div>
                             </div1>
-                            <div1 class="col-5 none" id="menor6">
+                            <div1 class="col-5 none" id="menor6" style="display: none;">
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" value="Palavras e Frases Apropriadas"
                                         id="flexCheckDefault33" name="RespostaVerbal">
@@ -488,7 +488,7 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="col-2 w-10"
                                 style="rotate: 90deg; font-size: 16px; font-family: 'Courier New', Courier, monospace; padding-bottom: 20px; height: 50px;">
                                 Resposta motora</div>
-                            <div1 class="col-4 p-0" id="maior6">
+                            <div1 class="col-4 p-0" id="maior6" style="display: none;">
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" value="Obedece Comandos"
                                         id="flexCheckDefault38" name="RespostaMotora">
@@ -532,7 +532,7 @@ if (!isset($_SESSION['loggedIn'])) {
                                     </label>
                                 </div>
                             </div1>
-                            <div1 class="col-6 p-0 none" id="menor7">
+                            <div1 class="col-6 p-0 none" id="menor7" style="display: none;">
                                 <div class="col-auto">
                                     <input class="form-check-input" type="radio" value="Obedece Prontamente"
                                         id="flexCheckDefault44" name="RespostaMotora">
@@ -2672,7 +2672,7 @@ if (!isset($_SESSION['loggedIn'])) {
     <!--                        -->
     <!-- ✓ Anamnese Gestacional -->
     <!--                        -->
-    <div class="accordion-item">
+    <div class="accordion-item" id="gestacaoA">
         <h2 class="accordion-header" id="panelsStayOpen-headingEighteen">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseEighteen" aria-expanded="false"
@@ -3136,6 +3136,24 @@ if (!isset($_SESSION['loggedIn'])) {
             maior7.style.display = "none";
         }
     });
+    var inputGest = document.getElementById("gestacaoA");
+    function gestacaoM(){
+        if(inputGest.style.display = "flex"){
+        inputGest.style.display = "none"
+        }else {
+            inputGest.style.display = "flex"
+
+        }
+    }
+    function gestacaoF(){
+        if(inputGest.style.display = "none"){
+        inputGest.style.display = ""
+        }else {
+            inputGest.style.display = ""
+
+        }
+    }
+   
 
     // var inputIdade = document.getElementById("idadePaciente_DP");
     // var menor5 = document.getElementById("menor5");
