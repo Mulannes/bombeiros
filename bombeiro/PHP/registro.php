@@ -162,7 +162,7 @@ if (!isset($_SESSION['loggedIn'])) {
                 ?>
 
             <br>
-            <div style="width: 100%; display: flex; justify-content: center; bottom: 60px; position:absolute;">
+            <div style="width: 100%; position: absolute; bottom: 60px; left: 52%; transform: translateX(-50%);">
                 <div class="nav-pills-style"
                     style="width: 95%; height: 75px; flex-shrink: 0; border-radius: 50px; background: #FFF; box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.50);">
                     <ul class="nav nav-pills nav-justified">
