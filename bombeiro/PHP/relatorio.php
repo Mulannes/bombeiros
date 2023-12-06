@@ -155,6 +155,22 @@ if (isset($_GET['id'])) {
             echo '<hr>';
             echo '<h3>Localização dos Traumas</h3>'; 
 
+            $colunasTraumas = [
+                'local1', 'lado1', 'face1', 'tipo1',
+                'local2', 'lado2', 'face2', 'tipo2',
+                'local3', 'lado3', 'face3', 'tipo3',
+                'local4', 'lado4', 'face4', 'tipo4',
+                'cabeca', 'pescoco', 't_ant', 't_pos',
+                'genit', 'MID', 'MIE', 'MSD', 'MSE'
+            ];
+            
+            foreach ($colunasTraumas as $colunaTrauma) {
+                $valor = $ficha[$colunaTrauma];
+                if (!empty($valor)) {
+                    echo '<p>' . ucfirst($colunaTrauma) . ': ' . $valor . '</p>';
+                }
+            }
+
 // Objetos Recolhidos
             echo '<hr>';
             echo '<h3>Objetos Recolhidos</h3>'; 

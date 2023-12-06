@@ -872,9 +872,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="Cabeca_Value" id="Cabeca_Value">
                                     <option value=""></option>
-                                    <option value="Cabeca1grau">Queimadura 1° Grau</option>
-                                    <option value="Cabeca2grau">Queimadura 2° Grau</option>
-                                    <option value="Cabeca3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -884,9 +884,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="Pescoco_Value" id="Pescoco_Value">
                                     <option value=""></option>
-                                    <option value="Pescoco1grau">Queimadura 1° Grau</option>
-                                    <option value="Pescoco2grau">Queimadura 2° Grau</option>
-                                    <option value="Pescoco3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -896,9 +896,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="Tant_Value" id="Tant_Value">
                                     <option value=""></option>
-                                    <option value="Tant1grau">Queimadura 1° Grau</option>
-                                    <option value="Tant2grau">Queimadura 2° Grau</option>
-                                    <option value="Tant3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -908,9 +908,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="Tpos_Value" id="Tpos_Value">
                                     <option value=""></option>
-                                    <option value="Tpos1grau">Queimadura 1° Grau</option>
-                                    <option value="Tpos2grau">Queimadura 2° Grau</option>
-                                    <option value="Tpos3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -920,9 +920,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="Genit_Value" id="Genit_Value">
                                     <option value=""></option>
-                                    <option value="Genit1grau">Queimadura 1° Grau</option>
-                                    <option value="Genit2grau">Queimadura 2° Grau</option>
-                                    <option value="Genit3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -932,9 +932,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="MID_Value" id="MID_Value">
                                     <option value=""></option>
-                                    <option value="MID1grau">Queimadura 1° Grau</option>
-                                    <option value="MID2grau">Queimadura 2° Grau</option>
-                                    <option value="MID3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -944,9 +944,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="MIE_Value" id="MIE_Value">
                                     <option value=""></option>
-                                    <option value="MIE1grau">Queimadura 1° Grau</option>
-                                    <option value="MIE2grau">Queimadura 2° Grau</option>
-                                    <option value="MIE3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -956,9 +956,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="MSD_Value" id="MSD_Value">
                                     <option value=""></option>
-                                    <option value="MSD1grau">Queimadura 1° Grau</option>
-                                    <option value="MSD2grau">Queimadura 2° Grau</option>
-                                    <option value="MSD3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
@@ -968,9 +968,9 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="btn-group dropend" style="display: flex; align-items: center; width: 100px; padding-top: 4px; padding-bottom: 4px;">
                                 <select class="btn btn-secondary" name="MSE_Value" id="MSE_Value">
                                     <option value=""></option>
-                                    <option value="MSE1grau">Queimadura 1° Grau</option>
-                                    <option value="MSE2grau">Queimadura 2° Grau</option>
-                                    <option value="MSE3grau">Queimadura 3° Grau</option>
+                                    <option value="Queimadura 1 Grau">Queimadura 1° Grau</option>
+                                    <option value="Queimadura 2 Grau">Queimadura 2° Grau</option>
+                                    <option value="Queimadura 3 Grau">Queimadura 3° Grau</option>
                                 </select>
                                 </label>
                             </div>
