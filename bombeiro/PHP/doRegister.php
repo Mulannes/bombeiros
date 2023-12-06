@@ -124,6 +124,26 @@ if (!isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>
             </div>
+        <!--                   -->
+        <!-- ✓ Termo de recusa -->
+        <!--                   -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFifteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFifteen" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFifteen">
+                    Termo de Recusa
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFifteen" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingFifteen">
+                <div class="accordion-body">
+                    <label for="imagem_recusa">Termo de Recusa:</label>
+                    <br>
+                    <input type="file" name="imagem_recusa" accept="image/*">
+                </div>
+            </div>
+        </div>
         <!--                      -->
         <!-- ✓ Tipo de Ocorrência -->
         <!--                      -->
@@ -2501,26 +2521,6 @@ if (!isset($_SESSION['loggedIn'])) {
         setupCheckboxAndText('flexCheckDefault812', 'quantOutro2');
         })();
     </script>
-    <!--                   -->
-    <!-- ✓ Termo de recusa -->
-    <!--                   -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingFifteen">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseFifteen" aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseFifteen">
-                Termo de recusa de atendimento e/ou transporte
-            </button>
-        </h2>
-        <div id="panelsStayOpen-collapseFifteen" class="accordion-collapse collapse"
-            aria-labelledby="panelsStayOpen-headingFifteen">
-            <div class="accordion-body">
-                <label for="imagem_recusa">Termo de Recusa:</label>
-                <br>
-                <input type="file" name="imagem_recusa" accept="image/*">
-            </div>
-        </div>
-    </div>
     <!--                           -->
     <!-- ✓ Observações Importantes -->
     <!--                           -->
@@ -3154,22 +3154,6 @@ if (!isset($_SESSION['loggedIn'])) {
         }
     }
    
-
-    // var inputIdade = document.getElementById("idadePaciente_DP");
-    // var menor5 = document.getElementById("menor5");
-    // var maior5 = document.getElementById("maior5");
-
-    // inputIdade.addEventListener("input", function() {
-    //   var valorIdade = parseInt(inputIdade.value);
-
-    //   if (valorIdade > 4) {
-    //     menor5.style.display = "none";
-    //     maior5.style.display = "block";
-    //   } else {
-    //     menor5.style.display = "block";
-    //     maior5.style.display = "none";
-    //   }
-    // });
 </script>
 
 </html>
