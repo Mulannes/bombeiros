@@ -131,7 +131,7 @@ if (isset($_GET['id'])) {
             echo '<p>Pressão Arterial: ' . $ficha['pressao_arterial0'] . ' x ' . $ficha['pressao_arterial1'];
             echo '<p>Pulso: ' . $ficha['pulso'] . '</p>';
             echo '<p>Respiração: ' . $ficha['respiracao'] . '</p>';
-            echo '<p>Saturação: ' . $ficha['saturacao'] . '</p>';
+            echo '<p>Saturação: ' . $ficha['saturacao'] . '%';
             echo '<p>Temperatura: ' . $ficha['temperatura'] . '</p>';
             echo '<p>Perfusão: ' . $ficha['perfusao'] . '</p>';
             echo '<p>HGT: ' . $ficha['HGT'] . '</p>';
