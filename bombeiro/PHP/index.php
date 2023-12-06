@@ -4,6 +4,11 @@
 include("admin/redirectadm.php");
 include("admin/redirectindex.php");
 
+if (isset($_SESSION['mensagem'])) {
+    echo '<div class="alert alert-success">' . $_SESSION['mensagem'] . '</div>';
+    unset($_SESSION['mensagem']);
+}
+
 // Verifica se o usuário está logado
 if (!isset($_SESSION['loggedIn'])) {
     // Se não estiver, redirecione para a página de login

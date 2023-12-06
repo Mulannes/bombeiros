@@ -39,6 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_PO
             $stmt->close();
             $conn->close();
 
+            // Adiciona uma mensagem de sucesso à sessão
+            $_SESSION['mensagem'] = "Autenticado com sucesso! Bem-vindo, " . $_SESSION['nome_usuario'] . ".";
+
             // Redireciona para a página adm ou user
             if ($_SESSION['admin']) {
                 header('Location: index_admin.php');
